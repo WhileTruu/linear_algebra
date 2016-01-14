@@ -380,7 +380,27 @@
     <h3>11. Võrrandisüsteemi Ax = b pseudolahend. Pseudolahendite seos tavaliste
     lahenditega.</h3>
       <div>
-
+        Vaatleme suvalist võrrandsüsteemi
+        <div class="__formula">
+          `Ax = b`
+        </div>
+        See võib olla lahenduv või mittelahenduv. Moodustame uue lineaarvõrrandsüsteemi
+        <div class="__formula">
+          `A^T Ax = A^T b`
+        </div>
+        Uus lineaarvõrrandsüsteem `A^T Ax = A^T b` omab alati lahendit. <br>
+        Kui esialgne võrrandsüsteem `Ax = b` on lahenduv, siis on esialgsel ja
+        uuel süsteemil samad lahendid.<br>
+        <b>Definitsioon</b>
+        <p>
+          Süsteemi `A^T Ax = A^T b` lahendit nimetatakse võrrandisüsteemi `Ax = b`
+          pseudolahendiks (ehk lahendiks vähimruutude mõttes).
+        </p>
+        Pseudolahendi korral on avaldisel
+        <div class="__formula">
+          `|| Ax - b || = sqrt(sum_(i=1)^m (sum_(j=1)^n a_(ij) x_j - b_i )^2)`
+        </div>
+        vähim väärtus.
       </div>
     <h3>12. Substitutsioon. Inversioon, inversioonide arv substitutsioonis.</h3>
       <div>
