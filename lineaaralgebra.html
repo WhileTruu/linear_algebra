@@ -390,12 +390,12 @@
         </div>
         Uus lineaarvõrrandsüsteem `A^T Ax = A^T b` omab alati lahendit. <br>
         Kui esialgne võrrandsüsteem `Ax = b` on lahenduv, siis on esialgsel ja
-        uuel süsteemil samad lahendid.<br>
+        uuel süsteemil samad lahendid.<br><br>
         <b>Definitsioon</b>
-        <p>
+        <div>
           Süsteemi `A^T Ax = A^T b` lahendit nimetatakse võrrandisüsteemi `Ax = b`
-          pseudolahendiks (ehk lahendiks vähimruutude mõttes).
-        </p>
+          pseudolahendiks (ehk lahendiks vähimruutude mõttes).<br>
+        </div>
         Pseudolahendi korral on avaldisel
         <div class="__formula">
           `|| Ax - b || = sqrt(sum_(i=1)^m (sum_(j=1)^n a_(ij) x_j - b_i )^2)`
@@ -404,7 +404,36 @@
       </div>
     <h3>12. Substitutsioon. Inversioon, inversioonide arv substitutsioonis.</h3>
       <div>
-
+        <b>Definitsioon</b>
+        <div>
+          <b>n-ndat järku substitutsioon</b> on <b>n</b> esimese naturaalarvu
+          `1, 2, ..., n` kõikvõimalikud ümberjärjestused `i_1, i_2, ..., i_n`. <br><br>
+          Näiteks kolmandat järku substitutsioone, mida on `3!` tükki:
+          <div class="__formula">
+            `1, 2, 3`;&emsp;`1, 3, 2`;&emsp;`2, 1, 3`;<br>
+            `2, 3, 1`;&emsp;`3, 2, 1`;&emsp;`3, 2, 1`;
+          </div><br>
+        </div>
+        <b>Definitsioon</b>
+        <div>
+          Olgu substitutsioonist `i_1, i_2, ..., i_n` valitud kaks arvu `i_k` ja `i_l`
+          selles järjekorras, nagu nad seal esinevad, st `k < l` ehk `i_1, ..., i_k, ..., i_l, ..., i_n`.
+           Kui `i_k > i_l` siis öeldakse, et paar `i_k, i_l` moodustab inversiooni vaadeldavas substitutsioonis.
+        </div><br>
+        Näiteks neljandat järku substitutsioonis `4, 1, 3, 2` saab moodustada arvupaarid `(i_k; i_l)`
+        , mida on
+        <div class="__formula">
+          `(n!) / (m!(n - m)!) = (4!) / (2!(4-2)!) = 24/4 = 6`
+        </div><br>
+        <div class="__formula">
+          `4, 1`;&emsp;`4, 3`:&emsp;`4, 2`;&emsp;`1, 3`;&emsp;`1, 2`;&emsp;`3, 2`
+        </div>
+        Neist inversiooni moodustavad ainult paarid, milles arvud on kahanemisjärjekorras, ehk:
+        <div class="__formula">
+          `4, 1`;&emsp;`4, 3`:&emsp;`4, 2`;&emsp;`3, 2`
+        </div><br>
+        Kõikide inversioonide arvu substitutsioonis `i_1, i_2, ..., i_n` tähistatakse `sigma(i_1, i_2, ..., i_n)`.
+        <br> Substitutsioonis `4, 1, 3, 2` on inversioonide arv `sigma(4, 1, 3, 2) = 4`.
       </div>
     <h3>13. n-ndat järku determinandi definitsioon. Teist ja kolmandat järku determinant.</h3>
       <div>
