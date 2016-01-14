@@ -1,0 +1,492 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Lineaaralgebra</title>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_HTMLorMML-full"></script>
+    <style>
+      body {
+          font-family: "helvetica";
+          color: #333;
+      }
+
+      h1 {
+          text-align: center;
+      }
+
+      .yellow-bg {
+        background-color: rgb(246, 243, 159);
+      }
+      .blue-bg {
+        background-color: rgb(195, 195, 244);
+      }
+
+      .red-bg {
+        background-color: rgb(242, 171, 171);
+      }
+
+      .__formula {
+        text-align: center;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Lineaaralgebra kordamisküsimused 2015/2016. õppeaastal</h1>
+
+    <h3>1. Kompleksarv kui reaalarvude paar. Tehted kompleksarvudega. Tehete
+    omadused. Kompleksarvu algebraline kuju. Tuletatavad tehted ja nende
+    omadused.</h3>
+      <div>
+        <h4>Kompleksarvu mõiste</h4>
+        <ul>
+          <li>Kompleksarv kui reaalarvude paar: `z = (x; y)`</li>
+          <li>`CC` - kõigi kompleksarvude hulk</li>
+          <li>`(x; 0) = x`</li>
+          <li>`RR sub CC`</li>
+        </ul>
+
+        <h4>Tehted kompleksarvudega</h4>
+        <ul>
+          <li>`z=(x; y), hat z=(hat x; hat y)`</li>
+          <li><b>I liitmine: </b><br>`z + hat z = (x; y) + (hat x; hat y) = (x + hat x; y + hat y)`</li>
+          <li><b>II korrutamine: </b><br>`z * hat z = (x; y) + (hat x; hat y) = (x hat x - y hat y; x hat y + hat x y)`</li>
+        </ul>
+
+        <h4>Tehete omadused</h4>
+        Liitmine ja korrutamine kõigi kompleksarvude hulgal `CC` rahuldavad omadusi <b>K1-K9</b>:
+        <ul>
+          <li><b>K1. </b>Liitmine on <i>kommutatiivne</i>, st<br>
+            `z_1 + z_2 = z_2 + z_1`<br>
+            iga `z_1, z_2` korral.</li>
+          <li><b>K2. </b>Liitmine on <i>assotsiatiivne</i>, st<br>
+            `(z_1 + z_2) + z_3= z_1 + (z_2 + z_3)`<br>
+            iga `z_1, z_2, z_3` korral.</li>
+          <li><b>K3. </b>Liitmise suhtes leidub <i>nullelement</i> (ehk null) `theta`, st leidub `theta`, nii et<br>
+          `theta + z = z + theta = z`<br>
+          iga `z` korral</li>
+          <li><b>K4. </b>Iga `z` jaoks leidub vastandelement `hat z`, st selline `hat z`, et<br>
+          `z + hat z = hat z + z = theta`</li>
+          <li><b>K5. </b>Korrutamine on <i>kommutatiivne</i>, st<br>
+          `z_1 z_2 = z_2 z_1`<br>
+          iga `z_1, z_2` korral.</li>
+          <li><b>K6. </b>Korrutamine on <i>assotsiatiivne</i>, st<br>
+          `(z_1 z_2) z_3 = z_1 (z_2 z_3)`<br>
+          iga `z_1, z_2, z_3` korral.</li>
+          <li><b>K7. </b>Korrutamise suhtes leidub <i>ühikelement</i> `e`, st selline `e`, et<br>
+          `e z = z e = z`<br>
+          iga `z` korral</li>
+          <li><b>K8. </b>Iga `z != theta` jaoks leidub <i>pöördelement</i>, st selline `hat z in CC`, et<br>
+          `z hat z = e`</li>
+          <li><b>K9. </b>Korrutamine ja liitmine on seotud <i>distributiivsusega</i>, st<br>
+          `z_1(z_2 + z_3) = z_1 z_2 + z_1 z_3`, `(z_1 + z_2)z_3 = z_1 z_3 + z_2 z_3`<br>
+          iga `z_1, z_2, z_3` korral.</li>
+        </ul>
+
+        <h4>Kompleksarvu algebraline kuju.</h4>
+        <ul>
+          <li>`z = (x; y) = ... = x + y i`</li>
+          <li><div class="yellow-bg">`i=(0;1)`</div></li>
+        </ul>
+
+        <h4>Tuletatavad tehted ja omadused</h4>
+        <ul>
+          <li><b>I Lahutamine:</b><br>
+            <div class="yellow-bg">
+              `z - hat z stackrel"def"= z + (- hat z)`</h4r>
+              `(x; y) - (hat x; hat y) = (x - hat x; y - hat y)`<br>
+              `(x + yi) - (hat x; hat y i) = (x - hat x) + (y - hat y) i`
+          </li>
+          <li><b>II jagamine: </b> kui `hat z != 0`, siis leidub `hat z^(-1)`<br>
+            <div class="yellow-bg">
+              `z / hat z stackrel"def"= z * hat z^(-1)`</h4r>
+            `(x; y) / (hat x; hat y) = (x + yi) / (hat x + hat y i) = ((x + y i)(hat x - hat y i))/((hat x + hat y i)(hat x - hat y i))= (...) / (hat x^2 + hat y^2)`
+          </li>
+        </ul>
+      </div>
+    <h3>2. Kompleksarvu trigonomeetriline kuju. Tehted trigonomeetrilisel kujul antud
+    kompleksarvudega. Moivre’i valem. Kompleksarvude juurimine. (Tõestustega).</h3>
+      <div>
+        <h4>Kompleksarvu trigonomeetriline kuju</h4>
+        <div>
+          <div>`z = (x; y) = x + yi = r(cos phi + i sin phi)`</div>
+          <div class="yellow-bg">
+            `r=sqrt(x^2 + y^2)`
+          </div>
+          <div class="yellow-bg">
+            `{(x / r = cos phi),(y / r = sin phi):}`
+          </div>
+          <div>
+            <img src="imaginarygraph.png" alt="8===D" height="200">
+          </div>
+        </div>
+        <h4>Tehted trigonomeetrilisel kujul antud kompleksarvudega</h4>
+        <div>
+          `z_1 = r_1(cos phi_1 + i sin phi_1), z_2 = r_2(cos phi_2 + i sin phi_2)`
+        </div>
+        <div>
+          <h4>I korrutamine:</h4>
+          <div class="yellow-bg __formula">
+            `z_1 z_2 = r_1 r_2 (cos (phi_1 + phi_2) + i sin (phi_1 + phi_2))`
+          </div>
+          <div class="red-bg">
+            <h4>Tõestus:</h4>
+            <div>
+              <div class="__formula">`z_1 z_2 = r_1(cos phi_1 + i sin phi_1) r_2(cos phi_2 + i sin phi_2) =`</div>
+              <div class="__formula">`= r_1 r_2 (( cos phi_1 cos phi_2 - sin phi_1 sin phi_2) + i (cos phi_1 sin phi_ 2 + i sin phi_1 cos phi_ 2)) =`</div>
+              <div class="__formula">`= r_1 r_2 (cos (phi_1 + phi_2) + i sin (phi_1 + phi_2))`</div>
+            </div>
+          </div>
+          <h4>II jagamine:</h4>
+          <div class="yellow-bg __formula">
+            `z_1 / z_2 = r_1 / r_2 (cos (phi_1 - phi_2) + i sin (phi_1 - phi_2))`
+          </div>
+          <div class="red-bg">
+            <h4>Tõestus:</h4>
+            <div>
+              <div class="__formula">`z_1 / z_2 = (r_1(cos phi_1 + i sin phi_1)) / (r_2(cos phi_2 + i sin phi_2)) =`</div>
+              <div class="__formula">`= r_1 / r_2 * ((cos phi_1 + i sin phi_1)(cos phi_2 - i sin phi_2)) / ((cos phi_2 + i sin phi_2)(cos phi_2 - i sin phi_2)) =`</div>
+              <div class="__formula">`= r_1 / r_2 * ((cos phi_1 cos phi_2 + sin phi_1 sin phi_2) + (sin phi_1 cos phi_2 - sin phi_2 cos phi_1) i ) / (cos^2 phi_2 + sin^2 phi_2) =`</div>
+              <div class="__formula">`= z_1 / z_2 = r_1 / r_2 (cos (phi_1 - phi_2) + i sin (phi_1 - phi_2))`</div>
+            </div>
+          </div>
+          <h4>III juurimine:</h4>
+          <div>
+            <div>`z = x + y i in CC, n in NN, n > 0`</div>
+            <div class="yellow-bg">`root(n)(z) = w hArr w^n = z`</div>
+            <div>Kui `z = 0`, siis</div>
+            <div>`root(n)(0) = 0`</div>
+            <div>Kui `z != 0` ja</div>
+            <div>`z = (x; y)  = x + y i = r (cos phi + i sin phi)`,</div>
+            <div>siis</div>
+            <div class="yellow-bg">`root(n)(z) = root(n)(r) (cos ((phi + 2 pi k) / n) + i sin ((phi + 2 pi k) / n))`</div>
+            <div>`k = 0, 1, ... , n - 1`</div>
+          <div>
+          <h4>IV Astendamine:</h4>
+          <div class="__formula">
+            `z^n = (r(cos phi + i sin phi))^n = r^n (cos (n phi) + i sin (n phi))`
+          </div>
+          <div class="blue-bg">
+            <h4>Moivre'i valem:</h4>
+            <div class="__formula">
+              `(cos phi + i sin phi)^n = cos n phi + i sin n phi`
+            </div>
+          </div>
+        </div>
+      </div>
+    <h3>3. Korpuse definitsioon. Skalaari mõiste. Korpuste näiteid (arvude korpused,
+    jäägiklassikorpus).</h3>
+      <div>
+        <div><b>Korpuse definitsioon.</b></div>
+        <i>Hulka K</i> nimetatakse korpuseks, kui hulgal <i>K</i> on defineeritud elementide liitmine ja arvuga korrutamine nii,
+        et hulk K on kinnine nende tehete suhtes, st kõik summad ja korrutised on samuti hulga <i>K</i> elemendid ning on täidetud
+        järgmised tingimused:
+        <div>
+          <ul>
+            <li>Liitmine on kommutatiivne: <div class="__formula">`AA a, b in K` `a + b = b + a`</div></li>
+            <li>Liitmine on assotsiatiivne: <div class="__formula">`AA a, b, c in K` `(a + b) + c = a + (b + c)`</div></li>
+            <li>Leidub nullelement: <div class="__formula">`EE 0 in K` nii, et `AA a in K` a + 0 = 0 + a = a</div></li>
+            <li>Leidub vastandeelement: <div class="__formula">`AA a in K EE` - `a in K` nii, et `a + (-a) = (-a) + a = 0`</div></li>
+            <li>Korrutamine on kommutatiivne: <div class="__formula">`AA a, b in K` `ab = ba`</div></li>
+            <li>Korrutamine on assotsiatiivne: <div class="__formula">`AA a, b, c in K` `(ab)c = a(bc)`</div></li>
+            <li>Kehtivad distributiivsuse tingimused: <div class="__formula">`AA a, b, c in K` `{(a(b+c) = ab + ac),((a+b)c = ac + bc):}`</div></li>
+            <li>Leidub ühik <div class="__formula">`E 1 in K` nii, et `AA a in K` ` 1a = a`</div></li>
+            <li>Igal nullelemendist erineval elemendil leidub pöördelement: <div class="__formula">`AA 0 != a in K EE a^(-1) in K` nii, et a a^(-1) = a^(-1) a = 1</div></li>
+          </ul>
+          Korpuse elemente nimetatakse skalaarideks.
+        </div>
+        <div><b>Skalaari mõiste.</b></div>
+        <div>
+          <b>Skalaariks</b> nimetatakse mistahes korpuse elementi.
+        </div>
+        <div><b>Korpuste näiteid.</b>(arvude korpused, jäägiklassikorpus)</div>
+        <ul>
+          <li>Arvude korpused: `QQ, RR, CC`</li>
+          <li>Jäägiklassikorpus: `ZZ_p` (`p` - algarv)</li>
+        </ul>
+      </div>
+    <h3>4. Geomeetriline vektor. Lineaarsed tehted geomeetriliste vektoritega ja
+    nende omadused.</h3>
+      <div>
+        <div>
+          Geomeetrilised vektorid on suunatud sirglõigud tasandil või ruumis. <br>
+          Vektorit iseloomustavad siht, suund ja pikkus.<br>
+        </div>
+        <div>
+          Tähistagu järgnevalt `V` kõigi geomeetriliste vektorite hulka tasandil
+          ja `K` reaalarvude (skalaaride) hulka. Ühik korpuses `K` olgu tähistatud
+          sümboliga 1.
+        </div>
+        <div><b>Tehete omadused.</b></div>
+        <div>
+          <ul>
+            <li>Liitmine on kommutatiivne: <div class="__formula">`alpha + beta = beta + alpha`</div> iga `alpha, beta, gamma in V` korral.</li>
+            <li>Liitmine on assotsiatiivne: <div class="__formula">`(alpha + beta) + gamma = alpha + (beta + gamma)`</div>iga `alpha, beta, gamma in V` korral.</li>
+            <li>Liitmise suhtes leidub nullelement (ehk null) `theta`, st leidub `theta`, nii, et: <div class="__formula">`theta + alpha = alpha + theta = alpha`</div>iga `alpha in V` korral.</li>
+            <li>Iga `alpha in V` jaoks leidub vastandelement `beta in V`, st selline `beta in V`, et <div class="__formula">`alpha + beta = beta + alpha = theta`</div></li>
+            <li><div class="__formula">`a (b alpha) = (a b) alpha` iga `a, b in K` ja `a in V` korral.</div></li>
+            <li><div class="__formula">`(a+b)alpha= a alpha + b alpha` iga `a, b in K` ja `alpha in V` korral.</div></li>
+            <li><div class="__formula">`a(alpha + beta) = a alpha + a beta` iga `a in K` ja `alpha, beta in V` korral.</div></li>
+            <li><div class="__formula">`1 alpha = alpha` iga `alpha in V` korral.</div></li>
+          </ul>
+        </div>
+      </div>
+    <h3>5. Aritmeetiline vektor. n-mõõtmeline aritmeetiline ruum. Lineaarsed
+    tehted aritmeetiliste vektoritega ja nende omadused.</h3>
+      <div>
+        <div class="">
+          Aritmeetiline vektor.<br>
+          `n`-mõõtmeline aritmeetiline ruum `K^n` (`K` - mis tahes korpus).<br><br>
+        </div>
+        <div class="">`n`-mõõtmeline aritmeetiline vektor `alpha` (üle korpuse `K`):</div>
+        <div class="__formula">`alpha = (a_1; a_2; ...; a_n)`</div>
+        <div class="__formula">`a_1, a_2, ..., a_n in K`</div>
+        <div>
+          <b>Lineaarsed tehted aritmeetiliste vektoritega:</b>
+          <div class="__formula">kui `alpha = (a_1; a_2; ...; a_n), beta = (b_1; b_2; ...; b_n)` ja `c in K`, siis</div>
+          <div class="__formula yellow-bg">`alpha + beta = (a_1 + b_1; a_2 + b_2; ...; a_n + b_n)`</div>
+          <div class="__formula yellow-bg">`c alpha = (c a_1; c a_2; ...; c a_n)`</div>
+          <div class="">`K^n` - kõigi `n`-mõõtmeliste vektorite hulk üle korpuse `K`.</div>
+        </div>
+        <div>
+          <b>Tehete omadused.</b>
+          <ul>
+            <li>Liitmine on kommutatiivne: <div class="__formula">`alpha + beta = beta + alpha`</div><div style="text-align: right;"> iga `alpha, beta in K^n` korral.</div></li>
+            <li>Liitmine on assotsiatiivne: <div class="__formula">`(alpha + beta) + gamma = alpha + (beta + gamma)`</div><div style="text-align: right;">iga `alpha, beta, gamma in K^n` korral.</div></li>
+            <li>Liitmise suhtes leidub nullelement (ehk null) `theta`, st leidub `theta`, nii, et: <div class="__formula">`theta + alpha = alpha + theta = alpha`</div><div style="text-align: right;">iga `alpha in K^n` korral.</div></li>
+            <li>Iga `alpha` jaoks leidub vastandelement `beta`, st selline `beta`, et <div class="__formula">`alpha + beta = beta + alpha = theta`</div><div style="text-align: right;"> iga `alpha, beta in K^n` korral.</div></li>
+            <li><div class="__formula">`a (b alpha) = (a b) alpha`</div><div style="text-align: right;"> iga `a, b in K` ja `a in K^n` korral.</div></li>
+            <li><div class="__formula">`(a+b)alpha= a alpha + b alpha`</div><div style="text-align: right;"> iga `a, b in K` ja `alpha in K^n` korral.</div></li>
+            <li><div class="__formula">`a(alpha + beta) = a alpha + a beta`</div><div style="text-align: right;"> iga `a in K` ja `alpha, beta in K^n` korral.</div></li>
+            <li><div class="__formula">`1 alpha = alpha`</div><div style="text-align: right;"> iga `alpha in K^n` korral.</div></li>
+          </ul>
+        </div>
+      </div>
+    <h3>6. Maatriksi definitsioon ja tähistused. Lineaarsed tehted maatriksitega ja
+    nende omadused.</h3>
+      <div>
+        <div class="">
+          <b>Maatriksi definitsioon ja tähistused.</b>
+          <div class="__formula">
+            `A = [[a_(11), a_(12), ..., a_(1n)],
+                  [a_(21), a_(22), ..., a_(2n)],
+                  [vdots, vdots, ddots, vdots],
+                  [a_(m1), a_(m2), ..., a_(mn)]]`
+
+              `= ((a_(11), a_(12), ..., a_(1n)),
+                   (a_(21), a_(22), ..., a_(2n)),
+                   (vdots, vdots, ddots, vdots),
+                   (a_(m1), a_(m2), ..., a_(mn)))`
+
+              `= [a_(ij)] = (a_(ij))`
+          </div>
+          <div class="__formula">`K^(m xx n)` - kõigi `(m xx n)`-maatriksite hulk üle korpuse `K`.</div>
+        </div>
+        <div>
+          <b>Tehete omadused.</b>
+          <ul>
+            <li>Liitmine on kommutatiivne: <div class="__formula">`A + B = B + A`</div><div style="text-align: right;"> iga `A, B in K^(m xx n)` korral.</div></li>
+            <li>Liitmine on assotsiatiivne: <div class="__formula">`(A + B) + C = A + (B + C)`</div><div style="text-align: right;">iga `A, B, C in K^(m xx n)` korral.</div></li>
+            <li>Liitmise suhtes leidub nullelement (ehk null) `theta`, st leidub `theta`, nii, et: <div class="__formula">`theta + A = A + theta = A`</div><div style="text-align: right;">iga `A in K^(m xx n)` korral.</div></li>
+            <li>Iga `A` jaoks leidub vastandelement `B`, st selline `B`, et <div class="__formula">`A + B = B + A = theta`</div><div style="text-align: right;"> iga `A, B in K^(m xx n)` korral.</div></li>
+            <li><div class="__formula">`a (b A) = (a b) A`</div><div style="text-align: right;"> iga `a, b in K` ja `a in K^(m xx n)` korral.</div></li>
+            <li><div class="__formula">`(a+b)A= a A + b A`</div><div style="text-align: right;"> iga `a, b in K` ja `A in K^(m xx n)` korral.</div></li>
+            <li><div class="__formula">`a(A + B) = a A + a B`</div><div style="text-align: right;"> iga `a in K` ja `A, B in K^(m xx n)` korral.</div></li>
+            <li><div class="__formula">`1 A = A`</div><div style="text-align: right;"> iga `A in K^(m xx n)` korral.</div></li>
+          </ul>
+        </div>
+      </div>
+    <h3>7. Maatriksite korrutamine. Korrutamise omadused ja seos lineaarsete
+    tehetega.</h3>
+      <div>
+        <div>
+          Korrutise `AB` eksisteerimiseks peab maatriksi `A` veergude arv võrduma maatriksi `B`
+          ridade arvuga.<br><br>
+          <b>Korrutamise definitsioon</b>
+          <div class="">
+            Maatrikside `A = (a_(ij)) in RR^(m xx n)` ja `B = (b_(ij)) in RR^(n xx p)`
+            korrutiseks nimetatakse `(m xx p)`-maatriksit `AB`, mille `i`-nda rea ja
+            `j`-nda veeru element on võrdne maatriksi `A` `i`-nda reavektori ja maatriksi `B`
+            `j`-nda veeruvektori skalaarkorrutisega:
+          </div>
+          <div class="__formula">
+            `(AB)_(ij) = sum_(j=1)^n a_(ik) b_(kj) = a_(i1) b_(1j) + a_(i2) b_(2j) + ... + a_(in) b_(nj)`
+          </div>
+        </div>
+        <b style="color: red;">TO BE CONTINUDED</b>
+      </div>
+    <h3>8. Maatriksite transponeerimine. Transponeerimise omadused.</h3>
+      <div>
+        <div>
+          <b>Maatriksite transponeerimise definitisioon</b>
+          <div>
+            `(m xx n)`-maatriksi `A` transponeeritud maatriksiks `A^T`
+            nimetatakse `(n xx m)`-maatriksit `B = (b_(ij))`, nii et
+            `b_(ij) = a_(ji)`. Transponeeritud maatriksi `A^T` veergudeks on
+            matriksi `A` read (loomulikus järjekorras) ja ridadeks on maatriksi
+            `A` veerud.
+          </div>
+        </div>
+        <div>
+          <b>Transponeerimise omadused</b>
+          <div class="__formula yellow-bg">`(A^T)^T = A`</div>
+          <div class="__formula yellow-bg">`(A + B)^T = A^T + B^T`</div>
+          <div class="__formula yellow-bg">`(A B)^T = B^T A^T`</div>
+          <div class="__formula yellow-bg">`(c A)^T = c A^T`</div>
+        </div>
+      </div>
+    <h3><h3>9. Lineaarne võrrandisüsteem, selle lahend ja maatrikskuju.</h3>
+      <div>
+        <div class="">
+          <b>Lineaarne võrrand, tema lahend.</b>
+          <div style="padding-left: 5em;"><b>Näide. </b>`2x_1 - x_2 + 4x_3 = 6`; selle võrrandi lahendeid:</div>
+          <div class="__formula">`x_2 = x_3 = 0, x_1 = 3` ehk `xi = (3; 0; 0)`,</div>
+          <div class="__formula">`x_2 = 1, x_3 = -1, x_1 = 11/2` ehk `xi = (1; -1; 1/2)`,</div>
+          <div style="padding-left: 5em;">kõigi lahendite hulk on</div>
+          <div class="__formula">`L = {((6 + c_1 - 4 c_2)/2; c_1; c_2) | c_1, c_2 in RR}`,</div>
+        </div>
+        <b style="color: red;">TO BE CONTINUDED</b>
+      </div>
+    <h3>10. Gaussi meetod.</h3>
+      <div>
+
+      </div>
+    <h3>11. Võrrandisüsteemi Ax = b pseudolahend. Pseudolahendite seos tavaliste
+    lahenditega.</h3>
+      <div>
+
+      </div>
+    <h3>12. Substitutsioon. Inversioon, inversioonide arv substitutsioonis.</h3>
+      <div>
+
+      </div>
+    <h3>13. n-ndat järku determinandi definitsioon. Teist ja kolmandat järku determinant.</h3>
+      <div>
+
+      </div>
+    <h3>14. Crameri valemid ja nende tõestus juhul n = 2.</h3>
+      <div>
+
+      </div>
+    <h3>15. Determinantide omadused (tõestusteta).</h3>
+      <div>
+
+      </div>
+    <h3>16. Vektorruumi definitsioon ja näiteid.</h3>
+      <div>
+
+      </div>
+    <h3>17. Vektorite lineaarne kombinatsioon. Vektorite lineaarse sõltuvuse mõiste.
+    Vektorite lineaarse sõltumatuse tunnus. Näiteid.</h3>
+      <div>
+
+      </div>
+    <h3>18. Vektorruumi baasi definitsioon. Kanoonilised baasid tuntud vektorruumides.
+    Baaside omadusi.</h3>
+      <div>
+
+      </div>
+    <h3>19. Vektori koordinaadid. Tehted koordinaatkujul antud vektoritega. nmõõtmelise
+    vektorruumi isomorfsus aritmeetilise ruumiga.</h3>
+      <div>
+
+      </div>
+    <h3>20. Miinori definitsioon. Maatriksi astaku definitsioon. Maatriksi ridade ja
+    veergude elementaarteisendused. Astaku leidmine.</h3>
+      <div>
+
+      </div>
+    <h3>21. Teoreem maatriksi astakust (tõestusega). Järeldusi sellest.</h3>
+      <div>
+
+      </div>
+    <h3>22. Pöördmaatriksi definitsioon, ühesus, olemasolu ja leidmine (tõestustega).</h3>
+      <div>
+
+      </div>
+    <h3>23. Afiinne ruum. Koordinaatide sissetoomine afiinsesse ruumi (reeper ehk
+    teljestik). Omadusi (tõestustega).</h3>
+      <div>
+
+      </div>
+    <h3>24. Skalaarkorrutise definitsioon üldjuhul. Skalaarkorrutise näiteid.</h3>
+      <div>
+
+      </div>
+    <h3>25. Eukleidilise vektorruumi ja eukleidilise ruumi definitsioon. Eukleidilises
+    ruumis defineeritavad mõisted.</h3>
+      <div>
+
+      </div>
+    <h3>26. Vektori pikkus ja selle omadused (tõestustega).</h3>
+      <div>
+
+      </div>
+    <h3>27. Punktide vaheline kaugus. Kauguse omadused.</h3>
+      <div>
+
+      </div>
+    <h3>28. Nurk vektorite vahel ja selle olemasolu. Ortogonaalsus ehk ristseis.</h3>
+      <div>
+
+      </div>
+    <h3>29. Ortonormaalne baas. Vektorite skalaarkorrutise, vektori pikkuse ja punktide
+    vahelise kauguse leidmise reeglid ortonormaalse reeperi korral.</h3>
+      <div>
+
+      </div>
+    <h3>30. Sirge ja tema võrrandid. Sirge võrrandid kahemõõtmelises eukleidilises
+    ruumis.</h3>
+      <div>
+
+      </div>
+    <h3>31. Hüpertasand, selle normaalvektor, omadusi. Hüpertasandi erijuhud.</h3>
+      <div>
+
+      </div>
+    <h3>32. Punkti kaugus mingist punktihulgast eukleidilises ruumis. Punkti kaugus
+    hüpertasandist (tõestusega). Saadud valemi erijuhud.</h3>
+      <div>
+
+      </div>
+    <h3>33. Teist järku determinandi geomeetriline tõlgendus (tõestusega).</h3>
+      <div>
+
+      </div>
+    <h3>34. Kolmandat järku determinandi geomeetriline tõlgendus (tõestusega).</h3>
+      <div>
+
+      </div>
+    <h3>35. Vektorkorrutise definitsioon. Vektorkorrutise omadused (tõestustega).</h3>
+      <div>
+
+      </div>
+    <h3>36. Kujutus. Lineaarne kujutus. Näiteid. Lineaarne kujutus koordinaatkujul.
+    Lineaarse kujutuse maatriks.</h3>
+      <div>
+
+      </div>
+    <h3>37. Ortogonaalteisenduse definitsioon. Ortogonaalteisenduse seos vektori
+    pikkusega ja vektorite vahelise nurgaga. Ortogonaalteisenduse maatriks. Ortogonaalmaatriksi
+    definitsioon. Tarvilik ja piisav tingimus selleks, et ruutmaatriks
+    oleks ortogonaalmaatriks (kõik tõestustega).</h3>
+      <div>
+
+      </div>
+    <h3>38. Omaväärtused ja omavektorid ning nende leidmine.</h3>
+      <div>
+
+      </div>
+    <h3>39. Omaväärtuste ja omavektorite omadused (ainult loetleda).</h3>
+      <div>
+
+      </div>
+    <h3>40. Ruutvorm ja tema maatrikskuju. Kanooniline kuju. Ruutvormi viimine
+    kanoonilisele kujule.</h3>
+      <div>
+
+      </div>
+    <br>
+  </font>
+  </body>
+</html>
