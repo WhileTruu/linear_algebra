@@ -473,7 +473,157 @@
       </div>
     <h3>21. Teoreem maatriksi astakust (tõestusega). Järeldusi sellest.</h3>
       <div>
-
+        <b>Teoreem</b>
+        <div>
+          Kui maatriksi `A` astak on `k`, siis maatriksil `A` leidub `k` lineaarselt
+          sõltumatut reavektorit, mille lineaarse kombinatsioonina avalduvad kõik maatriksi `A`
+          reavektorid.
+        </div><br>
+        <b>Tõestus</b>
+        <div>
+          Olgu `(m xx n)`-maatriksi `A = || a_(ij) ||` astak `k`. Siis maatriksil `A` leidub
+           `k`-ndat järku nullist erinev miinor
+        </div><br>
+        <div class="__formula">
+          `M = M_(i_1, ..., i_k)^(j_1, ..., j_k)
+             = |[a_(i_1j_1), a_(i_1j_2), ..., a_(i_1j_k)],
+                [a_(i_2j_1), a_(i_2j_2), ..., a_(i_2j_k)],
+                [vdots, vdots, ddots, vdots],
+                [a_(i_kj_1), a_(i_kj_2), ..., a_(i_kj_k)]| != 0`
+        </div>
+        <div>
+          ja tema kõik kõrgemat järku miinorid võrduvad nulliga. Tähistagu `alpha_1
+          ,...,alpha_m` maatriksi `A` reavektoreid:
+        </div>
+        <div class="__formula">
+          `alpha_1 = (alpha_(11); alpha_(12); ... ; alpha_(1n))`<br><br>
+          `......`<br><br>
+          `alpha_m = (alpha_(m1); alpha_(m2); ... ; alpha_(mn))`
+        </div>
+        <div>
+          Teoreemi tõestamiseks näitame, et reavektorid `alpha_(i_1), ..., alpha_(i_k)`
+           on lineaarselt sõltumatud ja kõik reavektorid avalduvad lineaarse kombinatsioonina
+           vektoritest `alpha_(i_1), ..., alpha_(i_k)`.
+        </div>
+        <div>
+          &emsp;Üldsust kitsendamata võib eeldada, et
+        </div>
+        <div class="__formula">
+          `i_1 = 1, i_2 = 2, ... , i_k = k`,
+        </div>
+        <div class="__formula">
+          `j_1 = 1, j_2 = 2, ... , j_k = k`,
+        </div>
+        <div>
+          st
+        </div>
+        <div class="__formula">
+          `M = M_(1, 2, ..., k)^(1, 2, ..., k)
+             = |[a_(11), a_(12), ..., a_(1k)],
+                [a_(21), a_(22), ..., a_(2k)],
+                [vdots, vdots, ddots, vdots],
+                [a_(k1), a_(k2), ..., a_(kk)]| != 0`
+        </div>
+        <div>
+          (vastasel juhul tuleb järgnevas tõestuses esinevad maatriksi `A` elementide reaindeksid
+          `1, 2, ..., k` kõikjal asendada indeksitega `i_1, i_2, ... , i_k` ja veeruindeksid
+           `1, 2, ..., k` asendada indeksitega `j_1, j_2, ..., j_k`; see aga teeb
+           tõestuse halvemini jälgitavaks.)<br>
+           &emsp;Veendume, et maatriksi `A` reavektorid `alpha_1, ... , alpha_k` on
+           lineaarselt sõltumatud. Vastuväiteliselt eeldame, et nad on lineaarselt sõltuvad, siis
+           üks neist, näiteks `alpha_1`, avaldub lineaarse kombinatsioonina ülejäänutest:
+        </div>
+        <div class="__formula">
+          `alpha_1 = c_2 alpha_2 + ... + c_k alpha_k`;&emsp;`c_2, ... , c_k in RR`
+        </div>
+        <div>
+          Siis
+        </div>
+        <div class="__formula">
+          `M =
+               |[a_(11), a_(12), ..., a_(1k)],
+                [a_(21), a_(22), ..., a_(2k)],
+                [vdots, vdots, ddots, vdots],
+                [a_(k1), a_(k2), ..., a_(kk)]|
+                =
+                 {:[-c_2 * 2. text(rida) - ... - c_k * k. text(rida)],
+                 [],
+                 [],
+                 []:}
+                =
+                |[0, 0, ..., 0],
+                 [a_(21), a_(22), ..., a_(2k)],
+                 [vdots, vdots, ddots, vdots],
+                 [a_(k1), a_(k2), ..., a_(kk)]| = 0`,
+        </div>
+        <div>
+          mis on vastuolus eeldusega, et `M != 0`. Saadud vastuolu näitab, et vektorid `alpha_1
+          , ... , alpha_k` ei saa olla lineaarselt sõltuvad, st nad on lineaarselt sõltumatud.<br>
+          &emsp;Näitame, et kõik reavektorid `alpha_1, ... , alpha_m` avalduvad lineaarse kombinatsioonina
+          reavektoritest `alpha_1, ... , alpha_k`. Esimesed `k` reavektorit ilmselt avalduvad öeldud viisil:
+        </div>
+        <div class="__formula">
+          `alpha_1 = 1 alpha_1 + 0 alpha_2 + ... + 0 alpha_k`
+        </div>
+        <div class="__formula">
+          `alpha_2 = 0 alpha_1 + 1 alpha_2 + ... + 0 alpha_k`
+        </div>
+        <div class="__formula">
+          `......`
+        </div>
+        <div class="__formula">
+          `alpha_k = 0 alpha_1 + 0 alpha_2 + ... + 1 alpha_k`
+        </div>
+        <div>
+          Valime nüüd reavektori `alpha_l`, `l > k`, ja näitame, et ka see avaldub lineaarse
+          kombinatsioonina vektoritest `alpha_1, ... , alpha_k`. Selleks valime mis tahes
+          veeruindeksi `s`, `1 <= s <= n` ja moodustame `(k + 1)`-ndat järku determinandi
+        </div>
+        <div class="__formula">
+          `D
+             = |[a_(11), ..., a_(1k), a_(1s)],
+                [vdots, ddots, vdots, vdots],
+                [a_(k1), ..., a_(kk), a_(ks)],
+                [a_(k1), ..., a_(lk), a_(kk)]|`.
+        </div>
+        <div>
+          Kui `s > k`, siis `D` on maatriksi `A (k + 1)`-ndat järku miinor ja seetõttu
+          `D=0` (vt astaku definitsiooni!). Kui aga `s <= k`, siis determinandi `D`
+          viimane veerg langeb kokku tema `s`-nda veeruga ja järelduse 5.3 põhjal samuti `D=0`
+          . Järelikult `D=0` iga võimaliku `s` väärtuse korral. Arendades determinanti `D` tema
+          viimase veeru järgi saadakse
+        </div>
+        <div class="__formula">
+          `D = a_(1s) d_(1) + a_(2s) + ... + a_(ks) d_k + a_(ls) M`
+        </div>
+        <div>
+          kus `d_1, ... , d_k` on mingid arvud, mis on ühed ja samad iga `s` väärtuse
+          korral. Kuna `M != 0`, siis võrduses (7.6) on võimalik avaldada arv `a_(ls)`:
+        </div>
+        <div class="__formula">
+          `a_(ls) = (-(d_1) / M) a_(1s) + (-(d_2) / M) a_(2s) + ... + (-(d_k) / M) a_(ks)`
+        </div>
+        <div>
+          Tähistame `t_i = -d_i / M`. Siis
+        </div>
+        <div class="__formula">
+          `a_(ls) = t_1 a_(1s) + t_2 a_(2s) + ... + t_k a_(ks)`,
+        </div><br>
+        <div>
+          kus arvud `t_1, ..., t_k` ei sõltu indeksi `s` valikust, `1 <= s <= n`. Andes
+          võrduses (7.7) indeksile `s` järjest väärtused `1, 2, ..., n`, saadetakse
+          maatriksi `A` reavektori `alpha_l` kõik komponendid `a_(l1), ... , a_(ln)` ja
+        </div>
+        <div class="__formula">
+          `alpha_l = (a_(l1); a_(l2); ... ; a_(ln)) = (t_1 a_(11) + t_2 a_(21) + ... + t_k a_(k1);`
+          `t_1 a_(12) + t_2 a_(22) + ... + t_k a_(k2); ... ; t_1 a_(1n) + t_2 a_(2n) + ... + t_k a_(kn)) =`
+          `t_1 (a_(11); a_(12); ... ; a_(1n)) + t_2 (a_(21); a_(22); ... ; a_(2n)) +`
+          `+ ... + t_k (a_(k1); a_(k2); ... ; a_(kn)) = t_1 alpha_1 + t_2 alpha_2 + ... t_k alpha_k`
+        </div>
+        <div>
+          &emsp;Ongi näidatud, et ka reavektor `alpha_l , l > k`, avaldub reavektorite
+          `alpha_1, ... , alpha_k` lineaarse kombinatsioonina. Sellega on teoreem tõestatud. 
+        </div>
       </div>
     <h3>22. Pöördmaatriksi definitsioon, ühesus, olemasolu ja leidmine (tõestustega).</h3>
       <div>
