@@ -445,7 +445,81 @@
       </div>
     <h3>15. Determinantide omadused (tõestusteta).</h3>
       <div>
+          <b>Omadus 1</b><br>
+        Maatriksite `A` ja `A^T` determinantide väärtused langevad kokku, st determinandi `D` väärtus ei muutu, kui tema read paigutada vastavateks veergudeks ja vastupidi:
+        <div class="__formula"> 
+            `A =    |[a_(11), a_(12), ..., a_(1n)],
+                  [a_(21), a_(22), ..., a_(2n)],
+                  [vdots, vdots, ddots, vdots],
+                  [a_(n1), a_(n2), ..., a_(n n)]|`
 
+                  ` = |[a_(11), a_(21), ..., a_(n1)],
+                  [a_(12), a_(22), ..., a_(n2)],
+                  [vdots, vdots, ddots, vdots],
+                  [a_(1n), a_(2n), ..., a_(n n)]|`
+        </div>
+          <b>Omadus 2</b><br>
+        Kui determinandil D = det A vahetada omavahel kaks rida (või veergu), siis saadud determinandi väärtus on -D<br>
+          <b>Omadus 3</b><br>
+        Kui determinandis kaks rida langevad omavahel kokku, siis selle determinandi väärtus võrdub nulliga<br>
+          <b>Omadus 4</b><br>
+        Determinandi mis tahes rea arvudest võib ühise teguri tuua tegurina determinandi märgi ette.<br>
+          <b>Omadus 5</b><br>
+          Kui determinandi `D` mingi rea, näiteks K-nda rea arvud `a_(k1) ,a_(k2) ,...,a_(kn)` avalduvad kahe liidetava summana `a_(k1) = b1 + c1, a_(k2) = b2+c2, ... , a_(kn) = b_n+c_n`, siis determinand `D` avaldub kahe determinandi summana<br>
+            <div class="__formula"> 
+              `D = |[a_(11), ..., a_(1n)],
+                    [vdots, ddots, vdots],
+                    [a_(k1), ..., a_(kn)],
+                    [vdots, ddots, vdots],
+                    [a_(n1),..., a_(n n)]|`
+
+                    ` = |[a_(11), ..., a_(1n)],
+                    [vdots, ddots, vdots],
+                    [b1 + c1, ..., b_n + c_n],
+                    [vdots, ddots, vdots],
+                    [a_(n1),..., a_(n n)]|`
+
+                    ` = |[a_(11), ..., a_(1n)],
+                    [vdots, ddots, vdots],
+                    [b1, ..., b_n],
+                    [vdots, ddots, vdots],
+                    [a_(n1),..., a_(n n)]|`
+
+                    ` = |[a_(11), ..., a_(1n)],
+                    [vdots, ddots, vdots],
+                    [c1, ...,c_n],
+                    [vdots, ddots, vdots],
+                    [a_(n1),..., a_(n n)]|`
+          </div>
+          <i>(kõik avaldises esinevad determinandid erinevad ainult k-nda rea poolest). Analoogiline väide kehtib ka determinandi D veergude jaoks.</i> <br>
+          <b>Omadus 6</b><br>
+          Determinandi väärtus ei muutu, kui tema mingi rea arvudele liita mingi arvu kordsed teise rea arvud. Analoogiline väide kehtib ka determinandi veergude jaoks. <br>
+          <b>Omadus 7</b><br>
+          Determinandi D mis tahes reanumbri i korral kehtib <br>
+          <div class="__formula">
+            `D = sum_(j=1)^n a_(ij) A_(ij) = a_(i1) A_(i1) + a_(i2) A_(i2) + ... + a_(i n) A_(i n)` <br>
+            <i>(arendis i-nda rea järgi) ja mis tahes veerunumbri j korral kehtib</i> <br>
+            `D = sum_(i=1)^n a_(ij) A_(ij) = a_(1j) A_(1j) + a_(2j) A_(2j) + ... + a_(nj) A_(nj)` <br>
+            <i>(arendis j-nda veeru järgi), kus</i> <br>
+            `A_(ij) = (-1)^(i+j) M_(ij)` <br>
+            ja `M_(ij)` on determinant, mis tekib determinandist `D` i-nda rea ja j-nda veeru kõrvaldamisel.
+          </div>
+          <b>Omadus 8</b><br>
+          Kui determinandi mingis reas või veerus on kõik arvud nullid, siis determinandi väärtus võrdub nulliga. <br>
+          <b>Omadus 9</b><br>
+          Ruutmaatriksi `A=||a_(ij)||in R^(nxn)` determinandi `|A| = D` mis tahes reanumbrite i ja k korral kehtib võrdus<br>
+          <div class="__formula">
+            `a_(i1)A_(k1) + a_(i2)A_(k2) + ... + a_(i n)A_(kn) = sum_(j=1)^n a_(ij) A_(kj) = {(D, kui  i=k,),(0, kui  i!=k,):}` 
+          </div>
+          kus ´A_(kj)´ on determinandi D elemendi `a_(kj)` alamdeterminant. Analoogiliselt mis tahes veerunumbrite j ja k korral <br>
+          <div class="__formula">
+            `a_(1j)A_(1k) + a_(2j)A_(2k) + ... + a_(nj)A_(nk) = sum_(i=1)^n a_(ij) A_(ik) = {(D, kui  j=k,),(0, kui  j!=k,):}` 
+          </div>
+          <b>Omadus 10</b><br>
+          Kui A ja B on ühte ja sama järku ruutmaatriksid, siis nende maatriksite korrutise AB determinant võrdub maatriksite A ja B determinantide korrutisega:
+          <div class="__formula">
+          `det(AB) = det(a) * det(B)`
+          </div>
       </div>
     <h3>16. Vektorruumi definitsioon ja näiteid.</h3>
       <div>
