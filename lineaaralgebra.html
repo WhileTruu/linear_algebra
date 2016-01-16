@@ -501,7 +501,7 @@
           `+ a_(12)a_(23)a_(31) - a_(13)a_(21)a_(32) - a_(13)a_(22)a_(31)`
         </div>
       </div>
-      
+
     <h3>14. Crameri valemid ja nende tõestus juhul n = 2.</h3>
     <div>
          Lineaarse võrrandisüsteemi
@@ -510,13 +510,13 @@
                 (a_(21)x_1 + a_(22)x_2 +...+a_(2n)x_n = b_2),
                 (...),
                 (a_(m1)x_1 + a_(m2)x_2 +...+a_(mn)x_n = b_m):}`
-         </div> 
+         </div>
           lahendid saab leida Crameri valemitega, kui <br>
           1) tundmatute arv võrdub võrrandite arvugu(ehk peamaatriks A peab olema ruutmaatriks) <br>
           2) süsteemi peamaatriksi A determinant `det(a) != 0`. <br>
           <br>
           Võrrandisüsteemi lahend avaldub valemiga
-          
+
           <div class="__formula">
                 `x_i = |A_i|/|A|,i=1,2..n`,
           </div>
@@ -526,15 +526,15 @@
           <div class="__formula">
                 `{(a_(11)x_1 + a_(12)x_2= b_1),
                 (a_(21)x_1 + a_(22)x_2= b_2):}`
-         </div> 
+         </div>
           tundmatu `x_1` leidmiseks lahutatakse arvu `a_(22)` kordsest esimesest võrrandist arvu `a_(12)` kordne teine võrrand ja saadakse
           <div class="__formula">
                 `(a_(11)a_(22) -a_(12)a_(21) )x_1 = b_(1)a_(22) - b_(2)a_(12)`
-         </div> 
+         </div>
            ning juhul `a_(11)a_(22) -a_(12)a_(21) != 0`
           <div class="__formula">
                 `x_1 = (b_(1)a_(22) - b_(2)a_(12))/(a_(11)a_(22) -a_(12)a_(21))`
-         </div> 
+         </div>
           Tundmatu `x_2` leidmiseks tehakse analoogselt ja saadakse
           <div class="__formula">
                 `x_2 = (b_(2)a_(11) - b_(1)a_(21))/(a_(11)a_(22) -a_(12)a_(21))`
@@ -558,7 +558,7 @@
           Seega võrrandisüsteemi lahend on
            <div class="__formula">
                 `x_1 = D_1/D`
-          </div>         
+          </div>
             <div class="__formula">
                 `x_2 = D_2/D`
           </div>
@@ -696,6 +696,7 @@
         </div>
         <div class="__formula">
         mille esiletõstetud komponentides saab moodustada m-järku ühikmaatriksi<br>
+      </div>
         <div class="__formula">
          `E_m = [[1 , 0 , ... , 0],
                 [0 , 1 , ... , 0],
@@ -721,18 +722,57 @@
          <div class="__formula">
          `= (0;0;...;0)`
        </div><br>
-       </div>
-       </div>
        kust järelduvadki võrdused `c_1 = c_2 = ... = c_m = 0`. Järelikult on vektorid ´alpha_1, ..., alpha_m´ lineaarselt sõltumatud.
+     </div>
     <h3>18. Vektorruumi baasi definitsioon. Kanoonilised baasid tuntud vektorruumides.
     Baaside omadusi.</h3>
-      <div>
-
+    <div>
+      Mittetühja vektorite hulka B, `B sub V`, nimetatakse vektorruumi V baasiks, kui K0 vektorite hulk B on lineaarselt sõltumatute vektorite hulk,
+      K2 iga vektor `xi` vektorruumist V avaldub lineaarse kombinatsioonina hulka B kuuluvatest vekotritest, st leiduvad sellised vektorid `epsilon_1, ..., epsilon_n in B`
+      ja arvud `x_1, ... , x_n in R`, et
+      <div class="__formula">
+        `xi = x_1 epsilon_1 + x_2 epsilon_2 + ... + x_n epsilon_n`
       </div>
+      Tavaliselt valitakse vektorruumi paljude baaside hulgast välja üks baas B, mis enamasti tekib loomulikul viisil.
+      Sellist kokkuleppeliselt välja valitud baasi nimetatakse vaadeldava vektorruumi loomulikuks ehk kanooniliseks baasiks.
+      <strong>Omadused:</strong><br>
+      1) Vektorruumi V erinevad baasid sisaldavad ühe ja sama palju vektoreid. Vektorite arvu vektoruumi V mis tahes baasis nimetatakse vektorruumi V mõõtmeteks ehk dimensiooniks ja seda tähistatakse dimV
+      <br>2) n-mõõtmelises vektorruumis iga n lineaarselt sõltumatut vektorit moodustavad selle ruumi baasi.
+      <br>3) Vektorruumis V iga lineaarselt sõltumatute vektorite hulk on täiendatav selle vektorruumi baasiks.
+    </div>
     <h3>19. Vektori koordinaadid. Tehted koordinaatkujul antud vektoritega. nmõõtmelise
     vektorruumi isomorfsus aritmeetilise ruumiga.</h3>
       <div>
-
+        Vektoriga `xi` üheselt määratud arve `x_1, ... , x_n` avaldisest `xi = x_1 epsilon_1 + x_2 epsilon_2 + ... + x_n epsilon_n` nimetatakse vektori `xi` koordinaatideks antud baasil B.
+        Seejuurses kasutatakse tähistust
+        <div class="__formula">
+          `xi = (x_1; x_2; ... ; x_n)_B`
+        </div><br>
+        Kui kontekstist on selge, millist baasi B vaadeldakse, siis jäetakse B ära. Oluline on märkida, et erinevatel baasidel võivad ühe ja sama vektori koordinaadid olla erinevad.
+        <div class="__formula">
+          `xi = (x_1;x_2;...;x_n)_B, eta=(y_1;y_2;...;y_n)_B`
+        </div>
+        <div class="__formula">
+          `xi + eta = (x_1; x_2;...;x_n)_B + (y_1;y_2;...;y_n)_B =`
+        </div>
+        <div class="__formula">
+          `= (x_1 epsilon_1 + x_2 epsilon + ... + x_n) + (y_1 epsilon_1 + y_2 epsilon_2 + ... + y_n epsilon_n) = `
+        </div>
+        <div class="__formula">
+          `= (x_1 + y_1)epsilon_1 + (x_2 + y_2)epsilon_2 + ... + (x_n + y_n)epsilon_n =`
+        </div>
+        <div class="__formula">
+          `= (x_1 + y_1; x_2 + y_2; ... ; x_n + y_n)_B`
+        </div>
+        <div class="__formula">
+          `c xi = c(x_1 epsilon_1 + x_2 epsilon_2 + ... + x_n epsilon_n) =`
+        </div>
+        <div class="__formula">
+          `= (cx_1)epsilon_1 + (cx_2)epsilon_2 + ... + (cx_n)epsilon_n = (cx_1; cx_2; ... cx_n)_B`
+        </div><br>
+        Saadud võrdsused näitavad, et formaalselt teostatakse lineaarseid tehteid koordinaatkujul antud vektoritega samuti nagu aritmeetilises ruumis ´R^n´, lisandunud on vaid indeks B.
+        Seega kkõik n-mõõtmelised vektorruumid käituvad lineaarsete tehete suhtes analoogiliselt n-mõõtmelise aritmeetilise ruumiga `R^n`, nad on piltlikult väljendades nagu ühe ja sama objekti erinevad eksemplarid.
+        Kui mingid objektid on matemaatiliselt samaväärsed, siis öeldakse, et nad on omavahel isomorfsed. Järelikult kõik n-mõõtmelised vektorruumid on vektorruumidena omavahel isomorfsed.
       </div>
     <h3>20. Miinori definitsioon. Maatriksi astaku definitsioon. Maatriksi ridade ja
     veergude elementaarteisendused. Astaku leidmine.</h3>
@@ -1060,7 +1100,6 @@
       <div>
         Dibbs - uku
       </div>
-
     <h3>28. Nurk vektorite vahel ja selle olemasolu. Ortogonaalsus ehk ristseis.</h3>
       <div>
         <b>Nurk vektorite vahel ja selle olemasolu</b> <br>
@@ -1083,7 +1122,7 @@
       <div>
 
       </div>
-      
+
     <h3>30. Sirge ja tema võrrandid. Sirge võrrandid kahemõõtmelises eukleidilises
     ruumis.</h3>
       <div>
@@ -1104,13 +1143,13 @@
          </div>
           <br>
           <b>Sirge võrrandid kahemõõtmelises eukleidelises ruumis</b> <br>
-          Kõik eelnevalt öeldu kehtib ka sirge kohta kahemõõtmelises eukleidilises ruumis, kuigi 
+          Kõik eelnevalt öeldu kehtib ka sirge kohta kahemõõtmelises eukleidilises ruumis, kuigi
           koordinaate `x_1` ja `x_2` tähistatakse teisiti:
           <div class="__formula">
                 `x_1 = x text( ja ) x_2 = y`
          </div>
       </div>
-      
+
     <h3>31. Hüpertasand, selle normaalvektor, omadusi. Hüpertasandi erijuhud.</h3>
       <div>
        <b>Hüpertasand</b> <br>
@@ -1288,122 +1327,7 @@
       </div>
     <h3>35. Vektorkorrutise definitsioon. Vektorkorrutise omadused (tõestustega).</h3>
       <div>
-        <b>Definitsioon</b>
-        <div>
-          Vektorite `alpha` ja `beta` <b>vektorkorrutiseks</b> nimetatakse vektorit
-          `alpha xx beta`, mis on määratud võrdusega
-        </div>
-        <div class="__formula">
-          `alpha xx beta = (|[a_2, a_3],
-                             [b_2, b_3]|;
-
-                           -|[a_1, a_3],
-                             [b_1, b_3]|;
-
-                            |[a_1, a_2],
-                             [b_1, b_2]|)`
-        </div>
-        <div>
-          Tähistades koordinaattelgede suunalisi ühikvektoreid vastavalt `vec i`,
-          `vec j` ja `vec k`, on avaldis esitatav kujul
-        </div>
-        <div class="__formula">
-          `alpha xx beta = |[a_2, a_3],
-                           [b_2, b_3]| vec i;
-
-                          -|[a_1, a_3],
-                            [b_1, b_3]| vec j;
-
-                           |[a_1, a_2],
-                            [b_1, b_2]| vec k =`
-        </div>
-        <div class="__formula">
-          `              = |[vec i, vec j, vec k],
-                            [a_1, a_2, a_3],
-                            [b_1, b_2, b_3]|`
-        </div>
-        <div style="text-align:right;">
-          Seda võrdust on sobiv kasutada vektorkorrutise arvutamiseks.<br>
-        </div>
-        <div>
-          &emsp;Vektor- ja skalaarkorrutise abil on esitatav kolmandat järku
-          determinandi väärtuse leidmise eeskiri.<br>
-          Determinandi
-        </div>
-        <div class="__formula">
-          `D = |[a_1, a_2, a_3],
-                [b_1, b_2, b_3],
-                [c_1, c_2, c_3]|`,
-        </div>
-        <div>
-          mille reavektorid on
-        </div>
-        <div class="__formula">
-          `alpha = (a_1, a_2, a_3), beta = (b_1, b_2, b_3), gamma = (c_1, c_2, c_3)`
-        </div>
-        <div>
-          väärtuse leidmiseks arendame selle determinandi kolmanda rea järgi ning
-          kasutame seejärel vektor- ja skalaarkorrutise definitsiooni:
-        </div>
-        <div class="__formula">
-          `           D = c_1 |[a_2, a_3],
-                               [b_2, b_3]|;
-
-                        - c_2 |[a_1, a_3],
-                               [b_1, b_3]|;
-
-                          c_3 |[a_1, a_2],
-                               [b_1, b_2]| =`
-        </div>
-        <div class="__formula">
-          `= gamma * (alpha xx beta) = (alpha xx beta) * gamma`
-        </div>
-        <div>
-          ehk
-        </div>
-        <div class="__formula">
-          `D = (alpha xx beta) * gamma`
-        </div><br>
-        <b>Teoreem</b>
-        <div>
-          Vektorkorrutis `alpha xx beta` on risti mõlema teguriga `alpha` ja `beta`.
-          Vektorkorrutise `alpha xx beta` pikkus `|| alpha xx beta ||` on arvuliselt
-          võrdne vektoritele `alpha` ja `beta` ehitatud rööpküliku pindalaga.
-        </div><br>
-        <b>Tõestus</b>
-        <div>
-          Vaatleme vektorite `alpha = (a_1, a_2, a_3)` ja `beta = (b_1, b_2, b_3)`
-          vektorkorrutist `alpha xx beta`.
-        </div><br>
-        <div>
-          Võrduse `D = (alpha xx beta) * gamma` kohaselt
-        </div>
-        <div class="__formula">
-          `(alpha xx beta) * gamma = |[a_1, a_2, a_3],
-                                      [b_1, b_2, b_3],
-                                      [c_1, c_2, c_3]|`.
-        </div>
-        <div>
-          Lahutades viimase determinandi kolmandast reast tema esimese rea
-          ja arendades saadud determinandi kolmanda rea järgi, näeme, et
-          vaadeldava determinandi väärtus võrdub nulliga, st `(alpha xx beta) * alpha = 0`.
-          See aga tähendab, et vektorid `alpha xx beta` ja `alpha` on risti.
-          Analoogiliselt põhjendatakse vektorite `alpha xx beta` ja `beta` ristseis.
-        </div><br>
-        <div>
-          &emsp;Teoreemi teise väite tõestamiseks kasutame kolmandat järku determinandi
-          geomeetrilist tähendust.
-        </div>
-        <div class="__formula">
-          `V = |D| = |alpha xx beta| * gamma| = || alpha xx beta || * || gamma || * | cos phi |`,
-        </div>
-        <div>
-          kus `V` on vektoritele `alpha`, `beta`, `gamma` ehitatud rööptahuka ruumala
-          ning `phi` on vektorite `alpha xx beta` ja `gamma` vaheline nurk. Mainitud
-          rööptahuka kõrgus `h` on aga `||gamma|| * |cos phi|`. Seega `V = ||alpha xx beta|| * h`.
-          Siit järeldub, et arv `|| alpha xx beta ||` võrdub vaadeldava rööptahuka põhja
-          pindalaga. See aga on samaväärne teoreemi teise väitega.
-        </div>
+        DUBS -M
       </div>
     <h3>36. Kujutus. Lineaarne kujutus. Näiteid. Lineaarne kujutus koordinaatkujul.
     Lineaarse kujutuse maatriks.</h3>
