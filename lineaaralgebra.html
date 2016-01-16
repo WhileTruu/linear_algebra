@@ -777,7 +777,13 @@
     <h3>20. Miinori definitsioon. Maatriksi astaku definitsioon. Maatriksi ridade ja
     veergude elementaarteisendused. Astaku leidmine.</h3>
       <div>
-
+        Miinoriks nimetatakse mingist maatriksist i-nda rea ja k-nda veeru ärajätmisel saadud maatriksi determinanti. Maatriksi astakuks nimetatakse selle maatriksi nuullist erinevate miinorite kõrgeimat järku. Tähistatakse r(A) või rank(A).
+        Maatriksi astak näitab ka mitu lineaarselt sõltumatut reavektorit maatriksis on. Seega kui maatriksi astak
+        on võrdne ka reavektorite arvuga, mis jäävad alles pärast korduvaid elementaarteisendusi kuni ühtegi rida
+        pole võimalik enam ära kaotada. <br>
+        Elementaarteisendused on: <br>
+        1) süsteemi mis tahes võrrandit korrutatakse mis tahes nullist erineva arvuga <br>
+        2) süsteemi mis tahes võrrandile liidetakse juurde mis tahes arvu kordne mingi teine võrrand samast süsteemist
       </div>
     <h3>21. Teoreem maatriksi astakust (tõestusega). Järeldusi sellest.</h3>
       <div>
@@ -969,11 +975,11 @@
     ruumis defineeritavad mõisted.</h3>
       <div>
           <b>Eukleidiline ruum</b> <br>
-          Eukleidiline ruum on nagu afiinne ruum, kuid temas on defineeritud lisaks 
+          Eukleidiline ruum on nagu afiinne ruum, kuid temas on defineeritud lisaks
           lineaarsetele tehetele(liitmine ja korrutamine) veel ka skalaarkorrutis. <br>
           Skalaarkorrutisega saab leida vektorite pikkusi ja vektorite vahelisi nurki.  <br> <br>
           <b>Ruumis defineeritavad mõisted</b> <br>
-          Vektori <b>pikkuseks</b> nimetatakse arvu `sqrt(a*a)`. Vektori `alpha` 
+          Vektori <b>pikkuseks</b> nimetatakse arvu `sqrt(a*a)`. Vektori `alpha`
           pikkust tähistatakse `||alpha||`. Seega
           <div class="__formula">`||alpha|| = sqrt(a*a) ` ehk `alpha*alpha=||alpha||^2`</div>
           Vektorite `alpha` ja `beta` <b>vaheline nurk</b>
@@ -982,7 +988,7 @@
          </div>
           Vektorid `alpha` ja `beta` on risti ehk <b>ortogonaalsed</b>, kui `vec alpha* vec beta = 0`
       </div>
-      
+
     <h3>26. Vektori pikkus ja selle omadused (tõestustega).</h3>
       <div>
         <b>Definitsioon</b>
@@ -1097,9 +1103,39 @@
         </ol>
       </div>
     <h3>27. Punktide vaheline kaugus. Kauguse omadused.</h3>
-      <div>
-        Dibbs - uku
+    <div>
+      Punktide `A` ja `B` vaheliseks kauguseks nimetatakse vektori <span class="__formula">`||vec(AB)||`</span> pikkust ja teda tähistatakse `rho(A, B)`.<br>
+      <b>Kauguse omadused</b>: kui `A` `B` ja `C` on punktid eukleidilisest ruumist, siis:<br>
+      <ol>
+        <li>`rho(A, B) >= 0` </li>
+        <li>`rho(A, B) = 0` parajasti siis kui `A = B` </li>
+        <li>`rho(A, B) = rho(B, A)` (sümmeetria)</li>
+        <li>`rho(A, B) <= rho(A, C) + rho(C, B)` (kolmnurga omadus)</li>
+      </ol>
+      <b>Tõestused</b><br>
+      Omadused 1 ja 2 järelduvad vahetult skalaarkorrutise omadustest ja järgnevast võrdusest:
+      <div class="__formula">
+        `rho(A, B) = ||vec(AB)|| = sqrt(vec(AB) * vec(AB))`
       </div>
+      Omadus 3-me põhjendus:
+      <div class="__formula">
+        `rho(B, A) = sqrt(vec(BA) * vec(BA)) = sqrt((-vec(AB)) * (-vec(AB))) =`
+      </div>
+      <div class="__formula">
+        `sqrt((-1) * (-1) * (vec(AB) * vec(AB))) = sqrt(vec(AB) * vec(AB)) = rho(A, B)`
+      </div>
+      Omadus 4-ja põhjendus:
+      <div class="__formula">
+        `rho(A, B) = ||vec(AB)|| = ||vec(AC) + vec(CB)|| <= ||vec(AC)|| + ||vec(CB)|| =`
+      </div>
+      <div class="__formula">
+        `= rho(A, C) + rho(C, B)`
+      </div>
+      Kui on antud punktid `A(a_1; a_2; ...; a_n)` ja `B(b_1; b_2; ...; b_n)` oma koordinaatidega mingis ortonormaalses teljestikus, siis `vec(AB) = (b_1 - a_1; b_2 - a_2; ...; b_n - a_n)` ja
+      <div class="__formula">
+        `rho(A, B) = sqrt(vec(AB) * vec(AB)) = sqrt((b_1 - a_1)^2 + (b_2 - a_2)^2 ... + (b_n - a_n)^2)`
+      </div>
+    </div>
     <h3>28. Nurk vektorite vahel ja selle olemasolu. Ortogonaalsus ehk ristseis.</h3>
       <div>
         <b>Nurk vektorite vahel ja selle olemasolu</b> <br>
