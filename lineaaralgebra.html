@@ -417,8 +417,90 @@
           <div class="__formula">`x_1 = 1, x_2 = -1, x_3 = 1/2` ehk `xi = (1; -1; 1/2)`,</div>
           <div style="padding-left: 5em;">kõigi lahendite hulk on</div>
           <div class="__formula">`L = {((6 + c_1 - 4 c_2)/2; c_1; c_2) | c_1, c_2 in RR}`,</div>
+        </div><br>
+        <b>Lineaarse võrrandsüsteemi maatrikskuju</b>
+        <div>
+          Lineaarse võrrandsüsteemi kordajatest moodustatud maatriksit
         </div>
-        <b style="color: red;">TO BE CONTINUDED</b>
+        <div class="__formula">
+          `A = || a_(ij) || = [
+          [a_(11), a_(12), ..., a_(1n)],
+          [a_(21), a_(22), ..., a_(2n)],
+          [vdots, vdots, ddots, vdots],
+          [a_(m1), a_(m2), ..., a_(mn)]
+          ]`
+        </div>
+        <div>
+          nimetatakse süsteemi maatriksiks. Maatriksi `A` täiendamisel vabaliikmete
+          veeruga tekkinud maatriksit
+        </div>
+        <div class="__formula">
+          `B = [
+          [a_(11), a_(12), ..., a_(1n), b_1],
+          [a_(21), a_(22), ..., a_(2n), b_2],
+          [vdots, vdots, ddots, vdots, vdots],
+          [a_(m1), a_(m2), ..., a_(mn), b_m]
+          ]`
+        </div>
+        <div>
+          nimetatakse süsteemi laiendatud maatriksiks.
+        </div><br>
+        <div>
+          Seostame süsteemiga veel maatriksid
+        </div>
+        <div class="__formula">
+          `x = [
+          [x_1],
+          [x_2],
+          [vdots],
+          [x_n]
+          ]`,
+          `b = [
+          [b_1],
+          [b_2],
+          [vdots],
+          [b_n]
+          ]`
+        </div>
+        <div>
+          Siis
+        </div>
+        <div class="__formula">
+          `A x = [
+          [a_(11), a_(12), ..., a_(1n)],
+          [a_(21), a_(22), ..., a_(2n)],
+          [vdots, vdots, ddots, vdots],
+          [a_(m1), a_(m2), ..., a_(mn)]
+          ] * `
+          `[
+          [x_1],
+          [x_2],
+          [vdots],
+          [x_n]
+          ] = `
+          ` [
+          [a_(11) x_1, a_(12) x_2, ..., a_(1n) x_n],
+          [a_(21) x_1, a_(22) x_2, ..., a_(2n) x_n],
+          [vdots, vdots, ddots, vdots],
+          [a_(m1) x_1, a_(m2) x_2, ..., a_(mn) x_n]
+          ] =`
+          ` [
+          [b_1],
+          [b_2],
+          [vdots],
+          [b_n]
+          ] = `
+          `b`
+        </div>
+        <div>
+          Seega lineaarne võrrandsüsteem on <b>maatrikskujul</b> antav võrdusega
+        </div>
+        <div class="__formula">
+          `Ax = b`,
+        </div>
+        <div style="text-align: right;">
+          kus maatriksid `A`, `x` ja `b` on kirjeldatud ülal.
+        </div>
       </div>
     <h3>10. Gaussi meetod.</h3>
       <div>
