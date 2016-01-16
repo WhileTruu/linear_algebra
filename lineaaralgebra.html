@@ -1300,7 +1300,92 @@
           rööptahuka kõrgus `h` on aga `||gamma|| * |cos phi|`. Seega `V = ||alpha xx beta|| * h`.
           Siit järeldub, et arv `|| alpha xx beta ||` võrdub vaadeldava rööptahuka põhja
           pindalaga. See aga on samaväärne teoreemi teise väitega.
+        </div><br>
+        <b>Vektorkorrutise omadused</b>
+        <div>
+          Olgu `vec u`, `vec v`, `vec w` vektorid kolmemõõtmelises ruumis. Siis
         </div>
+        <ol>
+          <li>
+            <div class="__formula">
+              `vec u * (vec u xx vec v) = 0`
+            </div>
+            <b>Tõestus</b>
+            <div>
+              Vektorkorrutis on risti mõlema vektoriga. `vec u xx vec v`&emsp;
+              `_|_ vec u`. Kuna ristuvate vektorite skalaarkorrutis on `0`, siis
+              `vec u * (vec u xx vec v) = 0` M.O.T.T.
+            </div>
+          </li><br>
+          <li>
+            <div class="__formula">
+              `vec v * (vec u xx vec v) = 0`
+            </div>
+            <b>Tõestus</b>
+            <div>
+              Vektorkorrutis on risti mõlema vektoriga. `vec u xx vec v`&emsp;
+              `_|_ vec v`. Kuna ristuvate vektorite skalaarkorrutis on `0`, siis
+              `vec v * (vec u xx vec v) = 0` M.O.T.T.
+            </div>
+          </li><br>
+          <li>
+            <div class="__formula">
+              `vec u xx vec v = - vec v xx vec u`
+            </div>
+            <div>
+              (Suund sõltub tegurite järjekorrast.)
+            </div>
+            <b>Tõestus</b>
+            <div class="__formula">
+              `vec u xx vec v = |[vec i, vec j, vec k],
+                                 [u_1, u_2, u_3],
+                                 [v_1, v_2, v_3]| = `
+            </div>
+            <div>
+              Ma ei tea. Hämab ära.
+            </div>
+          </li><br>
+          <li>
+            <div class="__formula">
+              `vec u xx (vec v + vec w) = vec u xx vec v + vec u xx vec w`
+            </div>
+          </li><br>
+          <li>
+            <div class="__formula">
+              `(vec u + vec v) xx vec w = vec u xx vec w + vec v xx vec w`
+            </div>
+          </li><br>
+          <li>
+            <div class="__formula">
+              `c (vec u xx vec v) = (c vec u) xx vec v = vec u xx (c vec v)`
+            </div>
+          </li><br>
+          <li>
+            <div class="__formula">
+              `|| vec u xx vec v ||^2 = || vec u ||^2 || vec v ||^2 - (vec u * vec v)^2` (Lagrange'i samasus)
+            </div>
+          </li><br>
+          <li>
+            <div class="__formula">
+              `vec u xx (vec v xx vec w) = (vec u * vec w) vec v - (vec u * vec v) vec w`
+            </div>
+          </li><br>
+          <li>
+            <div class="__formula">
+              `(vec u xx vec v) xx vec w = (vec u * vec w) vec v - (vec v * vec w) vec u`
+            </div>
+          </li><br>
+          <li>
+            <div class="__formula">
+              `vec u xx Theta = Theta xx vec u = Theta`
+            </div>
+          </li><br>
+          <li>
+            <div class="__formula">
+              `vec u xx vec u = Theta`
+            </div>
+          </li><br>
+        </ol>
       </div>
     <h3>36. Kujutus. Lineaarne kujutus. Näiteid. Lineaarne kujutus koordinaatkujul.
     Lineaarse kujutuse maatriks.</h3>
