@@ -1014,7 +1014,42 @@
     <h3>23. Afiinne ruum. Koordinaatide sissetoomine afiinsesse ruumi (reeper ehk
     teljestik). Omadusi (tõestustega).</h3>
       <div>
-            Dibs joss
+      Afiinseks ruumiks nimetatakse paari A = (V ; P), kus <br>
+      1) V on vektorruum, <br>
+      2) P on mingi hulk, mille elemente nimetatakse punktideks, <br>
+      ja vektorite hulk V ning punktide hulk P on seotud tingimustega <br>
+      `1^0` igale kahele punktile vastab parajasti üks vektor <br>
+      `2^0` iga punkti ja vektori korral leidub parajasti üks punkt nii et `alpha = vec (AB)` <br>
+      `3^0` iga kolme punkti korral kehtib võrdus `vec (AB) + vec (BC) = vec (AC)`
+      <br>
+      Afiinne ruum määrab ära seose vektorruumi vektorite ja punktide vahel. Vektorid 
+         koosnevad omakorda punktidest (teisisõnu koordinaatidest)  <br>   
+         Järeldus 1: Afiinse ruumi iga punkti A korral vektor `vec (AA)` võrdub nullvektoriga `O/` <br>
+         Järeldus 2: kui `vec (AB)= O/`, siis `A=B` <br>
+         Järeldus 3: afiinses ruumis iga kahe punkti A ja B korral `vec (AB) = - vec (BA)` <br>
+          <br>
+      <b>Koordinaadid afiinses ruumis</b> <br>   
+        <b>Definitsioon 1</b> <br>
+        Hulka T = {O;ε 1;...;ε n } = {O;T} , mis koosneb afiinse ruumi (V, P) mingist punktist O ja 
+        vektorruumi V baasivektoritest n ε ;...;ε 1 nimetatakse afiinse ruumi reeperiks ehk teljestikuks.
+        Piltlikult võib punkti O tõlgendada koordinaatteljestiku alguspunktina ja baasivektoreid telgede
+          sihilisi ühikvektoreid. <br>
+           <b>Definitsioon 2</b> <br>
+           Vektorit `vec (OP)` nimetatakse punkti P kohavektoriks vaadeldavas reeperis T = {O;T}. Punkti P
+           koordinaatideks nimetatakse tema kohavektori koordinaate x1, .., xn ja tähistatakse
+           `P(x_1;x_2;...;x_n)` <br>
+           Seega punkti koordinaadid sõltuvad teljestiku valikust. <br>
+         Järeldus <br>
+          Kui afiinses ruumis on antud punktid A ja B, siis vektori `vec (AB)` koordinaatide saamiseks 
+          tuleb lõpp-punkti B koordinaatidest lahutada alguspunkti A koordinaadid:
+          <div class="__formula">`vec (AB)=(y_1-x_1;y_2-x_2;...;y_n-x_n)`</div>
+        <i>Tõestus</i> kuna
+          
+          <div class="__formula">`vec (OA)=(x_1;x_2;...;x_n),vec (OB)=(y_1;y_2;...;y_n), `</div>
+          siis
+          <div class="__formula">`vec (AB) = vec (AO) + vec (OB) = -vec(OA)+vec (OB)= vec (OB)-vec(OA) = `</div>
+            <div class="__formula">`=(y_1;y_2;...;y_n) -(x_1;x_2;...;x_n) =  `</div>
+           <div class="__formula">`=(y_1-x_1;y_2-x_2;...;y_n-x_n)`</div>
       </div>
       
     <h3>24. Skalaarkorrutise definitsioon üldjuhul. Skalaarkorrutise näiteid.</h3>
