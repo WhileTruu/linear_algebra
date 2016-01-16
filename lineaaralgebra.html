@@ -958,7 +958,7 @@
           </li>
         </ol>
       </div>
-      
+
     <h3>22. Pöördmaatriksi definitsioon, ühesus, olemasolu ja leidmine (tõestustega).</h3>
       <div>
         Maatriksi A <b>pöördmaatriksiks</b> nimetatakse sellist maatriksit B, mille korral 
@@ -1010,7 +1010,7 @@
                     [0,0,...,1]|| =E `</div>
           Sellega sai näidatud, et `B=A^(-1)`
       </div>
-      
+
     <h3>23. Afiinne ruum. Koordinaatide sissetoomine afiinsesse ruumi (reeper ehk
     teljestik). Omadusi (tõestustega).</h3>
       <div>
@@ -1627,7 +1627,54 @@
     <h3>36. Kujutus. Lineaarne kujutus. Näiteid. Lineaarne kujutus koordinaatkujul.
     Lineaarse kujutuse maatriks.</h3>
       <div>
-        Dont touch it !!! - Rain
+        Reeglit f, mis hulga X igale elemendile x paneb vastavusse mingi elemendi y hulgast Y, nimetatakse kujutuseks hulgast X hulka Y.
+        Kujutust f hulgast X hulka Y tähistatakse
+        <div class="__formula" >
+          `f: X rarr Y ` või ` X stackrel"f" rarr Y`
+        </div><br>
+        Elementi y, mille kujutus f paneb vastavusse elemendile x, nimetatakse elemendi x kujutiseks ja seda tähistatakse mitmeti:
+        <div class"__formula">
+          `y = f(x) = fx = x^f = xf = ...`
+        </div><br>
+        Meie huviorbiidis on lineaarsed kujutused vektorruumist V vektorruumi W.<br>
+        Kujutust `L: V rarr W` vektorruumist V vektorruumi W nimetatakse lineaarseks, kui ta on<br>
+        aditiivne, st
+        <div class="__formula">
+          `L(xi_1 + xi_2) = L(xi_1) + L(xi_2)`
+        </div><br>
+        iga `xi_1, xi_2 in V` korral;<br>
+        homogeenne, st
+        <div class="__formula">
+          `L(c xi) = c(L(xi))`
+        </div><br>
+        <strong>Näide</strong> Valime vektorruumiks V kõigi lõigul [a;b] diferentseeruvate funktsioonide hulga ja vektorruumiks W kõigi lõigul [a; b]
+        määratud funktsioonide hulga. Kujutuseks `L : V rarr W` olgu aga diferentseerimine, st
+        <div class="__formula">
+          `L(f(x)) = f'(x) = df / dx`
+        </div><br>
+        Diferentseerimise omadusestest tuleneb kujutis L lineaarsus.<br>
+        <strong>Näide</strong> Olgu vektorruumiks V kõigi lõigul [a; b] pidevate funktsioonide f(x)
+        hulk C[a;b] ja vektorruumiks W kõigi reaalarvude hulk R. Kujutuse `L:V rarr W` aga defineerime järgnevalt
+        <div class="__formula">
+          `L(f(x)) = int_a^b f(x)dx`
+        </div>
+        Baasivektorite kujutised `L(epsilon_1), ... , L(epsilon_n)` lineaarse kujutusega L kui ruumi W vektorid on antavad
+        oma koordinaatidega baasil `delta_1, ... , delta_m`:<br>
+        <div class="__formula">
+          `L(epsilon_j) = (a_(1j); a_(2j); ... ; a_(mj)) = sum_(i=1)^m a_(ij) delta_i; j = 1,2,3, ... , n`
+        </div><br>
+        Moodustame maatriksi vektorite `L(epsilon_1), ... , L(epsilon_m)` koordinaatidest:
+        <div class="__formula">
+          A = || `a_(ij)` || = `[[a_(11), a_(12), ... , a_(1n)],
+                               [a_(21), a_(22), ... , a_(2n)],
+                               [vdots, vdots, ddots, vdots],
+                               [a_(m1), a_(m2), ..., a_(mn)]]`
+        </div><br>
+        Maatriksi a j-ndaks veeruks on vektor `L(epsilon_j)` koordinaadid. Maatriksit nimetatakse lineaarse kujutuse L maatriksiks
+        (baasidel `epsilon` ja `delta`). Lineaarse kujutuse maatriks sõltub baaside valikust ruumides V ja W. <br>
+        Võrdus `y = Ax` esitabki lineaarse kujutuse L koordinaatkujul: kui A on lineaarse kujutuse L maatriks, siis vektori `xi`
+        koordinaadid `x_1, ... , x_2 `ja tema kujutise `eta = L(xi)` koordinaadid `y_1, ... , y_m` on seotud selle sama võrdusega.
+
       </div>
     <h3>37. Ortogonaalteisenduse definitsioon. Ortogonaalteisenduse seos vektori
     pikkusega ja vektorite vahelise nurgaga. Ortogonaalteisenduse maatriks. Ortogonaalmaatriksi
@@ -1638,7 +1685,33 @@
       </div>
     <h3>38. Omaväärtused ja omavektorid ning nende leidmine.</h3>
     <div>
-      `d i b b s   U k u`
+      <p>
+        <b>Definitsioon</b><br>
+        Ruutmaatriksi `A` omavektoriks nimetatakse vektorit `vec(x) != vec(theta)` kui
+        <div class="__formula">
+          `[[a_(11), a_(12), ..., a_(1n)],
+            [a_(21), a_(22), ..., a_(2n)],
+            [vdots, vdots, ddots, vdots],
+            [a_(n1), a_(n2), ..., a_(n n)]]
+          [[x_1], [x_2], [vdots], [x_n]] = lambda[[x_1], [x_2], [vdots], [x_n]]`
+        </div>
+        ehk `A vec(x) = lambda vec(x)` kus `lambda` on mingi skalaar.
+        Skalaari `lambda` nimetatakse maatriksi `A` omaväärtuseks ja öeldakse,
+        et `vec(x)` on omaväärtusele `lambda` vastav omavektor.
+      </p>
+      <p>
+        <b>Omaväärtuste ja omavektorite leidmine</b><br>
+        Omaväärtuste ja omavektorite leidmiseks kirjutame tingimuse
+        `A vec(x) = lambda vec(x)` kujul `A vec(x) = lambda E vec(x)`,
+        mis on ekvivalentne tingimusega `(A − lambda E) vec(x) = vec(theta)`,
+        mis on lineaarne homogeenne võrrandisüsteem.
+      </p>
+      <p>
+        <b>Karakteristlik võrrand</b><br>
+        See võrrandisüsteem omab mittetriviaalseid lahendeid parajasti
+        siis, kui `text(det)(A - lambda E) = 0`. Seda võrrandit nimetatatakse maatriksi `A`
+        karakteristlikuks võrrandiks. Selle võrrandi lahendid on maatriksi `A` omaväärtused.
+      </p>
     </div>
     <h3>39. Omaväärtuste ja omavektorite omadused (ainult loetleda).</h3>
       <div>
@@ -1647,34 +1720,34 @@
     <h3>40. Ruutvorm ja tema maatrikskuju. Kanooniline kuju. Ruutvormi viimine
     kanoonilisele kujule.</h3>
       <div>
-       <b>Ruutvormiks</b> nimetatakse summat, mille liidetavateks on muutujate `x1,x2,...,x_n` kõikvõimalikud kahekaupa 
+       <b>Ruutvormiks</b> nimetatakse summat, mille liidetavateks on muutujate `x1,x2,...,x_n` kõikvõimalikud kahekaupa
          võetud korrutised `x_ix_j` mingi arvulise kordaaga, milleks võib olla mis tahes reaalarv. <br>
          Ruutvorm on seega avaldis kujul
          <div class="__formula">
             `f = sum_(i,j=1;i<=j)^n b_(ij) x_(i)x_j =b_(11)x_1^2+b_(12)x_1x_2+...+b_(n n)x_n^2`,
-          </div>  
+          </div>
           kus `b_(ij) in R`. Kuna `x_ix_j = x_jx_i`, siis nõue `i<=j` summas on loomulik. <br> <br>
          Ruutvorm on esitatav kujul
          <div class="__formula">
             `f = sum_(i,j=1)^n a_(ij) x_(i)x_j =sum_(i=1)^n sum_(j=1)^n a_(ij) x_(i)x_j`,
-          </div>  
+          </div>
          Seega on igale ruutvormile f vastavusse pandav maatriks `A=||a_(ij)||`, kus <br>
          1) `a_(ii)` on `x_i^2` kordaja ruutvormis, <br>
          2) `a_(ij)= a_(ji)` on `1/2` liikme `x_ix_j` kordajast ruutvormis `(i<j)`.
-         Saadud maatriks A on sümmeetriline ja seda nimetatakse <b>ruutvormi maatriksiks</b>. 
-         Näiteks 
+         Saadud maatriks A on sümmeetriline ja seda nimetatakse <b>ruutvormi maatriksiks</b>.
+         Näiteks
           <div class="__formula">
                 `||[3, 2,0],
                     [2, 4,-2],
                     [0, -2,5]||`
             </div>
-        
+
           <b>Kanooniline kuju</b> <br>
           Ruutvormide teooria põhiülesanne on: viia lineaarse muutujavahetusega antud ruutvorm võimalikult lihtsale kujule. <br>
           Öeldakse, et ruuvorm f on <b>kanoonilisel kujul</b>, kui ta on kujuga
           <div class="__formula">
             `f = sum_(i=1)^n c_(i) x_(i)^2=c_(1)x_1^2+c_(2)x_2^2+...+c_(n)x_n^2`
-          </div>  
+          </div>
           Kanoonilisel kujul oleva ruutvormi maatriks on diagonaalmaatriks
           <div class="__formula">
                 `||[c_1, 0,...,0],
@@ -1682,15 +1755,15 @@
                     [vdots, vdots,ddots,vdots],
                     [0, 0,...,c_n]|| = diag(c_1;c_2;...;c_n)`
             </div>
-          
+
           <b>Ruutvormi viimine kanoonilisele kujule</b>
           Vaatleme järgnenvalt ruutvormi
           <div class="__formula">`f = x^T Ax`</div>
-          Näitame võimaluse, kuidas valida uued muutujad `y_1,...,y_n` nii, et esialgsed muutujad `x_1,...,x_n` 
+          Näitame võimaluse, kuidas valida uued muutujad `y_1,...,y_n` nii, et esialgsed muutujad `x_1,...,x_n`
           ja uued muutujad on omavahel seotud lineaarselt ja ruutvorm f oleks uute muutujate suhtes kanoonilisel kujul. <br>
-          Sümmeetrilise maatriksi põhiomaduse kohaselt leidub maatriksi A jaoks ortogonaalmaatriks C, mille veeruvektoriteks on 
+          Sümmeetrilise maatriksi põhiomaduse kohaselt leidub maatriksi A jaoks ortogonaalmaatriks C, mille veeruvektoriteks on
           maatriksi A teatavad omavektorid `beta_1,...,beta_n`. Olgu `t_1,...,t_n` neile omavektoritele vastavad omaväärtused.
-          
+
           <div class="__formula">`CD=AC`,</div>
           kus
           <div class="__formula">
@@ -1732,10 +1805,10 @@
                     </div>
                     <div class="__formula">`=t_1y_1^2, t_2y_2^2,...,t_ny_n^2`
                     </div>
-                    ehk 
+                    ehk
                     <div class="__formula">`f=t_1y_1^2, t_2y_2^2,...,t_ny_n^2`
                     </div>
-                    Võrdus esitabki ruutvormi f kanoonilisel kujul. kirjeldatud skeem ongi aluseks ruutvormi 
+                    Võrdus esitabki ruutvormi f kanoonilisel kujul. kirjeldatud skeem ongi aluseks ruutvormi
                     viimiseks kanoonilisele kujule
       </div>
     <br>
