@@ -819,7 +819,97 @@
             <i>Teist järku determinandi absoluutväärtus võrdub tema reavektoritele ehitatud rööpküliku pindalaga.</i>
       </div>
     <h3>34. Kolmandat järku determinandi geomeetriline tõlgendus (tõestusega).</h3>
-     HAKKAN TEGELEME SELLEGA -J
+            Vaatleme kolmandat järku determinanti <br>
+            <div class="__formula">
+                `D= ||[a1, a2, a3],
+                      [b1, b2, b3],
+                      [c1, c2, c3]||`
+            </div>
+            geomeetrilise tähenduse saamiseks vaatleme tema reavektoreid
+            <div class="__formula">
+                `alpha = (a1;a2;a3), beta = (b1;b2;b3), gamma = (c1,c2,c3)`
+            </div>
+            geomeetriliste vektoritena, mis on antud oma koordinaatidega xyz-teljestikus. 
+            Kanname vektorid `alpha, beta, gamma` ühte punkti ja ehitame nendele rööptahuka <br>
+            <div class="__formula">
+                <img src="kolmandatjarku.png" alt="">
+            </div>
+            Veendume, et `|D|` võrdub tekkinud rööptahuka ruumalaga V. Selle näitamiseks konstrueerime risttahuka, mille ruumala on samuti V.
+            Mainitud risttahuka külgvektoriteks valime vektorid `alpha, hat beta` ja `hat gamma`, kus `hat beta` on vektori `beta` projektsioon vektori `alpha`
+             ristsihile ja `hat gamma` on vektori `gamma` projektsioon vektoritega `alpha` ja `beta` risti olevale sihile. On ilmne, et 
+             sellise risttahuka ruumala võrdub esialgse rööptahuka ruumalaga.. Kuna vektor `hat beta - beta` on paralleelne vektoriga `alpha` ning vektor 
+             `hat gamma - gamma` on paralleelne tasandiga, millel asuvad vektorid `alpha` ja `gamma`, siis leiduvad sellised arvud a, b, c, et <br>
+             <div class="__formula">`hat beta - beta = a alpha, hat gamma - gamma = b alpha + c beta`</div>
+             ehk <br>
+             <div class="__formula">`hat beta = beta + a alpha, hat gamma = gamma + b alpha + c beta`</div>
+             Nüüd arvutame sarnaselt eelmise alajaotusega determinandi D ruudu:
+             <div class="__formula">
+                 `D^2 = D*D = ||[a1, a2, a3],
+                      [b1, b2, b3],
+                      [c1, c2, c3]||*||[a1, a2, a3],
+                      [b1, b2, b3],
+                      [c1, c2, c3]||`
+                      
+                      `= ||[alpha *alpha, alpha *beta, alpha*gamma],
+                      [beta*alpha, beta*beta, beta*gamma],
+                      [gamma*alpha,gamma*beta,gamma*gamma]||`
+             </div>
+             Liidame determinandi kolmandale reale arvu b kordse esimese rea ja arvu c kordse teise 
+             rea ning teisele reale arvu a kordse esimese rea. Seoste tõttu saame
+             <div class="__formula">
+                 `D^2 =||[alpha *alpha, alpha *beta, alpha*gamma],
+                      [hat beta*alpha, hat beta*beta,  hatbeta*gamma],
+                      [hat gamma*alpha,hat gamma*beta,hat gamma*gamma]||`
+                      
+                      `=||[alpha *alpha, alpha *beta, alpha*gamma],
+                      [0, hat beta*beta,  hatbeta*gamma],
+                      [0,0,hat gamma*gamma]||`
+                     ` =(alpha*alpha)(hat beta*beta)(hat gamma*gamma)`,
+             </div>
+             sest <br>
+             <div class="__formula">`hat beta _|_ alpha, hat gamma _|_ alpha, hat gamma _|_ beta ehk hat beta*alpha=hat gamma*alpha=hat gamma*beta = 0`</div>
+             seega <br>
+            <div class="__formula">
+                 `D^2 = (alpha*alpha)(hat beta*beta)(hat gamma*gamma)= (alpha*alpha)(hat beta*beta +0)(hat gamma*gamma+0+0) 
+                 = (alpha*alpha)(hat beta*beta + hat beta*(a alpha))(hat gamma*gamma+hat gamma (b alpha) + hat gamma*(c beta))
+                 =(alpha*alpha)(hat beta*hat beta)(hat gamma*hat gamma) = ||alpha||^2||hat beta||^2||hat gamma||^2`
+             </div>
+             ja <br>
+             <div class="__formula">`|D| = ||alpha||*||hat beta||*||hat gamma||`</div>
+            Avaldise parem pool võrdub vaadeldava risttahuka ja seega ka esialgse rööptahuka ruumalaga. Kokkuvõttes oleme saanud teoreemi: <br>
+            <i>Kolmandat järku determinandi absoluutväärtus võrdub tema reavektoritele ehitatud rööptahuka ruumalaga.</i>
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
       <div>
 
       </div>
