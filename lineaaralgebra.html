@@ -961,12 +961,12 @@
 
     <h3>22. Pöördmaatriksi definitsioon, ühesus, olemasolu ja leidmine (tõestustega).</h3>
       <div>
-        Maatriksi A <b>pöördmaatriksiks</b> nimetatakse sellist maatriksit B, mille korral 
+        Maatriksi A <b>pöördmaatriksiks</b> nimetatakse sellist maatriksit B, mille korral
           <div class="__formula">`AB=BA=E`, </div>
           kus E on sobivat järku ühikmaatriks. <br>
-          Võrduste ahelas on korrutamine võimalik vaid juhul, kui A on ruutmaatriks. Seega 
+          Võrduste ahelas on korrutamine võimalik vaid juhul, kui A on ruutmaatriks. Seega
           pöördmaatriks võib leiduda ainult ruutmaatriksil. <br> <br>
-          
+
           <b>Ühesus</b> <br>
           Maatriksi A pöördmaatriks, juhul, kui ta eksisteerib, on üheselt määratud. <br>
           <i>Tõestus</i> Olgu `B_1` ja `B_2` maatriksi A pöördmaatriksid. Siis
@@ -977,13 +977,13 @@
           Maatriksi A pöördmaatriksit tähistatakse `A^(-1)`. Seega
           <div class="__formula">`AA^(-1) = A^(-1)A=E`</div>
           Osutub, et mitte kõik ruutmaatriksid ei oma pöördmaatriksit. <br> <br>
-          
+
           <b>Pöördmaatriksi olemasolu</b> <br>
-          Oletame, et maatriksil A leidub pöördmaatriks. Siis `AA^(-1)=E` ning 
+          Oletame, et maatriksil A leidub pöördmaatriks. Siis `AA^(-1)=E` ning
           <div class="__formula">`|A|*|A^(-1)|=|A^(-1)|=|E|=|[1, 0,...,0],
                     [0,1,...,0],
                     [vdots, vdots,ddots,vdots],
-                    [0, 0,...,1]|=1!=0`</div>          
+                    [0, 0,...,1]|=1!=0`</div>
           Siit järeldubki, et `|A|!=0` <br> <br>
           <b>Pöördmaatriksi leidmine</b> <br>
           Eeldame, et`|A| !=0`. Moodustame maatriksi
@@ -991,7 +991,7 @@
                     [A_(12),A_(22),...,A_(n2)],
                     [vdots, vdots,ddots,vdots],
                     [A_(1n),A_(2n),...,A_(n n)]||`</div>
-          
+
           ja veendume determinantide teooria põhivalemeid kasutades, et AB=E:
           <div class="__formula">`AB=1/|A|*||[A_(11),A_(21),...,A_(n1)],
                     [A_(12),A_(22),...,A_(n2)],
@@ -1000,7 +1000,7 @@
                     [A_(12),A_(22),...,A_(n2)],
                     [vdots, vdots,ddots,vdots],
                     [A_(1n),A_(2n),...,A_(n n)]|| = `</div>
-          
+
           <div class="__formula">`=1/|A|*||[|A|,0,...,0],
                     [0,|A|,...,0],
                     [vdots, vdots,ddots,vdots],
@@ -1016,7 +1016,7 @@
       <div>
             Dibs joss
       </div>
-      
+
     <h3>24. Skalaarkorrutise definitsioon üldjuhul. Skalaarkorrutise näiteid.</h3>
       <div>
         Skalaarkorrutiseks vektorruumis V nimetatakse reeglit, mis igale kahele vektorile `alpha, beta in V` paneb vastavusse
@@ -1287,8 +1287,56 @@
         <h3>32. Punkti kaugus mingist punktihulgast eukleidilises ruumis. Punkti kaugus <br>
         hüpertasandist (tõestusega). Saadud valemi erijuhud.</h3>
        <div>
+         Punktide A ja B vaheliseks kauguseks nimetatakse vektori `vec(AB)` pikkust ja seda tähistatkse `rho(A, B)`. Seega,
+         <div class="__formula">
+           `rho(A, B)` = || `vec(AB)` || = `sqrt(vec(AB) * vec(AB))`
+         </div><br>
+         Kui hulgas U leidub punkt Q nii, et `rho(A, Q) <= rho(A, P) ` iga ` P in U` korral,
+         siis kaugust `rho(A, Q)` nimetatakse punkit A kauguseks punkti hulgast U. Punkti A kaugust hulgast U tähistatakse `rho(A, U)`.
+         Seega `rho(A, U)` on vähim kaugusest `rho(A, P)`, kus `P in U`:
+         <div class="__formula">
+           `p(A, U) = min(P in U)`       `(P in U)` tegelikult min-i all keskel.
+         </div><br>
+         <strong>Teoreem</strong> Punkti `A(hat(x)_1; ... ; hat(x)_n)` kaugus `rho(A, tau)` hüpertasandist `tau`, mis on antud võrrandiga
+         <div class="__formula">
+           `a_1 x_1 + a_2 x_2 + ... + a_n x_n + b = 0`
+         </div><br>
+         avaldub kujul
+         <div class="__formula">
+           `rho(A, tau) = (|a_1 hat(x)_1 + a_2 hat(x)_2 + ... + a_n hat(x)_n + b| / sqrt(a_1^2 + a_2^2 + ... + a_n^2))`
+         </div><br>
+         <strong>Tõestus</strong> Tähistagu `vec(m)` hüpertasandil `tau` normaalvektorit:
+         <div class="__formula">
+           `vec(m) = (a_1; a_2; ... ; a_n)`
+         </div><br>
+         Paneme läbi punkti A sirge u sihivektoriga `vec(m)` ja leiame sirge u ning hüpertasandi `tau` ühise punkti Q.
+         Sirge  u ja hüpertasandi `tau` ühiste punktide saamiseks tuleb lahendada võrrandisüsteem<br>
+         <div class="__formula">
+           `{(a_1 hat(x)_1 + a_2 hat(x)_2  + ... + a_n hat(x)_n + b = 0), (x_1 = hat(x)_1 + a_1 t),(x_2 = hat(x)_2 + a_2 t),(...............),(x_n = hat(x)_n + a_n t):}`
+         </div>
+         Selleks paigutatakse süsteemi viimasest n võrrandist muutujate `x_1, ... , x_n` avaldised süsteemi esimesse võrrandisse, kust saadakse parammeetri t väärtus `t_0`.
+         Paigutades parameetri t saadud väärtuse `t_0` süsteemi viimasesse n võrrandisse, saadaksegi sirge u ja hüpertasandi `tau` ainukese ühise punkti (lõikepunkti) Q koordinaadid:
+         <div class="__formula">
+           `Q(hat(x)_1 + a_1 t_0; hat(x)_2 + a_2 t_0; ... ; hat(x)_n + a_n t_0)`
+         </div><br>
+         Näitame, et `rho(A, Q)` ongi punkti A kaugus vaadeldavast hüpertasandist `tau`.<br>
+         Erijuhul n = 2 saadakse valemist reegel punkti `A(x_0; y_0)` kauguse arvutamiseks võrrandi
+         <div class="__formula">
+           `ax + by + c = 0`
+         </div><br>
+         määratud sirgest u:
+         <div class="__formula">
+           `rho(A, u) = |ax_0 + by_0 + c| / sqrt(a^2 + b^2)`
+         </div><br>
+         Erijuhul n = 3 saadakse valemist reegel punkti `A(x_0; y_0; z_0)` kauguse arvutamiseks võrrandi
+         <div class="__formula">
+           `ax + by + cz + d = 0`
+         </div><br>
+         määratud sirgest u:
+         <div class="__formula">
+           `rho(A, u) = |ax_0 + by_0 + cz_0 + d| / sqrt(a^2 + b^2 + c^2)`
+         </div><br>
       </div>
-
         <h3>33. Teist järku determinandi geomeetriline tõlgendus (tõestusega).</h3>
         <div>
             Vaatleme teist järku determinanti <br>
