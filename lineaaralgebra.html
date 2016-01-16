@@ -1113,9 +1113,39 @@
         </ol>
       </div>
     <h3>27. Punktide vaheline kaugus. Kauguse omadused.</h3>
-      <div>
-        Dibbs - uku
+    <div>
+      Punktide `A` ja `B` vaheliseks kauguseks nimetatakse vektori <span class="__formula">`||vec(AB)||`</span> pikkust ja teda tähistatakse `rho(A, B)`.<br>
+      <b>Kauguse omadused</b>: kui `A` `B` ja `C` on punktid eukleidilisest ruumist, siis:<br>
+      <ol>
+        <li>`rho(A, B) >= 0` </li>
+        <li>`rho(A, B) = 0` parajasti siis kui `A = B` </li>
+        <li>`rho(A, B) = rho(B, A)` (sümmeetria)</li>
+        <li>`rho(A, B) <= rho(A, C) + rho(C, B)` (kolmnurga omadus)</li>
+      </ol>
+      <b>Tõestused</b><br>
+      Omadused 1 ja 2 järelduvad vahetult skalaarkorrutise omadustest ja järgnevast võrdusest:
+      <div class="__formula">
+        `rho(A, B) = ||vec(AB)|| = sqrt(vec(AB) * vec(AB))`
       </div>
+      Omadus 3-me põhjendus:
+      <div class="__formula">
+        `rho(B, A) = sqrt(vec(BA) * vec(BA)) = sqrt((-vec(AB)) * (-vec(AB))) =`
+      </div>
+      <div class="__formula">
+        `sqrt((-1) * (-1) * (vec(AB) * vec(AB))) = sqrt(vec(AB) * vec(AB)) = rho(A, B)`
+      </div>
+      Omadus 4-ja põhjendus:
+      <div class="__formula">
+        `rho(A, B) = ||vec(AB)|| = ||vec(AC) + vec(CB)|| <= ||vec(AC)|| + ||vec(CB)|| =`
+      </div>
+      <div class="__formula">
+        `= rho(A, C) + rho(C, B)`
+      </div>
+      Kui on antud punktid `A(a_1; a_2; ...; a_n)` ja `B(b_1; b_2; ...; b_n)` oma koordinaatidega mingis ortonormaalses teljestikus, siis `vec(AB) = (b_1 - a_1; b_2 - a_2; ...; b_n - a_n)` ja
+      <div class="__formula">
+        `rho(A, B) = sqrt(vec(AB) * vec(AB)) = sqrt((b_1 - a_1)^2 + (b_2 - a_2)^2 ... + (b_n - a_n)^2)`
+      </div>
+    </div>
     <h3>28. Nurk vektorite vahel ja selle olemasolu. Ortogonaalsus ehk ristseis.</h3>
       <div>
         <b>Nurk vektorite vahel ja selle olemasolu</b> <br>
