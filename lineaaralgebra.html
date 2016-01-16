@@ -958,10 +958,12 @@
           </li>
         </ol>
       </div>
+
     <h3>22. Pöördmaatriksi definitsioon, ühesus, olemasolu ja leidmine (tõestustega).</h3>
       <div>
-
+        Dibs - joss
       </div>
+
     <h3>23. Afiinne ruum. Koordinaatide sissetoomine afiinsesse ruumi (reeper ehk
     teljestik). Omadusi (tõestustega).</h3>
       <div>
@@ -1243,8 +1245,8 @@
         <div>
             Vaatleme teist järku determinanti <br>
             <div class="__formula">
-                `D= ||[a1, a2],
-                    [b1, b2]||`
+                `D= |[a1, a2],
+                    [b1, b2]|`
             </div>
             ja püüame leida talle geomeetrilise tõlgenduse. Selleks vaatleme determinandi reavektoreid `alpha = (a1;a2), beta = (b1;b2)` <br>
             ning tõlgendame neid kui geomeetrilisi vektoreid, mis on antud oma koordinaatidega xy-tasandil. Ehitame vektoritele `alpha `
@@ -1299,9 +1301,9 @@
     <h3>34. Kolmandat järku determinandi geomeetriline tõlgendus (tõestusega).</h3>
             Vaatleme kolmandat järku determinanti <br>
             <div class="__formula">
-                `D= ||[a1, a2, a3],
+                `D= |[a1, a2, a3],
                       [b1, b2, b3],
-                      [c1, c2, c3]||`
+                      [c1, c2, c3]|`
             </div>
             geomeetrilise tähenduse saamiseks vaatleme tema reavektoreid
             <div class="__formula">
@@ -1322,26 +1324,26 @@
              <div class="__formula">`hat beta = beta + a alpha, hat gamma = gamma + b alpha + c beta`</div>
              Nüüd arvutame sarnaselt eelmise alajaotusega determinandi D ruudu:
              <div class="__formula">
-                 `D^2 = D*D = ||[a1, a2, a3],
+                 `D^2 = D*D = |[a1, a2, a3],
                       [b1, b2, b3],
-                      [c1, c2, c3]||*||[a1, a2, a3],
+                      [c1, c2, c3]|*|[a1, a2, a3],
                       [b1, b2, b3],
-                      [c1, c2, c3]||`
+                      [c1, c2, c3]|`
 
-                      `= ||[alpha *alpha, alpha *beta, alpha*gamma],
+                      `= |[alpha *alpha, alpha *beta, alpha*gamma],
                       [beta*alpha, beta*beta, beta*gamma],
-                      [gamma*alpha,gamma*beta,gamma*gamma]||`
+                      [gamma*alpha,gamma*beta,gamma*gamma]|`
              </div>
              Liidame determinandi kolmandale reale arvu b kordse esimese rea ja arvu c kordse teise
              rea ning teisele reale arvu a kordse esimese rea. Seoste tõttu saame
              <div class="__formula">
-                 `D^2 =||[alpha *alpha, alpha *beta, alpha*gamma],
+                 `D^2 =|[alpha *alpha, alpha *beta, alpha*gamma],
                       [hat beta*alpha, hat beta*beta,  hatbeta*gamma],
-                      [hat gamma*alpha,hat gamma*beta,hat gamma*gamma]||`
+                      [hat gamma*alpha,hat gamma*beta,hat gamma*gamma]|`
 
-                      `=||[alpha *alpha, alpha *beta, alpha*gamma],
+                      `=|[alpha *alpha, alpha *beta, alpha*gamma],
                       [0, hat beta*beta,  hatbeta*gamma],
-                      [0,0,hat gamma*gamma]||`
+                      [0,0,hat gamma*gamma]|`
                      ` =(alpha*alpha)(hat beta*beta)(hat gamma*gamma)`,
              </div>
              sest <br>
@@ -1373,7 +1375,207 @@
       </div>
     <h3>35. Vektorkorrutise definitsioon. Vektorkorrutise omadused (tõestustega).</h3>
       <div>
-        DUBS -M
+        <b>Definitsioon</b>
+        <div>
+          Vektorite `alpha` ja `beta` <b>vektorkorrutiseks</b> nimetatakse vektorit
+          `alpha xx beta`, mis on määratud võrdusega
+        </div>
+        <div class="__formula">
+          `alpha xx beta = (|[a_2, a_3],
+                             [b_2, b_3]|;
+
+                           -|[a_1, a_3],
+                             [b_1, b_3]|;
+
+                            |[a_1, a_2],
+                             [b_1, b_2]|)`
+        </div>
+        <div>
+          Tähistades koordinaattelgede suunalisi ühikvektoreid vastavalt `vec i`,
+          `vec j` ja `vec k`, on avaldis esitatav kujul
+        </div>
+        <div class="__formula">
+          `alpha xx beta = |[a_2, a_3],
+                           [b_2, b_3]| vec i;
+
+                          -|[a_1, a_3],
+                            [b_1, b_3]| vec j;
+
+                           |[a_1, a_2],
+                            [b_1, b_2]| vec k =`
+        </div>
+        <div class="__formula">
+          `              = |[vec i, vec j, vec k],
+                            [a_1, a_2, a_3],
+                            [b_1, b_2, b_3]|`
+        </div>
+        <div style="text-align:right;">
+          Seda võrdust on sobiv kasutada vektorkorrutise arvutamiseks.<br>
+        </div>
+        <div>
+          &emsp;Vektor- ja skalaarkorrutise abil on esitatav kolmandat järku
+          determinandi väärtuse leidmise eeskiri.<br>
+          Determinandi
+        </div>
+        <div class="__formula">
+          `D = |[a_1, a_2, a_3],
+                [b_1, b_2, b_3],
+                [c_1, c_2, c_3]|`,
+        </div>
+        <div>
+          mille reavektorid on
+        </div>
+        <div class="__formula">
+          `alpha = (a_1, a_2, a_3), beta = (b_1, b_2, b_3), gamma = (c_1, c_2, c_3)`
+        </div>
+        <div>
+          väärtuse leidmiseks arendame selle determinandi kolmanda rea järgi ning
+          kasutame seejärel vektor- ja skalaarkorrutise definitsiooni:
+        </div>
+        <div class="__formula">
+          `           D = c_1 |[a_2, a_3],
+                               [b_2, b_3]|;
+
+                        - c_2 |[a_1, a_3],
+                               [b_1, b_3]|;
+
+                          c_3 |[a_1, a_2],
+                               [b_1, b_2]| =`
+        </div>
+        <div class="__formula">
+          `= gamma * (alpha xx beta) = (alpha xx beta) * gamma`
+        </div>
+        <div>
+          ehk
+        </div>
+        <div class="__formula">
+          `D = (alpha xx beta) * gamma`
+        </div><br>
+        <b>Teoreem</b>
+        <div>
+          Vektorkorrutis `alpha xx beta` on risti mõlema teguriga `alpha` ja `beta`.
+          Vektorkorrutise `alpha xx beta` pikkus `|| alpha xx beta ||` on arvuliselt
+          võrdne vektoritele `alpha` ja `beta` ehitatud rööpküliku pindalaga.
+        </div><br>
+        <b>Tõestus</b>
+        <div>
+          Vaatleme vektorite `alpha = (a_1, a_2, a_3)` ja `beta = (b_1, b_2, b_3)`
+          vektorkorrutist `alpha xx beta`.
+        </div><br>
+        <div>
+          Võrduse `D = (alpha xx beta) * gamma` kohaselt
+        </div>
+        <div class="__formula">
+          `(alpha xx beta) * gamma = |[a_1, a_2, a_3],
+                                      [b_1, b_2, b_3],
+                                      [c_1, c_2, c_3]|`.
+        </div>
+        <div>
+          Lahutades viimase determinandi kolmandast reast tema esimese rea
+          ja arendades saadud determinandi kolmanda rea järgi, näeme, et
+          vaadeldava determinandi väärtus võrdub nulliga, st `(alpha xx beta) * alpha = 0`.
+          See aga tähendab, et vektorid `alpha xx beta` ja `alpha` on risti.
+          Analoogiliselt põhjendatakse vektorite `alpha xx beta` ja `beta` ristseis.
+        </div><br>
+        <div>
+          &emsp;Teoreemi teise väite tõestamiseks kasutame kolmandat järku determinandi
+          geomeetrilist tähendust.
+        </div>
+        <div class="__formula">
+          `V = |D| = |alpha xx beta| * gamma| = || alpha xx beta || * || gamma || * | cos phi |`,
+        </div>
+        <div>
+          kus `V` on vektoritele `alpha`, `beta`, `gamma` ehitatud rööptahuka ruumala
+          ning `phi` on vektorite `alpha xx beta` ja `gamma` vaheline nurk. Mainitud
+          rööptahuka kõrgus `h` on aga `||gamma|| * |cos phi|`. Seega `V = ||alpha xx beta|| * h`.
+          Siit järeldub, et arv `|| alpha xx beta ||` võrdub vaadeldava rööptahuka põhja
+          pindalaga. See aga on samaväärne teoreemi teise väitega.
+        </div><br>
+        <b>Vektorkorrutise omadused</b>
+        <div>
+          Olgu `vec u`, `vec v`, `vec w` vektorid kolmemõõtmelises ruumis. Siis
+        </div>
+        <ol>
+          <li>
+            <div class="__formula">
+              `vec u * (vec u xx vec v) = 0`
+            </div>
+            <b>Tõestus</b>
+            <div>
+              Vektorkorrutis on risti mõlema vektoriga. `vec u xx vec v`&emsp;
+              `_|_ vec u`. Kuna ristuvate vektorite skalaarkorrutis on `0`, siis
+              `vec u * (vec u xx vec v) = 0` M.O.T.T.
+            </div>
+          </li><br>
+          <li>
+            <div class="__formula">
+              `vec v * (vec u xx vec v) = 0`
+            </div>
+            <b>Tõestus</b>
+            <div>
+              Vektorkorrutis on risti mõlema vektoriga. `vec u xx vec v`&emsp;
+              `_|_ vec v`. Kuna ristuvate vektorite skalaarkorrutis on `0`, siis
+              `vec v * (vec u xx vec v) = 0` M.O.T.T.
+            </div>
+          </li><br>
+          <li>
+            <div class="__formula">
+              `vec u xx vec v = - vec v xx vec u`
+            </div>
+            <div>
+              (Suund sõltub tegurite järjekorrast.)
+            </div>
+            <b>Tõestus</b>
+            <div class="__formula">
+              `vec u xx vec v = |[vec i, vec j, vec k],
+                                 [u_1, u_2, u_3],
+                                 [v_1, v_2, v_3]| = `
+            </div>
+            <div>
+              Ma ei tea. Hämab ära.
+            </div>
+          </li><br>
+          <li>
+            <div class="__formula">
+              `vec u xx (vec v + vec w) = vec u xx vec v + vec u xx vec w`
+            </div>
+          </li><br>
+          <li>
+            <div class="__formula">
+              `(vec u + vec v) xx vec w = vec u xx vec w + vec v xx vec w`
+            </div>
+          </li><br>
+          <li>
+            <div class="__formula">
+              `c (vec u xx vec v) = (c vec u) xx vec v = vec u xx (c vec v)`
+            </div>
+          </li><br>
+          <li>
+            <div class="__formula">
+              `|| vec u xx vec v ||^2 = || vec u ||^2 || vec v ||^2 - (vec u * vec v)^2` (Lagrange'i samasus)
+            </div>
+          </li><br>
+          <li>
+            <div class="__formula">
+              `vec u xx (vec v xx vec w) = (vec u * vec w) vec v - (vec u * vec v) vec w`
+            </div>
+          </li><br>
+          <li>
+            <div class="__formula">
+              `(vec u xx vec v) xx vec w = (vec u * vec w) vec v - (vec v * vec w) vec u`
+            </div>
+          </li><br>
+          <li>
+            <div class="__formula">
+              `vec u xx Theta = Theta xx vec u = Theta`
+            </div>
+          </li><br>
+          <li>
+            <div class="__formula">
+              `vec u xx vec u = Theta`
+            </div>
+          </li><br>
+        </ol>
       </div>
     <h3>36. Kujutus. Lineaarne kujutus. Näiteid. Lineaarne kujutus koordinaatkujul.
     Lineaarse kujutuse maatriks.</h3>
@@ -1432,12 +1634,38 @@
     definitsioon. Tarvilik ja piisav tingimus selleks, et ruutmaatriks
     oleks ortogonaalmaatriks (kõik tõestustega).</h3>
       <div>
-
+        DIIIBS - MARTEN
       </div>
     <h3>38. Omaväärtused ja omavektorid ning nende leidmine.</h3>
-      <div>
-
-      </div>
+    <div>
+      <p>
+        <b>Definitsioon</b><br>
+        Ruutmaatriksi `A` omavektoriks nimetatakse vektorit `vec(x) != vec(theta)` kui
+        <div class="__formula">
+          `[[a_(11), a_(12), ..., a_(1n)],
+            [a_(21), a_(22), ..., a_(2n)],
+            [vdots, vdots, ddots, vdots],
+            [a_(n1), a_(n2), ..., a_(n n)]]
+          [[x_1], [x_2], [vdots], [x_n]] = lambda[[x_1], [x_2], [vdots], [x_n]]`
+        </div>
+        ehk `A vec(x) = lambda vec(x)` kus `lambda` on mingi skalaar.
+        Skalaari `lambda` nimetatakse maatriksi `A` omaväärtuseks ja öeldakse,
+        et `vec(x)` on omaväärtusele `lambda` vastav omavektor.
+      </p>
+      <p>
+        <b>Omaväärtuste ja omavektorite leidmine</b><br>
+        Omaväärtuste ja omavektorite leidmiseks kirjutame tingimuse
+        `A vec(x) = lambda vec(x)` kujul `A vec(x) = lambda E vec(x)`,
+        mis on ekvivalentne tingimusega `(A − lambda E) vec(x) = vec(theta)`,
+        mis on lineaarne homogeenne võrrandisüsteem.
+      </p>
+      <p>
+        <b>Karakteristlik võrrand</b><br>
+        See võrrandisüsteem omab mittetriviaalseid lahendeid parajasti
+        siis, kui `text(det)(A - lambda E) = 0`. Seda võrrandit nimetatatakse maatriksi `A`
+        karakteristlikuks võrrandiks. Selle võrrandi lahendid on maatriksi `A` omaväärtused.
+      </p>
+    </div>
     <h3>39. Omaväärtuste ja omavektorite omadused (ainult loetleda).</h3>
       <div>
 
@@ -1445,7 +1673,96 @@
     <h3>40. Ruutvorm ja tema maatrikskuju. Kanooniline kuju. Ruutvormi viimine
     kanoonilisele kujule.</h3>
       <div>
+       <b>Ruutvormiks</b> nimetatakse summat, mille liidetavateks on muutujate `x1,x2,...,x_n` kõikvõimalikud kahekaupa
+         võetud korrutised `x_ix_j` mingi arvulise kordaaga, milleks võib olla mis tahes reaalarv. <br>
+         Ruutvorm on seega avaldis kujul
+         <div class="__formula">
+            `f = sum_(i,j=1;i<=j)^n b_(ij) x_(i)x_j =b_(11)x_1^2+b_(12)x_1x_2+...+b_(n n)x_n^2`,
+          </div>
+          kus `b_(ij) in R`. Kuna `x_ix_j = x_jx_i`, siis nõue `i<=j` summas on loomulik. <br> <br>
+         Ruutvorm on esitatav kujul
+         <div class="__formula">
+            `f = sum_(i,j=1)^n a_(ij) x_(i)x_j =sum_(i=1)^n sum_(j=1)^n a_(ij) x_(i)x_j`,
+          </div>
+         Seega on igale ruutvormile f vastavusse pandav maatriks `A=||a_(ij)||`, kus <br>
+         1) `a_(ii)` on `x_i^2` kordaja ruutvormis, <br>
+         2) `a_(ij)= a_(ji)` on `1/2` liikme `x_ix_j` kordajast ruutvormis `(i<j)`.
+         Saadud maatriks A on sümmeetriline ja seda nimetatakse <b>ruutvormi maatriksiks</b>.
+         Näiteks
+          <div class="__formula">
+                `||[3, 2,0],
+                    [2, 4,-2],
+                    [0, -2,5]||`
+            </div>
 
+          <b>Kanooniline kuju</b> <br>
+          Ruutvormide teooria põhiülesanne on: viia lineaarse muutujavahetusega antud ruutvorm võimalikult lihtsale kujule. <br>
+          Öeldakse, et ruuvorm f on <b>kanoonilisel kujul</b>, kui ta on kujuga
+          <div class="__formula">
+            `f = sum_(i=1)^n c_(i) x_(i)^2=c_(1)x_1^2+c_(2)x_2^2+...+c_(n)x_n^2`
+          </div>
+          Kanoonilisel kujul oleva ruutvormi maatriks on diagonaalmaatriks
+          <div class="__formula">
+                `||[c_1, 0,...,0],
+                    [0, c_2,...,0],
+                    [vdots, vdots,ddots,vdots],
+                    [0, 0,...,c_n]|| = diag(c_1;c_2;...;c_n)`
+            </div>
+
+          <b>Ruutvormi viimine kanoonilisele kujule</b>
+          Vaatleme järgnenvalt ruutvormi
+          <div class="__formula">`f = x^T Ax`</div>
+          Näitame võimaluse, kuidas valida uued muutujad `y_1,...,y_n` nii, et esialgsed muutujad `x_1,...,x_n`
+          ja uued muutujad on omavahel seotud lineaarselt ja ruutvorm f oleks uute muutujate suhtes kanoonilisel kujul. <br>
+          Sümmeetrilise maatriksi põhiomaduse kohaselt leidub maatriksi A jaoks ortogonaalmaatriks C, mille veeruvektoriteks on
+          maatriksi A teatavad omavektorid `beta_1,...,beta_n`. Olgu `t_1,...,t_n` neile omavektoritele vastavad omaväärtused.
+
+          <div class="__formula">`CD=AC`,</div>
+          kus
+          <div class="__formula">
+                `D=||[t_1, 0,...,0],
+                    [0, t_2,...,0],
+                    [vdots, vdots,ddots,vdots],
+                    [0, 0,...,t_n]||`
+            </div>
+          Kuna C on ortogonaalmaatriks, siis `C^T = C^(-1)` ja võrdusest
+          <div class="__formula">`D=C^(-1)AC=C^TAC`</div>
+          Tähistame
+          <div class="__formula">
+                `D=||[y_1],
+                    [y_2],
+                    [vdots],
+                    [y_n]||`
+            </div>
+          ja valime uued muutujad `y_1,...,y_n` võrduse
+          <div class="__formula">
+                `x=Cy text( ehk ) y=C^(-1)x = C^Tx`
+            </div>
+            kohaselt. Siis
+            <div class="__formula">`f = x^T Ax = (Cy)^TA(Cy) = y^TC^tACy=`</div>
+            <div class="__formula">`= y^T(C^TAC)y=y^TDy = ` </div>
+                   <div class="__formula">
+                  ` = ||[y_1, y_2,...,y_n]|| * ||[t_1, 0,...,0],
+                    [0, t_2,...,0],
+                    [vdots, vdots,ddots,vdots],
+                    [0, 0,...,t_n]|| * ||[y_1],
+                    [y_2],
+                    [vdots],
+                    [y_n]|| =`</div>
+                    <div class="__formula">`=||[y_1, y_2,...,y_n]||* ||[t_1y_1],
+                                                                        [t_2y_2],
+                                                                        [vdots],
+                                                                        [t_ny_n]|| =`
+                    </div>
+                    <div class="__formula">`=||[t_1y_1^2, t_2y_2^2,...,t_ny_n^2]||=`
+                    </div>
+                    <div class="__formula">`=t_1y_1^2, t_2y_2^2,...,t_ny_n^2`
+                    </div>
+                    ehk
+                    <div class="__formula">`f=t_1y_1^2, t_2y_2^2,...,t_ny_n^2`
+                    </div>
+                    Võrdus esitabki ruutvormi f kanoonilisel kujul. kirjeldatud skeem ongi aluseks ruutvormi
+                    viimiseks kanoonilisele kujule
       </div>
     <br>
   </font>
