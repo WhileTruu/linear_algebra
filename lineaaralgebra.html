@@ -342,8 +342,51 @@
           <div class="__formula">
             `(AB)_(ij) = sum_(j=1)^n a_(ik) b_(kj) = a_(i1) b_(1j) + a_(i2) b_(2j) + ... + a_(in) b_(nj)`
           </div>
+        </div><br>
+        <b>Omadused ja seos lineaarsete tehetega</b>
+        <div>
+          <ol>
+            <li>
+              <div>
+                Maatriksite korrutamine pole kommutatiivne, st leiduvad sellised maatriksid
+                `A` ja `B`, et `A B != B A`.
+              </div>
+            </li><br>
+            <li>
+              <div>
+                Maatriksite korrutamine on assotsiatiivne, st
+              </div>
+              <div class="__formula">
+                `A(BC) = (AB) C`
+              </div>
+              <div style="text-align: right;">
+                alati, kui vaadeldavad maatriksid on korrutatavad.
+              </div>
+            </li><br>
+            <li>
+              <div>
+                Liitmine ja korrutamine on seotud distributiivsusega, st
+              </div>
+              <div class="__formula">
+                `A (B + C) = A B + A C`,&emsp;`(A + B) C = A C + B C`
+              </div>
+              <div style="text-align: right;">
+                alati, kui antud tehted on teostatavad.
+              </div>
+            </li><br>
+            <li>
+              <div>
+                Kui eksisteerib maatriksite korrutis `A B`, siis
+              </div>
+              <div class="__formula">
+                `a (A B) = (a A) B = A (a B)`
+              </div>
+              <div style="text-align: right;">
+                iga `a in RR` korral.
+              </div>
+            </li>
+          </ol>
         </div>
-        <b style="color: red;">TO BE CONTINUDED</b>
       </div>
     <h3>8. Maatriksite transponeerimine. Transponeerimise omadused.</h3>
       <div>
@@ -374,8 +417,90 @@
           <div class="__formula">`x_1 = 1, x_2 = -1, x_3 = 1/2` ehk `xi = (1; -1; 1/2)`,</div>
           <div style="padding-left: 5em;">kõigi lahendite hulk on</div>
           <div class="__formula">`L = {((6 + c_1 - 4 c_2)/2; c_1; c_2) | c_1, c_2 in RR}`,</div>
+        </div><br>
+        <b>Lineaarse võrrandsüsteemi maatrikskuju</b>
+        <div>
+          Lineaarse võrrandsüsteemi kordajatest moodustatud maatriksit
         </div>
-        <b style="color: red;">TO BE CONTINUDED</b>
+        <div class="__formula">
+          `A = || a_(ij) || = [
+          [a_(11), a_(12), ..., a_(1n)],
+          [a_(21), a_(22), ..., a_(2n)],
+          [vdots, vdots, ddots, vdots],
+          [a_(m1), a_(m2), ..., a_(mn)]
+          ]`
+        </div>
+        <div>
+          nimetatakse süsteemi maatriksiks. Maatriksi `A` täiendamisel vabaliikmete
+          veeruga tekkinud maatriksit
+        </div>
+        <div class="__formula">
+          `B = [
+          [a_(11), a_(12), ..., a_(1n), b_1],
+          [a_(21), a_(22), ..., a_(2n), b_2],
+          [vdots, vdots, ddots, vdots, vdots],
+          [a_(m1), a_(m2), ..., a_(mn), b_m]
+          ]`
+        </div>
+        <div>
+          nimetatakse süsteemi laiendatud maatriksiks.
+        </div><br>
+        <div>
+          Seostame süsteemiga veel maatriksid
+        </div>
+        <div class="__formula">
+          `x = [
+          [x_1],
+          [x_2],
+          [vdots],
+          [x_n]
+          ]`,
+          `b = [
+          [b_1],
+          [b_2],
+          [vdots],
+          [b_n]
+          ]`
+        </div>
+        <div>
+          Siis
+        </div>
+        <div class="__formula">
+          `A x = [
+          [a_(11), a_(12), ..., a_(1n)],
+          [a_(21), a_(22), ..., a_(2n)],
+          [vdots, vdots, ddots, vdots],
+          [a_(m1), a_(m2), ..., a_(mn)]
+          ] * `
+          `[
+          [x_1],
+          [x_2],
+          [vdots],
+          [x_n]
+          ] = `
+          ` [
+          [a_(11) x_1, a_(12) x_2, ..., a_(1n) x_n],
+          [a_(21) x_1, a_(22) x_2, ..., a_(2n) x_n],
+          [vdots, vdots, ddots, vdots],
+          [a_(m1) x_1, a_(m2) x_2, ..., a_(mn) x_n]
+          ] =`
+          ` [
+          [b_1],
+          [b_2],
+          [vdots],
+          [b_n]
+          ] = `
+          `b`
+        </div>
+        <div>
+          Seega lineaarne võrrandsüsteem on <b>maatrikskujul</b> antav võrdusega
+        </div>
+        <div class="__formula">
+          `Ax = b`,
+        </div>
+        <div style="text-align: right;">
+          kus maatriksid `A`, `x` ja `b` on kirjeldatud ülal.
+        </div>
       </div>
     <h3>10. Gaussi meetod.</h3>
       <div>
@@ -1014,7 +1139,42 @@
     <h3>23. Afiinne ruum. Koordinaatide sissetoomine afiinsesse ruumi (reeper ehk
     teljestik). Omadusi (tõestustega).</h3>
       <div>
-            Dibs joss
+      Afiinseks ruumiks nimetatakse paari A = (V ; P), kus <br>
+      1) V on vektorruum, <br>
+      2) P on mingi hulk, mille elemente nimetatakse punktideks, <br>
+      ja vektorite hulk V ning punktide hulk P on seotud tingimustega <br>
+      `1^0` igale kahele punktile vastab parajasti üks vektor <br>
+      `2^0` iga punkti ja vektori korral leidub parajasti üks punkt nii et `alpha = vec (AB)` <br>
+      `3^0` iga kolme punkti korral kehtib võrdus `vec (AB) + vec (BC) = vec (AC)`
+      <br>
+      Afiinne ruum määrab ära seose vektorruumi vektorite ja punktide vahel. Vektorid 
+         koosnevad omakorda punktidest (teisisõnu koordinaatidest)  <br>   
+         Järeldus 1: Afiinse ruumi iga punkti A korral vektor `vec (AA)` võrdub nullvektoriga `O/` <br>
+         Järeldus 2: kui `vec (AB)= O/`, siis `A=B` <br>
+         Järeldus 3: afiinses ruumis iga kahe punkti A ja B korral `vec (AB) = - vec (BA)` <br>
+          <br>
+      <b>Koordinaadid afiinses ruumis</b> <br>   
+        <b>Definitsioon 1</b> <br>
+        Hulka T = {O;ε 1;...;ε n } = {O;T} , mis koosneb afiinse ruumi (V, P) mingist punktist O ja 
+        vektorruumi V baasivektoritest n ε ;...;ε 1 nimetatakse afiinse ruumi reeperiks ehk teljestikuks.
+        Piltlikult võib punkti O tõlgendada koordinaatteljestiku alguspunktina ja baasivektoreid telgede
+          sihilisi ühikvektoreid. <br>
+           <b>Definitsioon 2</b> <br>
+           Vektorit `vec (OP)` nimetatakse punkti P kohavektoriks vaadeldavas reeperis T = {O;T}. Punkti P
+           koordinaatideks nimetatakse tema kohavektori koordinaate x1, .., xn ja tähistatakse
+           `P(x_1;x_2;...;x_n)` <br>
+           Seega punkti koordinaadid sõltuvad teljestiku valikust. <br>
+         Järeldus <br>
+          Kui afiinses ruumis on antud punktid A ja B, siis vektori `vec (AB)` koordinaatide saamiseks 
+          tuleb lõpp-punkti B koordinaatidest lahutada alguspunkti A koordinaadid:
+          <div class="__formula">`vec (AB)=(y_1-x_1;y_2-x_2;...;y_n-x_n)`</div>
+        <i>Tõestus</i> kuna
+          
+          <div class="__formula">`vec (OA)=(x_1;x_2;...;x_n),vec (OB)=(y_1;y_2;...;y_n), `</div>
+          siis
+          <div class="__formula">`vec (AB) = vec (AO) + vec (OB) = -vec(OA)+vec (OB)= vec (OB)-vec(OA) = `</div>
+            <div class="__formula">`=(y_1;y_2;...;y_n) -(x_1;x_2;...;x_n) =  `</div>
+           <div class="__formula">`=(y_1-x_1;y_2-x_2;...;y_n-x_n)`</div>
       </div>
 
     <h3>24. Skalaarkorrutise definitsioon üldjuhul. Skalaarkorrutise näiteid.</h3>
@@ -1215,9 +1375,14 @@
       </div>
     <h3>29. Ortonormaalne baas. Vektorite skalaarkorrutise, vektori pikkuse ja punktide
     vahelise kauguse leidmise reeglid ortonormaalse reeperi korral.</h3>
-      <div>
-
-      </div>
+    <div>
+      <b>Ortonormaalne baas</b><br>
+      Eukleidilise vektorruumi baasi nimetatakse ortonormeeritud ehk ortonormaalseks baasiks,
+      kui baasivektorid moodustavad ortonormeeritud vektorite süsteemi.
+      (vektor `alpha` on normeeritud ehk ühikvektor, kui pikkus `||alpha|| = 1`)
+      <br>
+      Selles baasis nende asjade arvutamine toimub nii nagu oled harjunud.
+    </div>
 
     <h3>30. Sirge ja tema võrrandid. Sirge võrrandid kahemõõtmelises eukleidilises
     ruumis.</h3>
@@ -1731,6 +1896,93 @@
     oleks ortogonaalmaatriks (kõik tõestustega).</h3>
       <div>
         DIIIBS - MARTEN
+        <b>Definitsioon</b>
+        <div>
+          Lineaarteisendusest `L : V rarr V` nimetatakse <b>ortogonaalteisenduseks</b>,
+          kui ta säilitab skalaarkorrutise.
+        </div><br>
+        <div>
+          Öeldakse, et lineaarteisendus `L : V rarr V` <b>säilitab skalaarkorrutise</b>,
+          kui
+        </div><br>
+        <div class="__formula">
+          `xi_1 * xi_2 = L(xi_1) * L(xi_2)`
+        </div>
+        <div style="text-align: right;">
+          iga `xi_1, xi_2 in V` korral.
+        </div><br>
+        <b>Seos vektori pikkuse ja vektorite vahelise nurgaga</b>
+        <div>
+          Ortogonaalteisendus `L` säilitab vektorite pikkused ja vektorite vahelised nurgad,
+          st
+        </div>
+        <div class="__formula">
+          `|| xi || = || L (xi) ||,`&emsp;`hat(xi_1, xi_2) = hat(L(xi_1), L(xi_2))`
+        </div>
+        <div style="text-align: right;">
+          iga `xi, xi_1, xi_2 in V` korral.
+        </div>
+        <div>
+          Tõepoolest, võrduse `xi_1 * xi_2 = L(xi_1) * L(xi_2)` kohaselt
+        </div>
+        <div class="__formula">
+          `|| xi || = sqrt( xi * xi) = sqrt(L(xi) * L(xi)) = || L(xi) ||`
+        </div>
+        <div>
+          ja seetõttu ka
+        </div>
+        <div class="__formula">
+          `cos hat(xi_1, xi_2) = (xi_1 * xi_2) / (||xi_1|| * ||xi_2||) = `
+        </div>
+        <div class="__formula">
+          `(L(xi_1) * L(xi_2)) / (||L(xi_1)|| * ||L(xi_2)||) = cos hat(L(xi_1), L(xi_2))`.
+        </div><br>
+        <b>Ortogonaalteisenduse maatriks</b>
+        <div>
+          Lineaarteisendus `L` on ortogonaalteisendus parajasti siis, kui tema maatriks
+          `A` rahuldab võrdust
+        </div>
+        <div class="__formula">
+          `A^T = A^(-1)`
+        </div><br>
+        <b>Definitsioon</b>
+        <div>
+          Ruutmaatriksit `A` nimetatakse <b>ortogonaalmaatriksiks</b>, kui `A^(-1)=A^T`.
+        </div><br>
+        <b>Tarvilik ja piisav tunnus selleks, et ruutmaatriks oleks ortogonaalmaatriks.</b>
+        <div>
+          Ruutmaatriks `A` on ortogonaalmaatriks parajasti siis, kui tema reavektorid
+          on omavahel risti ja pikkusega `1`.
+        </div><br>
+        <b>Tõestus</b>
+        <div>
+          Olgu `A` reavektorid `vec a_1, vec a_2, ... , vec a_3`, st
+        </div>
+        <div class="__formula">
+          `A = [[vec a_1], [vec a_2], [...], [vec a_n]]`,&emsp;siis
+          &emsp;`A^T=[vec a_1 vec a_2 ... vec a_n]`.
+        </div>
+        <div>
+          siis
+        </div>
+        <div class="__formula">
+          `A A^T = [
+          [alpha_1 * alpha_1, alpha_1 * alpha_2, ... , alpha_1 * alpha_n],
+          [alpha_1 * alpha_1, alpha_1 * alpha_2, ... , alpha_1 * alpha_n],
+          [vdots, vdots, ddots, vdots],
+          [alpha_n * alpha_1, alpha_n * alpha_2, ... , alpha_n * alpha_n]
+          ]`
+        </div>
+        <div>
+          Maatriks `A` on ortogonaalmaatriks parajasti siis, kui `A^T = A^(-1)`,
+          st `A A^T = E` ehk eelneva võrduse tõttu
+        </div>
+        <div class="__formula">
+          `a_i a_j = {(0, text(kui ) i != j), (1, text(kui ) i = j):}`
+        </div>
+        <div>
+          See on samaväärne teoreemi väitega, M.O.T.T.
+        </div>
       </div>
     <h3>38. Omaväärtused ja omavektorid ning nende leidmine.</h3>
     <div>
