@@ -446,7 +446,39 @@
       </div>
     <h3>13. n-ndat järku determinandi definitsioon. Teist ja kolmandat järku determinant.</h3>
       <div>
-
+        Maatriksi determindandiks nimetatakse summat
+        <div class="__formula">
+          `sum_((i_1, i_2, ..., i_3) in S_n)^() (-1)^(sigma(i_1, i_2,..., i_n)) a_(1i_1) a_(2i_2) ... a_(ni_n)`
+        </div>
+        kus iga n-ndat järku substitutsiooni `(i_1, i_2, ..., i_3)` jaoks on üks liidetav<br>
+        <div class="__formula">
+          `(-1)^(sigma(i_1, i_2,..., i_n)) a_(1i_1) a_(2i_2) ... a_(ni_n)`
+        </div><br>
+        Summat tähistatakse veel<br>
+              <div class="__formula">
+                `detA = |A| = |[a_(11), a_(12), ..., a_(1n)],
+                 [a_(21),  a_(22),  ...,  a_(2n)],
+                 [vdots,  vdots,  ddots,  vdots],
+                 [a_(n1),  a_(n2),  ...,  a_(n n)]|`
+               </div><br>
+        ja seda nimetatakse ka n-dat järku determinandiks.<br>
+        Teist järku determinant:<br>
+        <div class="__formula">
+          `|[a_(11), a_(12)],
+          [a_(21), a_(22)]| = sum_((i_1, i_2) in S_2)^() (-1)^(sigma(i_1, i_2)) a_(1i_1)a_(2i_2) = (-1)^(sigma(1, 2)) a_(11)a_(22) + (-1)^(sigma(2, 1))a_(12)a_(21)
+          = a_(11)a_(22) - a_(12)a_(21)`
+        </div><br>
+        Kolmandat järku determinant<br>
+        <div class="__formula">
+          `|[a_(11), a_(12), a_(13)],
+          [a_(21), a_(22), a_(23)],
+          [a_(31), a_(32), a_(33)]| = sum_((i_1, i_2, i_3) in S_3)^() (-1)^(sigma(i_1, i_2, i_3)) a_(1i_1) a_(2i_2) a_(3i_3) = ` <br>
+          `= (-1)^(sigma(1,2,3)) a_(11)a_(22)a_(33) + (-1)^(sigma(1,3,2)) a_(11)a_(23)a_(32) + ` <br>
+          `+ (-1)^(sigma(2,1,3)) a_(12)a_(21)a_(33) + (-1)^(sigma(2,3,1)) a_(12)a_(23)a_(31) + ` <br>
+          `+ (-1)^(sigma(3,1,2)) a_(13)a_(21)a_(32) + (-1)^(sigma(3,2,1)) a_(13)a_(22)a_(31) = ` <br>
+          `= a_(11)a_(22)a_(33) - a_(11)a_(23)a_(32) - a_(12)a_(21)a_(33) + ` <br>
+          `+ a_(12)a_(23)a_(31) - a_(13)a_(21)a_(32) - a_(13)a_(22)a_(31)`
+        </div>
       </div>
     <h3>14. Crameri valemid ja nende tõestus juhul n = 2.</h3>
       <div>
@@ -532,7 +564,28 @@
       </div>
     <h3>16. Vektorruumi definitsioon ja näiteid.</h3>
       <div>
-
+          Mittetühja hulka V nimetatakse vektorruumiks, kui temas on antud kaks tehet - liitmine(igale kahele elemend `alpha + beta in V` on vastavusse pandud parajasti üks element `alpha + beta in V`)
+          ja skalaar korrutamine (igale arvule `alpha in R` ja hulga V elemendile `alpha` on vastavusse pandud parajasti üks element a`alpha in V` - nii, et on täidetud teoreemis 2.1 loetletud aksioomid `1^0 - 8^8`.
+          Vektorruumi V elemente nimetatakse vektoriteks.<br><br>
+          Vektori `theta` aksioomist `3^0` nimetatakse nullvektoriks. Nullvektoreid saab vektorruumis olla ainult üks, sest kui  `theta_1` ja `theta_2` on nullvektorid,siis `theta_1 + theta_2` võrdub nii vektoriga `theta_1`, kui ka vektoriga `theta_2`, st `theta_1 = theta_2`<br>
+          Aksioom `3^0` kohaselt leidub iga vektori `alpha in V` jaoks selline vektor `beta in V`, et `alpha + beta = beta + alpha = theta`. Sellist vektorit `beta`  nimetatakse vektori `alpha` vastandvektoriks. Ka vektori `alpha` vastandvektoriks. Ka vektori `alpha` vastandvektor
+          on üheselt määratud: kui `beta_1` ja `beta_2` oleksid mõlemad vektori `alpha` vastandvektorid, siis
+          <div class="__formula">
+              `beta_1 + alpha = theta, alpha + beta_2 = theta`
+          </div><br>
+          ja<br>
+          <div class="__formula">
+              `beta_2 = theta + beta_2 = (beta_1 + alpha) + beta_2 = beta_1 + (alpha + beta_2) = beta_1 + theta = beta_1` ehk `beta_2 = beta_1`
+          </div><br>
+          Iga kahe vektori `alpha` ja `beta` jaoks vektorruumist V saab V saab defineerida ka nende vektorite vahe `alpha - beta` võrdusega<br>
+          <div class="__formula">
+            `alpha - beta = alpha + (-1)beta`
+          </div><br>
+          Polünoomiks nimetatakse funktsiooni kujul <br>
+          <div class="__formula">
+            `f(x) = a_0 + a_1x + a_2x^2 + ... + a_nx^n = sum_(i=0)^n a_ix^î`
+          </div><br>
+          kus `a_0, a_1, ... , a_n in R`. Kõigi polünoomide hulka tähistatakse R[x]. Hulk R[x] on vektorruum, milles liitmine ja arvuga korrutamine toimub nii, nagu see toimub tavaliselt funktsioonidega.
       </div>
     <h3>17. Vektorite lineaarne kombinatsioon. Vektorite lineaarse sõltuvuse mõiste.
     Vektorite lineaarse sõltumatuse tunnus. Näiteid.</h3>
