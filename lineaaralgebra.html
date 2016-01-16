@@ -30,6 +30,19 @@
         text-align: center;
         padding: 5px;
       }
+
+      body {
+        margin: 40px auto;
+        max-width:650px;
+        line-height:1.6;
+        font-size:18px;
+        color:#444;
+        padding: 0 10px
+      }
+
+      h1, h2, h3 {
+        line-height:1.2
+      }
     </style>
   </head>
   <body>
@@ -552,7 +565,7 @@
           <div class="__formula">
             `a_(i1)A_(k1) + a_(i2)A_(k2) + ... + a_(i n)A_(kn) = sum_(j=1)^n a_(ij) A_(kj) = {(D, text(kui )  i=k,),(0, text(kui )  i!=k,):}`
           </div>
-          kus ´A_(kj)´ on determinandi D elemendi `a_(kj)` alamdeterminant. Analoogiliselt mis tahes veerunumbrite j ja k korral <br>
+          kus `A_(kj)` on determinandi D elemendi `a_(kj)` alamdeterminant. Analoogiliselt mis tahes veerunumbrite j ja k korral <br>
           <div class="__formula">
             `a_(1j)A_(1k) + a_(2j)A_(2k) + ... + a_(nj)A_(nk) = sum_(i=1)^n a_(ij) A_(ik) = {(D, text(kui )  j=k,),(0, text(kui )  j!=k,):}`
           </div>
@@ -590,8 +603,58 @@
     <h3>17. Vektorite lineaarne kombinatsioon. Vektorite lineaarse sõltuvuse mõiste.
     Vektorite lineaarse sõltumatuse tunnus. Näiteid.</h3>
       <div>
-
-      </div>
+        Vektorite `alpha_1, ... , a_m in V` lineaarseks kombinatsiooniks nimetatakse iga vektorit kujul
+        <div class="__formula">
+          `c_1 alpha_1 + c_2 alpha_2 + ... + c_m c_n`
+        </div><br>
+        kus `c_1, c_2, ... , c_m in R`<br>
+        Seega on vektorite `alpha_1, ... , alpha_m` linaarne kombinatsioon vektor, mis on saadud nendest vektoritest lineaarsete tehete abil (nii-öelda "lineaarselt kombineerides")
+        <br><strong>Näide</strong> Olgu V kõigi geomeetriliste vektorite hulk tasandil ning `alpha` ja `beta` suvalised mittekollineaarsed vektorid ruumist V. Siis iga vektor `gamma in V`
+        avaldub lineaarse kombinatsioonina vektoritest `alpha` ja `beta`. <br>
+        <br>Öeldakse, et vektorid `alpha_1, ..., alpha_m in V (m > 1)` on lineaarselt sõltumatud, kui ükski nendest ei avaldu lineaarse kombinatsioonina ülejäänud m-1 vektroist.
+        Nullist erinevat vektorit (st juht m = 1 ülalt) nimeatakse samuti lineaarselt sõltumatuks. Vastandjuhul nimetataakse vektoreid `alpha_1, ... , alpha_m` lineaarselt sõltuvateks.
+        <br><strong>Näide</strong>Iga kolm vektorit `alpha, beta, gamma` tasandil vaadeldavate geomeetriliste vektorite ruumist on lineaarelt sõltuvad. Kui `alpha` ja `beta` on parralleelsed, st `alpha = c beta`
+        või `beta = c alpha` (c - mingi arv), siis `alpha = c beta + 0 gamma` või `beta = c alpha + 0 gamma`. Kui aga `alpha` ja `beta` pole paralleelsed, siis `gamma` avaldub lineaarse kombinatsioonina vektorites `alpha` ja `beta`.
+        <br>Öeldakse, et lõpmatu vektorite hulk B vektorruumist V (`B sub V`) on lineaarselt sõltumatute vektorite hulk, kui iga lõplik arv erinevaid vektoreid hulgast B on lineaarselt sõltumatud. Vastndjuhul
+        nimetatakse vektorite hulka B lineaarselt sõltuvate vektorite hulgast.
+        <br><strong>Näide</strong>Olgu  `m <= n` ja vaatleme n-mõõtmelises aritmeetilises ruumis `R^n`vektoreid
+        <div class="__formula">
+          `alpha_1 = (...;1;...;0;...;0;...)`
+        </div>
+        <div class="__formula">
+          `alpha_2 = (...;0;...;1;...;0;...)`
+        </div>
+        <div class="__formula">
+          `alpha_m = (...;0;...;0;...;1;...)`
+        </div>
+        <div class="__formula">
+        mille esiletõstetud komponentides saab moodustada m-järku ühikmaatriksi<br>
+        <div class="__formula">
+         `E_m = [[1 , 0 , ... , 0],
+                [0 , 1 , ... , 0],
+                [vdots, vdots, ddots, vdots],
+                [0 , 0 , ... , 1]]`
+       </div><br>
+       Võrdleme võrdust:<br>
+       <div class="__formula">
+         `c_1 alpha_1 + c_2 alpha_2 + ... + c_m alpha_m =`
+        </div>
+        <div class="__formula">
+         `= (...;1;...;0;...;0;...) + `
+         </div>
+         <div class="__formula">
+         `+ (...;0;...;1;...;0;...) + `
+         </div>
+         <div class="__formula">
+         `+ (...;0;...;0;...;1;...) = `
+         </div>
+         <div class="__formula">
+         `+ (...;c_1;...;c_2;...;c_m;...) = `
+         </div>
+         <div class="__formula">
+         `= (0;0;...;0)`
+       </div><br>
+       kust järelduvadki võrdused `c_1 = c_2 = ... = c_m = 0`. Järelikult on vektorid ´alpha_1, ..., alpha_m´ lineaarselt sõltumatud.
     <h3>18. Vektorruumi baasi definitsioon. Kanoonilised baasid tuntud vektorruumides.
     Baaside omadusi.</h3>
       <div>
@@ -917,7 +980,7 @@
       </div>
     <h3>28. Nurk vektorite vahel ja selle olemasolu. Ortogonaalsus ehk ristseis.</h3>
       <div>
-
+        DIbs joss
       </div>
     <h3>29. Ortonormaalne baas. Vektorite skalaarkorrutise, vektori pikkuse ja punktide
     vahelise kauguse leidmise reeglid ortonormaalse reeperi korral.</h3>
@@ -931,15 +994,49 @@
       </div>
     <h3>31. Hüpertasand, selle normaalvektor, omadusi. Hüpertasandi erijuhud.</h3>
       <div>
-        Mina teen seda -J
-      </div>
-    <h3>32. Punkti kaugus mingist punktihulgast eukleidilises ruumis. Punkti kaugus
-    hüpertasandist (tõestusega). Saadud valemi erijuhud.</h3>
-      <div>
+       <b>Hüpertasand</b> <br>
+       Hüpertasand kahe- ja kolmemõõtmelises ruumis: <br>
+         <div class="__formula">
+            <img src="hupertasandkaks.png" alt="">
+        </div>
+        <div class="__formula">
+            <img src="hupertasandkolm.png" alt="">
+         </div>
+        Definitsioon: Hüpertasandiks afiinses ruumis <b>A</b> nimetatakse kõigi selliste punktide
+        `P(x_1;x_2;...;x_n)` hulka, mille koordinaadid `x_1,x_2,...,x_n` rahuldavad lineaarset võrrandit <br>
+        <div class="__formula">
+         `a_1 x_1 + a_2 x_2 +...+a_n x_n + b = 0`,
+        </div>
+          kus `a_1,...,a_n` ja `b` on fikseeritud reaalarvud ning arvude `a_1,...,a_n` seas on vähemalt üks arv erinev nullist. <br>
+          Kahemõõtmelises eukleidelises ruumis on hüpertasandiks punkti A läbiv sirge normaalvektoriga `vec m`. <br>
+          Kolmemõõtmelises ruumis on hüpertasandiks punkti A läbiv ja vektoriga `vec m` risti olev tasand. <br> <br>
 
+        <b>Hüpertasandi normaalvektor</b> <br>
+         Vektorit `vec m` nimetatakse vaadeldava tasandi normaalvektoriks <br>
+         Kolmemõõtmelises ruumis on normaalvektor risti tasandiga. `vec m = (a;b;c)` <br>
+         Kahemõõtmelises ruumis on normaalvektor risti sirgega. <br> <br>
+
+         <b>Hüpertasandi omadusi</b> <br>
+         Kolmemõõtmelises eukleidelises ruumis võib sirget lisaks kanoonilistele ja parameetrilistele võrranditele esitada ka
+         kahe mitteparalleelse tasandi lõiksirgena, st võrrandisüsteemiga kujul
+         <div class="__formula">
+                `{(a_1x+b_1y + c_1z+d_1=0),(a_2x+b_2y + c_2z+d_2=0):}`
+        </div>
+          kus mainitud tasandite normaalvektorid `(a_1;b_1;c_1)` ja `(a_2;b_2;c_2)` on mitteparalleelsed. <br> <br>
+         <b>Hüpertasandi erijuhud</b> <br>
+          Erijuhul n = 2 ehk tasandil on hüpertasandiks sirge võrrandiga: <br>
+          <div class="__formula">`ax + by +c = 0`</div>
+          Erijuhul n = 3 on hüpertasandiks tavaline tasand võrrandiga <br>
+          <div class="__formula">`ax + by + cz + b = 0`</div>
+          kus tasandi normaalvektor (tasandiga risti olev vektor) on koordinaatidega `vec n = (a,b,c)`
       </div>
-    <h3>33. Teist järku determinandi geomeetriline tõlgendus (tõestusega).</h3>
-      <div>
+        <h3>32. Punkti kaugus mingist punktihulgast eukleidilises ruumis. Punkti kaugus <br>
+        hüpertasandist (tõestusega). Saadud valemi erijuhud.</h3>
+       <div>
+      </div>
+
+        <h3>33. Teist järku determinandi geomeetriline tõlgendus (tõestusega).</h3>
+        <div>
             Vaatleme teist järku determinanti <br>
             <div class="__formula">
                 `D= ||[a1, a2],
@@ -963,23 +1060,38 @@
             </div>
             Leiame determinandi teisele reale arvu a kordse esimese rea ja arvestame, et vektorite `alpha` ja `gamma`
             ristseisu tõttu `alpha * gamma = gamma* alpha = 0`:
-          <div class="__formula">
+            <div class="__formula">
                 `D^2 = |[alpha * alpha, alpha * beta],
                         [(beta + a alpha) * alpha, (beta + a alpha)*beta]|`
+          </div>
+          <div class="__formula">
                 `=     |[alpha * alpha, alpha * beta],
                         [gamma * alpha, gamma*beta]|`
+          </div>
+          <div class="__formula">
                 `=     |[alpha * alpha, alpha * beta],
                         [0, gamma*beta]|`
+          </div>
+          <div class="__formula">
                 `=    (alpha*alpha)(gamma*beta)``=||alpha||^2(gamma*beta+0)`
+          </div>
+          <div class="__formula">
                 `=||alpha||^2(gamma*beta+gamma*a alpha)`
+          </div>
+          <div class="__formula">
                 `=||alpha||^2 (gamma*(beta+a alpha))`
+          </div>
+          <div class="__formula">
                 `=||alpha||^2(gamma*gamma)`
+          </div>
+          <div class="__formula">
                 `=||alpha||^2||gamma||^2`
-            </div>
+          </div>
             Võttes viimase võrduse mõlemast poolest ruutjuure, saamegi `|D| = ||alpha||*||gamma||`,
             mis võrdub vektoritele`alpha` ja `beta` ehitatud rööpküliku pindalaga. Sõnastame saadud tulemuse teoreemina: <br>
             <i>Teist järku determinandi absoluutväärtus võrdub tema reavektoritele ehitatud rööpküliku pindalaga.</i>
       </div>
+
     <h3>34. Kolmandat järku determinandi geomeetriline tõlgendus (tõestusega).</h3>
             Vaatleme kolmandat järku determinanti <br>
             <div class="__formula">
@@ -1029,12 +1141,31 @@
                      ` =(alpha*alpha)(hat beta*beta)(hat gamma*gamma)`,
              </div>
              sest <br>
-             <div class="__formula">`hat beta _|_ alpha, hat gamma _|_ alpha, hat gamma _|_ beta ehk hat beta*alpha=hat gamma*alpha=hat gamma*beta = 0`</div>
+             <div class="__formula">`hat beta _|_ alpha, hat gamma _|_ alpha, hat gamma _|_ beta`</div>
+             ehk <br>
+             <div class="__formula">`hat beta*alpha=hat gamma*alpha=hat gamma*beta = 0`</div>
              seega <br>
+<<<<<<< HEAD
             <div class="__formula">
                  `D^2 = (alpha*alpha)(hat beta*beta)(hat gamma*gamma)= (alpha*alpha)(hat beta*beta +0)(hat gamma*gamma+0+0)
                  = (alpha*alpha)(hat beta*beta + hat beta*(a alpha))(hat gamma*gamma+hat gamma (b alpha) + hat gamma*(c beta))
                  =(alpha*alpha)(hat beta*hat beta)(hat gamma*hat gamma) = ||alpha||^2||hat beta||^2||hat gamma||^2`
+=======
+             <div class="__formula">
+               `D^2 = (alpha*alpha)(hat beta*beta)(hat gamma*gamma)`
+             </div>
+             <div class="__formula">
+               `= (alpha*alpha)(hat beta*beta +0)(hat gamma*gamma+0+0)`
+             </div>
+             <div class="__formula">
+               `= (alpha*alpha)(hat beta*beta + hat beta*(a alpha))(hat gamma*gamma+hat gamma (b alpha) + hat gamma*(c beta))`
+             </div>
+             <div class="__formula">
+               `= (alpha*alpha)(hat beta*hat beta)(hat gamma*hat gamma)`
+             </div>
+             <div class="__formula">
+               `= ||alpha||^2||hat beta||^2||hat gamma||^2`
+>>>>>>> ecb74ea59c66bfc4954cd187364b8123bf5dafd6
              </div>
              ja <br>
              <div class="__formula">`|D| = ||alpha||*||hat beta||*||hat gamma||`</div>
