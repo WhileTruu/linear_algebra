@@ -961,7 +961,54 @@
       
     <h3>22. Pöördmaatriksi definitsioon, ühesus, olemasolu ja leidmine (tõestustega).</h3>
       <div>
-        Dibs - joss
+        Maatriksi A <b>pöördmaatriksiks</b> nimetatakse sellist maatriksit B, mille korral 
+          <div class="__formula">`AB=BA=E`, </div>
+          kus E on sobivat järku ühikmaatriks. <br>
+          Võrduste ahelas on korrutamine võimalik vaid juhul, kui A on ruutmaatriks. Seega 
+          pöördmaatriks võib leiduda ainult ruutmaatriksil. <br> <br>
+          
+          <b>Ühesus</b> <br>
+          Maatriksi A pöördmaatriks, juhul, kui ta eksisteerib, on üheselt määratud. <br>
+          <i>Tõestus</i> Olgu `B_1` ja `B_2` maatriksi A pöördmaatriksid. Siis
+          <div class="__formula">`AB_1=B_1A=E, text( ) AB_2=B_2A=E`</div>
+          ja
+          <div class="__formula">`B_1=B_1E=B_1(AB_2) = (B_1A)B_2= EB_2=B_2`</div>
+          st `B_1=B_2` ning teoreemi väide kehtib. <br>
+          Maatriksi A pöördmaatriksit tähistatakse `A^(-1)`. Seega
+          <div class="__formula">`AA^(-1) = A^(-1)A=E`</div>
+          Osutub, et mitte kõik ruutmaatriksid ei oma pöördmaatriksit. <br> <br>
+          
+          <b>Pöördmaatriksi olemasolu</b> <br>
+          Oletame, et maatriksil A leidub pöördmaatriks. Siis `AA^(-1)=E` ning 
+          <div class="__formula">`|A|*|A^(-1)|=|A^(-1)|=|E|=|[1, 0,...,0],
+                    [0,1,...,0],
+                    [vdots, vdots,ddots,vdots],
+                    [0, 0,...,1]|=1!=0`</div>          
+          Siit järeldubki, et `|A|!=0` <br> <br>
+          <b>Pöördmaatriksi leidmine</b> <br>
+          Eeldame, et`|A| !=0`. Moodustame maatriksi
+          <div class="__formula">`B=1/|A|*||[A_(11),A_(21),...,A_(n1)],
+                    [A_(12),A_(22),...,A_(n2)],
+                    [vdots, vdots,ddots,vdots],
+                    [A_(1n),A_(2n),...,A_(n n)]||`</div>
+          
+          ja veendume determinantide teooria põhivalemeid kasutades, et AB=E:
+          <div class="__formula">`AB=1/|A|*||[A_(11),A_(21),...,A_(n1)],
+                    [A_(12),A_(22),...,A_(n2)],
+                    [vdots, vdots,ddots,vdots],
+                    [A_(1n),A_(2n),...,A_(n n)]||*||[A_(11),A_(21),...,A_(n1)],
+                    [A_(12),A_(22),...,A_(n2)],
+                    [vdots, vdots,ddots,vdots],
+                    [A_(1n),A_(2n),...,A_(n n)]|| = `</div>
+          
+          <div class="__formula">`=1/|A|*||[|A|,0,...,0],
+                    [0,|A|,...,0],
+                    [vdots, vdots,ddots,vdots],
+                    [0,0,...,|A|]|| =||[1,0,...,0],
+                    [0,1,...,0],
+                    [vdots, vdots,ddots,vdots],
+                    [0,0,...,1]|| =E `</div>
+          Sellega sai näidatud, et `B=A^(-1)`
       </div>
       
     <h3>23. Afiinne ruum. Koordinaatide sissetoomine afiinsesse ruumi (reeper ehk
