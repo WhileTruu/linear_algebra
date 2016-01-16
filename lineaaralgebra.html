@@ -503,10 +503,67 @@
       </div>
       
     <h3>14. Crameri valemid ja nende tõestus juhul n = 2.</h3>
-     dibs - joss
-      <div>
-
-      </div>
+    <div>
+         Lineaarse võrrandisüsteemi
+         <div class="__formula">
+                `{(a_(11)x_1 + a_(12)x_2 +...+a_(1n)x_n = b_1),
+                (a_(21)x_1 + a_(22)x_2 +...+a_(2n)x_n = b_2),
+                (...),
+                (a_(m1)x_1 + a_(m2)x_2 +...+a_(mn)x_n = b_m):}`
+         </div> 
+          lahendid saab leida Crameri valemitega, kui <br>
+          1) tundmatute arv võrdub võrrandite arvugu(ehk peamaatriks A peab olema ruutmaatriks) <br>
+          2) süsteemi peamaatriksi A determinant `det(a) != 0`. <br>
+          <br>
+          Võrrandisüsteemi lahend avaldub valemiga
+          
+          <div class="__formula">
+                `x_i = |A_i|/|A|,i=1,2..n`,
+          </div>
+          kus `A_i` on maatriks, mis on saadud maatriksist A i-nda veeru asendamisel võrrandisüsteemi vabaliikmete veeruga.
+          <br>
+          <b>Juhul n=2</b> ehk võrrandisüsteemist
+          <div class="__formula">
+                `{(a_(11)x_1 + a_(12)x_2= b_1),
+                (a_(21)x_1 + a_(22)x_2= b_2):}`
+         </div> 
+          tundmatu `x_1` leidmiseks lahutatakse arvu `a_(22)` kordsest esimesest võrrandist arvu `a_(12)` kordne teine võrrand ja saadakse
+          <div class="__formula">
+                `(a_(11)a_(22) -a_(12)a_(21) )x_1 = b_(1)a_(22) - b_(2)a_(12)`
+         </div> 
+           ning juhul `a_(11)a_(22) -a_(12)a_(21) != 0`
+          <div class="__formula">
+                `x_1 = (b_(1)a_(22) - b_(2)a_(12))/(a_(11)a_(22) -a_(12)a_(21))`
+         </div> 
+          Tundmatu `x_2` leidmiseks tehakse analoogselt ja saadakse
+          <div class="__formula">
+                `x_2 = (b_(2)a_(11) - b_(1)a_(21))/(a_(11)a_(22) -a_(12)a_(21))`
+         </div>
+          Murdude lugejas ja nimetajas on teist järku determinandid
+          <div class="__formula">
+                `D= |[a_(11), a_(12)],
+                    [a_(21), a_(22)]|
+                    = a_(11)a_(22) -a_(12)a_(21)`
+         </div>
+          <div class="__formula">
+                `D_1= |[b_(1), a_(12)],
+                    [b_(2), a_(22)]|
+                    = b_(1)a_(22) -b_(2)a_(12)`
+         </div>
+          <div class="__formula">
+                `D_2= |[a_(11), b_(1)],
+                    [a_(21), b_(2)]|
+                    = b_(2)a_(11) -b_(1)a_(21)`
+         </div>
+          Seega võrrandisüsteemi lahend on
+           <div class="__formula">
+                `x_1 = D_1/D`
+          </div>         
+            <div class="__formula">
+                `x_2 = D_2/D`
+          </div>
+          Sellega ongi Crameri valemid juhul n=2 tõestatud.
+    </div>
     <h3>15. Determinantide omadused (tõestusteta).</h3>
       <div>
           <b>Omadus 1</b><br>
