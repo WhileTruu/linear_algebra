@@ -979,16 +979,30 @@
           <div class="__formula">
                 `D^2 = |[alpha * alpha, alpha * beta],
                         [(beta + a alpha) * alpha, (beta + a alpha)*beta]|`
+          </div>
+          <div class="__formula">
                 `=     |[alpha * alpha, alpha * beta],
                         [gamma * alpha, gamma*beta]|`
+          </div>
+          <div class="__formula">
                 `=     |[alpha * alpha, alpha * beta],
                         [0, gamma*beta]|`
+          </div>
+          <div class="__formula">
                 `=    (alpha*alpha)(gamma*beta)``=||alpha||^2(gamma*beta+0)`
+          </div>
+          <div class="__formula">
                 `=||alpha||^2(gamma*beta+gamma*a alpha)`
+          </div>
+          <div class="__formula">
                 `=||alpha||^2 (gamma*(beta+a alpha))`
+          </div>
+          <div class="__formula">
                 `=||alpha||^2(gamma*gamma)`
+          </div>
+          <div class="__formula">
                 `=||alpha||^2||gamma||^2`
-            </div>
+          </div>
             Võttes viimase võrduse mõlemast poolest ruutjuure, saamegi `|D| = ||alpha||*||gamma||`,
             mis võrdub vektoritele`alpha` ja `beta` ehitatud rööpküliku pindalaga. Sõnastame saadud tulemuse teoreemina: <br>
             <i>Teist järku determinandi absoluutväärtus võrdub tema reavektoritele ehitatud rööpküliku pindalaga.</i>
@@ -1042,12 +1056,24 @@
                      ` =(alpha*alpha)(hat beta*beta)(hat gamma*gamma)`,
              </div>
              sest <br>
-             <div class="__formula">`hat beta _|_ alpha, hat gamma _|_ alpha, hat gamma _|_ beta ehk hat beta*alpha=hat gamma*alpha=hat gamma*beta = 0`</div>
+             <div class="__formula">`hat beta _|_ alpha, hat gamma _|_ alpha, hat gamma _|_ beta`</div>
+             ehk <br>
+             <div class="__formula">`hat beta*alpha=hat gamma*alpha=hat gamma*beta = 0`</div>
              seega <br>
-            <div class="__formula">
-                 `D^2 = (alpha*alpha)(hat beta*beta)(hat gamma*gamma)= (alpha*alpha)(hat beta*beta +0)(hat gamma*gamma+0+0)
-                 = (alpha*alpha)(hat beta*beta + hat beta*(a alpha))(hat gamma*gamma+hat gamma (b alpha) + hat gamma*(c beta))
-                 =(alpha*alpha)(hat beta*hat beta)(hat gamma*hat gamma) = ||alpha||^2||hat beta||^2||hat gamma||^2`
+             <div class="__formula">
+               `D^2 = (alpha*alpha)(hat beta*beta)(hat gamma*gamma)`
+             </div>
+             <div class="__formula">
+               `= (alpha*alpha)(hat beta*beta +0)(hat gamma*gamma+0+0)`
+             </div>
+             <div class="__formula">
+               `= (alpha*alpha)(hat beta*beta + hat beta*(a alpha))(hat gamma*gamma+hat gamma (b alpha) + hat gamma*(c beta))`
+             </div>
+             <div class="__formula">
+               `= (alpha*alpha)(hat beta*hat beta)(hat gamma*hat gamma)`
+             </div>
+             <div class="__formula">
+               `= ||alpha||^2||hat beta||^2||hat gamma||^2`
              </div>
              ja <br>
              <div class="__formula">`|D| = ||alpha||*||hat beta||*||hat gamma||`</div>
