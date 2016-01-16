@@ -739,7 +739,97 @@
       </div>
     <h3>26. Vektori pikkus ja selle omadused (tõestustega).</h3>
       <div>
-        I AM DOING THIS, CHOOSE STH ELSE
+        <b>Definitsioon</b>
+        <div>
+          Vektori `alpha in V` pikkuseks nimetatakse arvu `sqrt(alpha * alpha)`.
+          Vektori `alpha` pikkust tähistatakse `||alpha||`.
+        </div>
+        <div class="__formula">
+          `||alpha|| = sqrt(alpha * alpha)` ehk `alpha * alpha = || alpha ||^2`
+        </div><br>
+        <b>Teoreem</b>
+        <div>
+          Mis tahes arvu `c` ning kahe vektori `alpha` ja `beta` korral
+          eukleidilisest vektorruumist `V` kehtivad järgmised omadused.
+        </div>
+        <ol>
+          <li>
+            <div class="__formula">
+              `|| c alpha || = |c| * || alpha ||`
+            </div>
+            <b>Tõestus</b>
+            <div>
+              Kuna `sqrt(c^2) = |c|`, siis
+            </div>
+            <div class="__formula">
+              `|| c alpha || = sqrt((c alpha) * (c alpha)) = sqrt(c^2 (alpha * alpha)) = `
+              `|c| * sqrt(alpha * alpha) = |c| * ||alpha||`
+            </div>
+            <div style="text-align: right;">
+              ja võrdus kehtib.
+            </div><br>
+          </li>
+          <li>
+            <div class="__formula">
+              `|alpha * beta| <= || alpha || * || beta ||`
+            </div>
+            <b>Tõestus</b>
+            <div>
+              Kui `alpha = theta` või `beta = theta`, siis võrratus kehtib. Seepärast
+              eeldame, et `alpha != theta` ja `beta != theta`. Valime suvalise reaalarvu
+              `x` ja moodustame vektori `xi = alpha + x beta`.<br>
+              &emsp;Aksioomi (`alpha * alpha >= 0` iga `alpha in V` korral;
+              `alpha * alpha = 0` parajasti siis, kui `alpha = theta`) põhjal `xi * xi >= 0`, st
+            </div>
+            <div class="__formula">
+              `(alpha + x beta) * (alpha + x beta) >= 0`
+            </div>
+            <div>
+              Avaldades võrratuse vasakul pool sulud, saadakse
+            </div>
+            <div class="__formula">
+              `alpha * (alpha + x beta) +  (x beta) * (alpha + x beta) >= 0`,
+            </div>
+            <div class="__formula">
+              `alpha * alpha + alpha * (x beta) + (x beta) * alpha + (x beta) * (x beta) >= 0`,
+            </div>
+            <div class="__formula">
+              `alpha * alpha + x (alpha * beta) + x (beta * alpha) + x^2 (beta * beta) >= 0`,
+            </div>
+            <div class="__formula">
+              `|| alpha ||^2 + x (alpha * beta) + x (alpha * beta) + x^2 || beta ||^2 >= 0`,
+            </div>
+            <div class="__formula">
+              `|| beta ||^2 c^2 + 2 (alpha * beta) x + ||alpha||^2 >= 0`.
+            </div>
+            <div>
+              Kuna `beta != theta`, siis on saadud võrratus ruutvõrratus. Saadud
+              võrratus kehtib iga reaalarvu `x` korral, mistõttu peab tema vasakul
+              pool esineva ruutkolmliikme diskriminant `D` rahuldama võrratust `D <= 0`:
+            </div>
+            <div>
+              (Ruutvõrrandi diskriminant on suurus `D = b^2 - 4 a c`)
+            </div>
+            <div class="__formula">
+              `D = (2 (alpha * beta))^2 - 4 * || beta ||^2 * || alpha ||^2 <= 0`.
+            </div>
+            <div>
+              Teisendades võrratust saadakse
+            </div>
+            <div class="__formula">
+              `4 (alpha * beta)^2 <= 4 * || alpha ||^2 * || beta ||^2`,&emsp;
+              `(alpha * beta)^2 <= || alpha ||^2 * || beta ||^2`
+            </div>
+            <div style="text-align: right;">
+              kust järeldubki võrratus `|alpha * beta| <= ||alpha|| * ||beta||`.
+            </div><br>
+          </li>
+          <li>
+            <div class="__formula">
+              `|| alpha + beta || <= || alpha || + || beta ||`
+            </div>
+          </li>
+        </ol>
       </div>
     <h3>27. Punktide vaheline kaugus. Kauguse omadused.</h3>
       <div>
