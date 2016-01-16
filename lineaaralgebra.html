@@ -1586,6 +1586,93 @@
     oleks ortogonaalmaatriks (kõik tõestustega).</h3>
       <div>
         DIIIBS - MARTEN
+        <b>Definitsioon</b>
+        <div>
+          Lineaarteisendusest `L : V rarr V` nimetatakse <b>ortogonaalteisenduseks</b>,
+          kui ta säilitab skalaarkorrutise.
+        </div><br>
+        <div>
+          Öeldakse, et lineaarteisendus `L : V rarr V` <b>säilitab skalaarkorrutise</b>,
+          kui
+        </div><br>
+        <div class="__formula">
+          `xi_1 * xi_2 = L(xi_1) * L(xi_2)`
+        </div>
+        <div style="text-align: right;">
+          iga `xi_1, xi_2 in V` korral.
+        </div><br>
+        <b>Seos vektori pikkuse ja vektorite vahelise nurgaga</b>
+        <div>
+          Ortogonaalteisendus `L` säilitab vektorite pikkused ja vektorite vahelised nurgad,
+          st
+        </div>
+        <div class="__formula">
+          `|| xi || = || L (xi) ||,`&emsp;`hat(xi_1, xi_2) = hat(L(xi_1), L(xi_2))`
+        </div>
+        <div style="text-align: right;">
+          iga `xi, xi_1, xi_2 in V` korral.
+        </div>
+        <div>
+          Tõepoolest, võrduse `xi_1 * xi_2 = L(xi_1) * L(xi_2)` kohaselt
+        </div>
+        <div class="__formula">
+          `|| xi || = sqrt( xi * xi) = sqrt(L(xi) * L(xi)) = || L(xi) ||`
+        </div>
+        <div>
+          ja seetõttu ka
+        </div>
+        <div class="__formula">
+          `cos hat(xi_1, xi_2) = (xi_1 * xi_2) / (||xi_1|| * ||xi_2||) = `
+        </div>
+        <div class="__formula">
+          `(L(xi_1) * L(xi_2)) / (||L(xi_1)|| * ||L(xi_2)||) = cos hat(L(xi_1), L(xi_2))`.
+        </div><br>
+        <b>Ortogonaalteisenduse maatriks</b>
+        <div>
+          Lineaarteisendus `L` on ortogonaalteisendus parajasti siis, kui tema maatriks
+          `A` rahuldab võrdust
+        </div>
+        <div class="__formula">
+          `A^T = A^(-1)`
+        </div><br>
+        <b>Definitsioon</b>
+        <div>
+          Ruutmaatriksit `A` nimetatakse <b>ortogonaalmaatriksiks</b>, kui `A^(-1)=A^T`.
+        </div><br>
+        <b>Tarvilik ja piisav tunnus selleks, et ruutmaatriks oleks ortogonaalmaatriks.</b>
+        <div>
+          Ruutmaatriks `A` on ortogonaalmaatriks parajasti siis, kui tema reavektorid
+          on omavahel risti ja pikkusega `1`.
+        </div><br>
+        <b>Tõestus</b>
+        <div>
+          Olgu `A` reavektorid `vec a_1, vec a_2, ... , vec a_3`, st
+        </div>
+        <div class="__formula">
+          `A = [[vec a_1], [vec a_2], [...], [vec a_n]]`,&emsp;siis
+          &emsp;`A^T=[vec a_1 vec a_2 ... vec a_n]`.
+        </div>
+        <div>
+          siis
+        </div>
+        <div class="__formula">
+          `A A^T = [
+          [alpha_1 * alpha_1, alpha_1 * alpha_2, ... , alpha_1 * alpha_n],
+          [alpha_1 * alpha_1, alpha_1 * alpha_2, ... , alpha_1 * alpha_n],
+          [vdots, vdots, ddots, vdots],
+          [alpha_n * alpha_1, alpha_n * alpha_2, ... , alpha_n * alpha_n]
+          ]`
+        </div>
+        <div>
+          Maatriks `A` on ortogonaalmaatriks parajasti siis, kui `A^T = A^(-1)`,
+          st `A A^T = E` ehk eelneva võrduse tõttu
+        </div>
+        <div class="__formula">
+          `a_i a_j = {(0, text(kui ) i != j), (1, text(kui ) i = j):}`
+        </div>
+        <div>
+          See on samaväärne teoreemi väitega, M.O.T.T.
+        </div>
       </div>
     <h3>38. Omaväärtused ja omavektorid ning nende leidmine.</h3>
       <div>
