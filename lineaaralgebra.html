@@ -32,6 +32,7 @@
       }
 
       body {
+        background-color: #EEEEEE;
         margin: 40px auto;
         max-width:650px;
         line-height:1.6;
@@ -44,6 +45,13 @@
         line-height:1.2
       }
     </style>
+    <script type="text/javascript">
+      window.onload = function() {
+        if (Math.random() <= 0.1) {
+          document.body.style.backgroundColor = '#FF3366';
+        }
+      };
+    </script>
   </head>
   <body>
     <h1>Lineaaralgebra kordamisküsimused 2015/2016. õppeaastal</h1>
@@ -980,17 +988,17 @@
       <div>
         Dibbs - uku
       </div>
-      
+
     <h3>28. Nurk vektorite vahel ja selle olemasolu. Ortogonaalsus ehk ristseis.</h3>
       <div>
         <b>Nurk vektorite vahel ja selle olemasolu</b> <br>
-            Olgu `alpha` ja `beta` nullvektorist erinevad vektorid eukleidilisest vektorruumist V. Vektorite `alpha` ja `beta` 
-            vaheliseks nurgaks nimetatakse nurka `hat (alpha,beta)`, mis on määratud võrdusega <br> 
-                   
+            Olgu `alpha` ja `beta` nullvektorist erinevad vektorid eukleidilisest vektorruumist V. Vektorite `alpha` ja `beta`
+            vaheliseks nurgaks nimetatakse nurka `hat (alpha,beta)`, mis on määratud võrdusega <br>
+
          <div class="__formula">
                 `cos hat (alpha,beta) = (alpha*beta)/(||alpha||*||beta||)`
          </div>
-         Kui `alpha != O/` ja `beta != O/`, siis 
+         Kui `alpha != O/` ja `beta != O/`, siis
         <div class="__formula">
                 `-1 <= (alpha*beta)/(||alpha||*||beta||) <= 1`
          </div>
@@ -1184,12 +1192,6 @@
              ehk <br>
              <div class="__formula">`hat beta*alpha=hat gamma*alpha=hat gamma*beta = 0`</div>
              seega <br>
-<<<<<<< HEAD
-            <div class="__formula">
-                 `D^2 = (alpha*alpha)(hat beta*beta)(hat gamma*gamma)= (alpha*alpha)(hat beta*beta +0)(hat gamma*gamma+0+0)
-                 = (alpha*alpha)(hat beta*beta + hat beta*(a alpha))(hat gamma*gamma+hat gamma (b alpha) + hat gamma*(c beta))
-                 =(alpha*alpha)(hat beta*hat beta)(hat gamma*hat gamma) = ||alpha||^2||hat beta||^2||hat gamma||^2`
-=======
              <div class="__formula">
                `D^2 = (alpha*alpha)(hat beta*beta)(hat gamma*gamma)`
              </div>
@@ -1204,7 +1206,6 @@
              </div>
              <div class="__formula">
                `= ||alpha||^2||hat beta||^2||hat gamma||^2`
->>>>>>> ecb74ea59c66bfc4954cd187364b8123bf5dafd6
              </div>
              ja <br>
              <div class="__formula">`|D| = ||alpha||*||hat beta||*||hat gamma||`</div>
