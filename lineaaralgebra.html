@@ -32,6 +32,7 @@
       }
 
       body {
+        background-color: #EEEEEE;
         margin: 40px auto;
         max-width:650px;
         line-height:1.6;
@@ -44,6 +45,13 @@
         line-height:1.2
       }
     </style>
+    <script type="text/javascript">
+      window.onload = function() {
+        if (Math.random() <= 0.1) {
+          document.body.style.backgroundColor = '#FF3366';
+        }
+      };
+    </script>
   </head>
   <body>
     <h1>Lineaaralgebra kordamisküsimused 2015/2016. õppeaastal</h1>
@@ -493,10 +501,69 @@
           `+ a_(12)a_(23)a_(31) - a_(13)a_(21)a_(32) - a_(13)a_(22)a_(31)`
         </div>
       </div>
-    <h3>14. Crameri valemid ja nende tõestus juhul n = 2.</h3>
-      <div>
 
-      </div>
+    <h3>14. Crameri valemid ja nende tõestus juhul n = 2.</h3>
+    <div>
+         Lineaarse võrrandisüsteemi
+         <div class="__formula">
+                `{(a_(11)x_1 + a_(12)x_2 +...+a_(1n)x_n = b_1),
+                (a_(21)x_1 + a_(22)x_2 +...+a_(2n)x_n = b_2),
+                (...),
+                (a_(m1)x_1 + a_(m2)x_2 +...+a_(mn)x_n = b_m):}`
+         </div>
+          lahendid saab leida Crameri valemitega, kui <br>
+          1) tundmatute arv võrdub võrrandite arvugu(ehk peamaatriks A peab olema ruutmaatriks) <br>
+          2) süsteemi peamaatriksi A determinant `det(a) != 0`. <br>
+          <br>
+          Võrrandisüsteemi lahend avaldub valemiga
+
+          <div class="__formula">
+                `x_i = |A_i|/|A|,i=1,2..n`,
+          </div>
+          kus `A_i` on maatriks, mis on saadud maatriksist A i-nda veeru asendamisel võrrandisüsteemi vabaliikmete veeruga.
+          <br>
+          <b>Juhul n=2</b> ehk võrrandisüsteemist
+          <div class="__formula">
+                `{(a_(11)x_1 + a_(12)x_2= b_1),
+                (a_(21)x_1 + a_(22)x_2= b_2):}`
+         </div>
+          tundmatu `x_1` leidmiseks lahutatakse arvu `a_(22)` kordsest esimesest võrrandist arvu `a_(12)` kordne teine võrrand ja saadakse
+          <div class="__formula">
+                `(a_(11)a_(22) -a_(12)a_(21) )x_1 = b_(1)a_(22) - b_(2)a_(12)`
+         </div>
+           ning juhul `a_(11)a_(22) -a_(12)a_(21) != 0`
+          <div class="__formula">
+                `x_1 = (b_(1)a_(22) - b_(2)a_(12))/(a_(11)a_(22) -a_(12)a_(21))`
+         </div>
+          Tundmatu `x_2` leidmiseks tehakse analoogselt ja saadakse
+          <div class="__formula">
+                `x_2 = (b_(2)a_(11) - b_(1)a_(21))/(a_(11)a_(22) -a_(12)a_(21))`
+         </div>
+          Murdude lugejas ja nimetajas on teist järku determinandid
+          <div class="__formula">
+                `D= |[a_(11), a_(12)],
+                    [a_(21), a_(22)]|
+                    = a_(11)a_(22) -a_(12)a_(21)`
+         </div>
+          <div class="__formula">
+                `D_1= |[b_(1), a_(12)],
+                    [b_(2), a_(22)]|
+                    = b_(1)a_(22) -b_(2)a_(12)`
+         </div>
+          <div class="__formula">
+                `D_2= |[a_(11), b_(1)],
+                    [a_(21), b_(2)]|
+                    = b_(2)a_(11) -b_(1)a_(21)`
+         </div>
+          Seega võrrandisüsteemi lahend on
+           <div class="__formula">
+                `x_1 = D_1/D`
+          </div>
+            <div class="__formula">
+                `x_2 = D_2/D`
+          </div>
+          Sellega ongi Crameri valemid juhul n=2 tõestatud.
+    </div>
     <h3>15. Determinantide omadused (tõestusteta).</h3>
       <div>
           <b>Omadus 1</b><br>
@@ -629,6 +696,7 @@
         </div>
         <div class="__formula">
         mille esiletõstetud komponentides saab moodustada m-järku ühikmaatriksi<br>
+      </div>
         <div class="__formula">
          `E_m = [[1 , 0 , ... , 0],
                 [0 , 1 , ... , 0],
@@ -654,23 +722,68 @@
          <div class="__formula">
          `= (0;0;...;0)`
        </div><br>
-       </div>
-       </div>
        kust järelduvadki võrdused `c_1 = c_2 = ... = c_m = 0`. Järelikult on vektorid ´alpha_1, ..., alpha_m´ lineaarselt sõltumatud.
+     </div>
     <h3>18. Vektorruumi baasi definitsioon. Kanoonilised baasid tuntud vektorruumides.
     Baaside omadusi.</h3>
-      <div>
-
+    <div>
+      Mittetühja vektorite hulka B, `B sub V`, nimetatakse vektorruumi V baasiks, kui K0 vektorite hulk B on lineaarselt sõltumatute vektorite hulk,
+      K2 iga vektor `xi` vektorruumist V avaldub lineaarse kombinatsioonina hulka B kuuluvatest vekotritest, st leiduvad sellised vektorid `epsilon_1, ..., epsilon_n in B`
+      ja arvud `x_1, ... , x_n in R`, et
+      <div class="__formula">
+        `xi = x_1 epsilon_1 + x_2 epsilon_2 + ... + x_n epsilon_n`
       </div>
+      Tavaliselt valitakse vektorruumi paljude baaside hulgast välja üks baas B, mis enamasti tekib loomulikul viisil.
+      Sellist kokkuleppeliselt välja valitud baasi nimetatakse vaadeldava vektorruumi loomulikuks ehk kanooniliseks baasiks.
+      <strong>Omadused:</strong><br>
+      1) Vektorruumi V erinevad baasid sisaldavad ühe ja sama palju vektoreid. Vektorite arvu vektoruumi V mis tahes baasis nimetatakse vektorruumi V mõõtmeteks ehk dimensiooniks ja seda tähistatakse dimV
+      <br>2) n-mõõtmelises vektorruumis iga n lineaarselt sõltumatut vektorit moodustavad selle ruumi baasi.
+      <br>3) Vektorruumis V iga lineaarselt sõltumatute vektorite hulk on täiendatav selle vektorruumi baasiks.
+    </div>
     <h3>19. Vektori koordinaadid. Tehted koordinaatkujul antud vektoritega. nmõõtmelise
     vektorruumi isomorfsus aritmeetilise ruumiga.</h3>
       <div>
-
+        Vektoriga `xi` üheselt määratud arve `x_1, ... , x_n` avaldisest `xi = x_1 epsilon_1 + x_2 epsilon_2 + ... + x_n epsilon_n` nimetatakse vektori `xi` koordinaatideks antud baasil B.
+        Seejuurses kasutatakse tähistust
+        <div class="__formula">
+          `xi = (x_1; x_2; ... ; x_n)_B`
+        </div><br>
+        Kui kontekstist on selge, millist baasi B vaadeldakse, siis jäetakse B ära. Oluline on märkida, et erinevatel baasidel võivad ühe ja sama vektori koordinaadid olla erinevad.
+        <div class="__formula">
+          `xi = (x_1;x_2;...;x_n)_B, eta=(y_1;y_2;...;y_n)_B`
+        </div>
+        <div class="__formula">
+          `xi + eta = (x_1; x_2;...;x_n)_B + (y_1;y_2;...;y_n)_B =`
+        </div>
+        <div class="__formula">
+          `= (x_1 epsilon_1 + x_2 epsilon + ... + x_n) + (y_1 epsilon_1 + y_2 epsilon_2 + ... + y_n epsilon_n) = `
+        </div>
+        <div class="__formula">
+          `= (x_1 + y_1)epsilon_1 + (x_2 + y_2)epsilon_2 + ... + (x_n + y_n)epsilon_n =`
+        </div>
+        <div class="__formula">
+          `= (x_1 + y_1; x_2 + y_2; ... ; x_n + y_n)_B`
+        </div>
+        <div class="__formula">
+          `c xi = c(x_1 epsilon_1 + x_2 epsilon_2 + ... + x_n epsilon_n) =`
+        </div>
+        <div class="__formula">
+          `= (cx_1)epsilon_1 + (cx_2)epsilon_2 + ... + (cx_n)epsilon_n = (cx_1; cx_2; ... cx_n)_B`
+        </div><br>
+        Saadud võrdsused näitavad, et formaalselt teostatakse lineaarseid tehteid koordinaatkujul antud vektoritega samuti nagu aritmeetilises ruumis ´R^n´, lisandunud on vaid indeks B.
+        Seega kkõik n-mõõtmelised vektorruumid käituvad lineaarsete tehete suhtes analoogiliselt n-mõõtmelise aritmeetilise ruumiga `R^n`, nad on piltlikult väljendades nagu ühe ja sama objekti erinevad eksemplarid.
+        Kui mingid objektid on matemaatiliselt samaväärsed, siis öeldakse, et nad on omavahel isomorfsed. Järelikult kõik n-mõõtmelised vektorruumid on vektorruumidena omavahel isomorfsed.
       </div>
     <h3>20. Miinori definitsioon. Maatriksi astaku definitsioon. Maatriksi ridade ja
     veergude elementaarteisendused. Astaku leidmine.</h3>
       <div>
-
+        Miinoriks nimetatakse mingist maatriksist i-nda rea ja k-nda veeru ärajätmisel saadud maatriksi determinanti. Maatriksi astakuks nimetatakse selle maatriksi nuullist erinevate miinorite kõrgeimat järku. Tähistatakse r(A) või rank(A).
+        Maatriksi astak näitab ka mitu lineaarselt sõltumatut reavektorit maatriksis on. Seega kui maatriksi astak
+        on võrdne ka reavektorite arvuga, mis jäävad alles pärast korduvaid elementaarteisendusi kuni ühtegi rida
+        pole võimalik enam ära kaotada. <br>
+        Elementaarteisendused on: <br>
+        1) süsteemi mis tahes võrrandit korrutatakse mis tahes nullist erineva arvuga <br>
+        2) süsteemi mis tahes võrrandile liidetakse juurde mis tahes arvu kordne mingi teine võrrand samast süsteemist
       </div>
     <h3>21. Teoreem maatriksi astakust (tõestusega). Järeldusi sellest.</h3>
       <div>
@@ -856,13 +969,36 @@
       </div>
     <h3>24. Skalaarkorrutise definitsioon üldjuhul. Skalaarkorrutise näiteid.</h3>
       <div>
+        Skalaarkorrutiseks vektorruumis V nimetatakse reeglit, mis igale kahele vektorile `alpha, beta in V` paneb vastavusse
+        parajasti ühe reaalarvu, mida tähistatakse `alpha beta` ja nimetatakse vektorite `alpha` ja `beta` skalaarkorrutiseks, kusjuures
+        on täidetud tingimused:
+        <br>
+        1) `alpha * alpha >= 0` iga `alpha in V` korral;<br>
+        2) `alpha * alpha = 0` parajasti siis, kui `alpha = theta` (nullvektor);<br>
+        3) `alpha * beta = beta * alpha` iga `alpha, beta in V` korral (kommutatiivsus)<br>
+        4) `c(alpha * beta) = (c alpha) * beta = alpha * (c beta)` iga `alpha,beta in V` ja ´c in R´ korral (homogeensus);<br>
+        5) `alpha(beta + gamma) = (alpha * beta) + (alpha * gamma), (alpha + beta) * gamma = (alpha * gamma) + (beta * gamma)` iga `alpha, beta, gamma in V` korral (distributiivsus)
+
 
       </div>
     <h3>25. Eukleidilise vektorruumi ja eukleidilise ruumi definitsioon. Eukleidilises
     ruumis defineeritavad mõisted.</h3>
       <div>
-
+          <b>Eukleidiline ruum</b> <br>
+          Eukleidiline ruum on nagu afiinne ruum, kuid temas on defineeritud lisaks
+          lineaarsetele tehetele(liitmine ja korrutamine) veel ka skalaarkorrutis. <br>
+          Skalaarkorrutisega saab leida vektorite pikkusi ja vektorite vahelisi nurki.  <br> <br>
+          <b>Ruumis defineeritavad mõisted</b> <br>
+          Vektori <b>pikkuseks</b> nimetatakse arvu `sqrt(a*a)`. Vektori `alpha`
+          pikkust tähistatakse `||alpha||`. Seega
+          <div class="__formula">`||alpha|| = sqrt(a*a) ` ehk `alpha*alpha=||alpha||^2`</div>
+          Vektorite `alpha` ja `beta` <b>vaheline nurk</b>
+          <div class="__formula">
+                `cos hat (alpha,beta) = (alpha*beta)/(||alpha||*||beta||)`
+         </div>
+          Vektorid `alpha` ja `beta` on risti ehk <b>ortogonaalsed</b>, kui `vec alpha* vec beta = 0`
       </div>
+
     <h3>26. Vektori pikkus ja selle omadused (tõestustega).</h3>
       <div>
         <b>Definitsioon</b>
@@ -977,10 +1113,39 @@
         </ol>
       </div>
     <h3>27. Punktide vaheline kaugus. Kauguse omadused.</h3>
-      <div>
-        Dibbs - uku
+    <div>
+      Punktide `A` ja `B` vaheliseks kauguseks nimetatakse vektori <span class="__formula">`||vec(AB)||`</span> pikkust ja teda tähistatakse `rho(A, B)`.<br>
+      <b>Kauguse omadused</b>: kui `A` `B` ja `C` on punktid eukleidilisest ruumist, siis:<br>
+      <ol>
+        <li>`rho(A, B) >= 0` </li>
+        <li>`rho(A, B) = 0` parajasti siis kui `A = B` </li>
+        <li>`rho(A, B) = rho(B, A)` (sümmeetria)</li>
+        <li>`rho(A, B) <= rho(A, C) + rho(C, B)` (kolmnurga omadus)</li>
+      </ol>
+      <b>Tõestused</b><br>
+      Omadused 1 ja 2 järelduvad vahetult skalaarkorrutise omadustest ja järgnevast võrdusest:
+      <div class="__formula">
+        `rho(A, B) = ||vec(AB)|| = sqrt(vec(AB) * vec(AB))`
       </div>
-
+      Omadus 3-me põhjendus:
+      <div class="__formula">
+        `rho(B, A) = sqrt(vec(BA) * vec(BA)) = sqrt((-vec(AB)) * (-vec(AB))) =`
+      </div>
+      <div class="__formula">
+        `sqrt((-1) * (-1) * (vec(AB) * vec(AB))) = sqrt(vec(AB) * vec(AB)) = rho(A, B)`
+      </div>
+      Omadus 4-ja põhjendus:
+      <div class="__formula">
+        `rho(A, B) = ||vec(AB)|| = ||vec(AC) + vec(CB)|| <= ||vec(AC)|| + ||vec(CB)|| =`
+      </div>
+      <div class="__formula">
+        `= rho(A, C) + rho(C, B)`
+      </div>
+      Kui on antud punktid `A(a_1; a_2; ...; a_n)` ja `B(b_1; b_2; ...; b_n)` oma koordinaatidega mingis ortonormaalses teljestikus, siis `vec(AB) = (b_1 - a_1; b_2 - a_2; ...; b_n - a_n)` ja
+      <div class="__formula">
+        `rho(A, B) = sqrt(vec(AB) * vec(AB)) = sqrt((b_1 - a_1)^2 + (b_2 - a_2)^2 ... + (b_n - a_n)^2)`
+      </div>
+    </div>
     <h3>28. Nurk vektorite vahel ja selle olemasolu. Ortogonaalsus ehk ristseis.</h3>
       <div>
         <b>Nurk vektorite vahel ja selle olemasolu</b> <br>
@@ -1003,11 +1168,34 @@
       <div>
 
       </div>
+
     <h3>30. Sirge ja tema võrrandid. Sirge võrrandid kahemõõtmelises eukleidilises
     ruumis.</h3>
       <div>
-        dibs on me - joss
+        <b>Sirge ja tema võrrandid</b> <br>
+          Olgu antud n-mõõtmeline eukleidiline ruum. Sirge määravad ära üks punkt A sellelt sirgelt ja sirge sihivektor `vec s` <br>
+          Parameetrilised võrrandid:
+          <div class="__formula">
+                `{(x_1 = c_1 + s_1t),(x_2 = c_2 + s_2t),(..........),(x_n = c_n + s_nt):}`
+         </div>
+         Kanoonilised võrrandid: <br>
+         Sirge u läbi punkti `A(x_0;y_0)` ja sihivektoriga `vec s = (s_x;s_y)`
+         <div class="__formula">
+                `(x_1-c_1)/s_1 =(x_2-c_2)/s_2 =... =(x_n-c_n)/s_n`
+         </div>
+          Võttes kanoonilisest ristkorrutise saab sirge üldvõrrandi:
+          <div class="__formula">
+                `ax+by+c=0`
+         </div>
+          <br>
+          <b>Sirge võrrandid kahemõõtmelises eukleidelises ruumis</b> <br>
+          Kõik eelnevalt öeldu kehtib ka sirge kohta kahemõõtmelises eukleidilises ruumis, kuigi
+          koordinaate `x_1` ja `x_2` tähistatakse teisiti:
+          <div class="__formula">
+                `x_1 = x text( ja ) x_2 = y`
+         </div>
       </div>
+
     <h3>31. Hüpertasand, selle normaalvektor, omadusi. Hüpertasandi erijuhud.</h3>
       <div>
        <b>Hüpertasand</b> <br>
@@ -1390,7 +1578,7 @@
     <h3>36. Kujutus. Lineaarne kujutus. Näiteid. Lineaarne kujutus koordinaatkujul.
     Lineaarse kujutuse maatriks.</h3>
       <div>
-
+        Dont touch it !!! - Rain
       </div>
     <h3>37. Ortogonaalteisenduse definitsioon. Ortogonaalteisenduse seos vektori
     pikkusega ja vektorite vahelise nurgaga. Ortogonaalteisenduse maatriks. Ortogonaalmaatriksi
@@ -1410,7 +1598,7 @@
     <h3>40. Ruutvorm ja tema maatrikskuju. Kanooniline kuju. Ruutvormi viimine
     kanoonilisele kujule.</h3>
       <div>
-
+        dibberonis - joss
       </div>
     <br>
   </font>
