@@ -3,7 +3,8 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Lineaaralgebra</title>
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_HTMLorMML-full"></script>
+    <!--<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_HTMLorMML-full"></script>-->
+    <script type="text/javascript" src="./MathJax-master/MathJax.js?config=AM_HTMLorMML"></script>
     <style>
       body {
           font-family: "helvetica";
@@ -447,7 +448,7 @@
       <div>
           <b>Omadus 1</b><br>
         Maatriksite `A` ja `A^T` determinantide väärtused langevad kokku, st determinandi `D` väärtus ei muutu, kui tema read paigutada vastavateks veergudeks ja vastupidi:
-        <div class="__formula"> 
+        <div class="__formula">
             `A =    |[a_(11), a_(12), ..., a_(1n)],
                   [a_(21), a_(22), ..., a_(2n)],
                   [vdots, vdots, ddots, vdots],
@@ -466,7 +467,7 @@
         Determinandi mis tahes rea arvudest võib ühise teguri tuua tegurina determinandi märgi ette.<br>
           <b>Omadus 5</b><br>
           Kui determinandi `D` mingi rea, näiteks K-nda rea arvud `a_(k1) ,a_(k2) ,...,a_(kn)` avalduvad kahe liidetava summana `a_(k1) = b1 + c1, a_(k2) = b2+c2, ... , a_(kn) = b_n+c_n`, siis determinand `D` avaldub kahe determinandi summana<br>
-            <div class="__formula"> 
+            <div class="__formula">
               `D = |[a_(11), ..., a_(1n)],
                     [vdots, ddots, vdots],
                     [a_(k1), ..., a_(kn)],
@@ -509,11 +510,11 @@
           <b>Omadus 9</b><br>
           Ruutmaatriksi `A=||a_(ij)||in R^(nxn)` determinandi `|A| = D` mis tahes reanumbrite i ja k korral kehtib võrdus<br>
           <div class="__formula">
-            `a_(i1)A_(k1) + a_(i2)A_(k2) + ... + a_(i n)A_(kn) = sum_(j=1)^n a_(ij) A_(kj) = {(D, kui  i=k,),(0, kui  i!=k,):}` 
+            `a_(i1)A_(k1) + a_(i2)A_(k2) + ... + a_(i n)A_(kn) = sum_(j=1)^n a_(ij) A_(kj) = {(D, kui  i=k,),(0, kui  i!=k,):}`
           </div>
           kus ´A_(kj)´ on determinandi D elemendi `a_(kj)` alamdeterminant. Analoogiliselt mis tahes veerunumbrite j ja k korral <br>
           <div class="__formula">
-            `a_(1j)A_(1k) + a_(2j)A_(2k) + ... + a_(nj)A_(nk) = sum_(i=1)^n a_(ij) A_(ik) = {(D, kui  j=k,),(0, kui  j!=k,):}` 
+            `a_(1j)A_(1k) + a_(2j)A_(2k) + ... + a_(nj)A_(nk) = sum_(i=1)^n a_(ij) A_(ik) = {(D, kui  j=k,),(0, kui  j!=k,):}`
           </div>
           <b>Omadus 10</b><br>
           Kui A ja B on ühte ja sama järku ruutmaatriksid, siis nende maatriksite korrutise AB determinant võrdub maatriksite A ja B determinantide korrutisega:
@@ -658,7 +659,7 @@
              = |[a_(11), ..., a_(1k), a_(1s)],
                 [vdots, ddots, vdots, vdots],
                 [a_(k1), ..., a_(kk), a_(ks)],
-                [a_(k1), ..., a_(lk), a_(kk)]|`.
+                [a_(k1), ..., a_(lk), a_(ls)]|`.
         </div>
         <div>
           Kui `s > k`, siis `D` on maatriksi `A (k + 1)`-ndat järku miinor ja seetõttu
@@ -668,7 +669,7 @@
           viimase veeru järgi saadakse
         </div>
         <div class="__formula">
-          `D = a_(1s) d_(1) + a_(2s) + ... + a_(ks) d_k + a_(ls) M`
+          `D = a_(1s) d_(1) + a_(2s) d_(2) + ... + a_(ks) d_k + a_(ls) M = 0`,
         </div>
         <div>
           kus `d_1, ... , d_k` on mingid arvud, mis on ühed ja samad iga `s` väärtuse
@@ -696,8 +697,27 @@
         </div>
         <div>
           &emsp;Ongi näidatud, et ka reavektor `alpha_l , l > k`, avaldub reavektorite
-          `alpha_1, ... , alpha_k` lineaarse kombinatsioonina. Sellega on teoreem tõestatud. 
-        </div>
+          `alpha_1, ... , alpha_k` lineaarse kombinatsioonina. Sellega on teoreem tõestatud.
+        </div><br>
+        <b>Järeldusi</b>
+        <ol>
+          <li>
+            Determinandi väärtus võrdub nulliga parajasti siis, kui tema reavektorid
+            või veeruvektorid on lineaarselt sõltuvad.
+          </li>
+          <li>
+            Aritmeetilised vektorid `alpha_1, ... , alpha_m` on lineaarselt sõltumatud
+            parajasti siis, kui maatriksi
+            <div class="__formula">
+              `A
+                 = [[alpha_1],
+                    [alpha_2],
+                    [...],
+                    [alpha_m]]`
+            </div>
+            astak on `m`.
+          </li>
+        </ol>
       </div>
     <h3>22. Pöördmaatriksi definitsioon, ühesus, olemasolu ja leidmine (tõestustega).</h3>
       <div>
