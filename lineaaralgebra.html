@@ -769,15 +769,47 @@
       </div>
     <h3>31. Hüpertasand, selle normaalvektor, omadusi. Hüpertasandi erijuhud.</h3>
       <div>
-        Mina teen seda -J
+       <b>Hüpertasand</b> <br>
+       Hüpertasand kahe- ja kolmemõõtmelises ruumis: <br>
+         <div>
+            <img src="hupertasandkaks.png" alt="">
+            <img src="hupertasandkolm.png" alt="">
+         </div>
+        Definitsioon: Hüpertasandiks afiinses ruumis <b>A</b> nimetatakse kõigi selliste punktide 
+        `P(x_1;x_2;...;x_n)` hulka, mille koordinaadid `x_1,x_2,...,x_n` rahuldavad lineaarset võrrandit <br>
+        <div class="__formula">
+         `a_1 x_1 + a_2 x_2 +...+a_n x_n + b = 0`,
+        </div>
+          kus `a_1,...,a_n` ja `b` on fikseeritud reaalarvud ning arvude `a_1,...,a_n` seas on vähemalt üks arv erinev nullist. <br>
+          Kahemõõtmelises eukleidelises ruumis on hüpertasandiks punkti A läbiv sirge normaalvektoriga `vec m`. <br>
+          Kolmemõõtmelises ruumis on hüpertasandiks punkti A läbiv ja vektoriga `vec m` risti olev tasand. <br>
+          
+        <b>Hüpertasandi normaalvektor</b> <br>
+         Vektorit `vec m` nimetatakse vaadeldava tasandi normaalvektoriks <br>
+         Kolmemõõtmelises ruumis on normaalvektor risti tasandiga. `vec m = (a;b;c)` <br>
+         Kahemõõtmelises ruumis on normaalvektor risti sirgega. <br>
+         
+         <b>Hüpertasandi omadusi</b> <br>
+         Kolmemõõtmelises eukleidelises ruumis võib sirget lisaks kanoonilistele ja parameetrilistele võrranditele esitada ka 
+         kahe mitteparalleelse tasandi lõiksirgena, st võrrandisüsteemiga kujul
+         <div class="__formula">
+                `{(a_1x+b_1y + c_1z+d_1=0),(a_2x+b_2y + c_2z+d_2=0):}`
+        </div>
+          kus mainitud tasandite normaalvektorid `(a_1;b_1;c_1)` ja `(a_2;b_2;c_2)` on mitteparalleelsed.
+         <b>Hüpertasandi erijuhud</b> <br>
+          Erijuhul n = 2 ehk tasandil on hüpertasandiks sirge võrrandiga: <br>
+          <div class="__formula">`ax + by +c = 0`</div>
+          Erijuhul n = 3 on hüpertasandiks tavaline tasand võrrandiga <br>
+          <div class="__formula">`ax + by + cz + b = 0`</div>
+          kus tasandi normaalvektor (tasandiga risti olev vektor) on koordinaatidega `vec n = (a,b,c)`
       </div>
-    <h3>32. Punkti kaugus mingist punktihulgast eukleidilises ruumis. Punkti kaugus
-    hüpertasandist (tõestusega). Saadud valemi erijuhud.</h3>
-      <div>
-
+        <h3>32. Punkti kaugus mingist punktihulgast eukleidilises ruumis. Punkti kaugus <br>
+        hüpertasandist (tõestusega). Saadud valemi erijuhud.</h3>
+       <div>
       </div>
-    <h3>33. Teist järku determinandi geomeetriline tõlgendus (tõestusega).</h3>
-      <div>
+       
+        <h3>33. Teist järku determinandi geomeetriline tõlgendus (tõestusega).</h3>
+        <div>
             Vaatleme teist järku determinanti <br>
             <div class="__formula">
                 `D= ||[a1, a2],
@@ -801,7 +833,7 @@
             </div>
             Leiame determinandi teisele reale arvu a kordse esimese rea ja arvestame, et vektorite `alpha` ja `gamma`
             ristseisu tõttu `alpha * gamma = gamma* alpha = 0`:
-          <div class="__formula">
+            <div class="__formula">
                 `D^2 = |[alpha * alpha, alpha * beta],
                         [(beta + a alpha) * alpha, (beta + a alpha)*beta]|`
                 `=     |[alpha * alpha, alpha * beta],
@@ -818,6 +850,7 @@
             mis võrdub vektoritele`alpha` ja `beta` ehitatud rööpküliku pindalaga. Sõnastame saadud tulemuse teoreemina: <br>
             <i>Teist järku determinandi absoluutväärtus võrdub tema reavektoritele ehitatud rööpküliku pindalaga.</i>
       </div>
+      
     <h3>34. Kolmandat järku determinandi geomeetriline tõlgendus (tõestusega).</h3>
             Vaatleme kolmandat järku determinanti <br>
             <div class="__formula">
