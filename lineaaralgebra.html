@@ -1378,7 +1378,54 @@
     <h3>36. Kujutus. Lineaarne kujutus. Näiteid. Lineaarne kujutus koordinaatkujul.
     Lineaarse kujutuse maatriks.</h3>
       <div>
-        Dont touch it !!! - Rain
+        Reeglit f, mis hulga X igale elemendile x paneb vastavusse mingi elemendi y hulgast Y, nimetatakse kujutuseks hulgast X hulka Y.
+        Kujutust f hulgast X hulka Y tähistatakse
+        <div class="__formula" >
+          `f: X rarr Y ` või ` X stackrel"f" rarr Y`
+        </div><br>
+        Elementi y, mille kujutus f paneb vastavusse elemendile x, nimetatakse elemendi x kujutiseks ja seda tähistatakse mitmeti:
+        <div class"__formula">
+          `y = f(x) = fx = x^f = xf = ...`
+        </div><br>
+        Meie huviorbiidis on lineaarsed kujutused vektorruumist V vektorruumi W.<br>
+        Kujutust `L: V rarr W` vektorruumist V vektorruumi W nimetatakse lineaarseks, kui ta on<br>
+        aditiivne, st
+        <div class="__formula">
+          `L(xi_1 + xi_2) = L(xi_1) + L(xi_2)`
+        </div><br>
+        iga `xi_1, xi_2 in V` korral;<br>
+        homogeenne, st
+        <div class="__formula">
+          `L(c xi) = c(L(xi))`
+        </div><br>
+        <strong>Näide</strong> Valime vektorruumiks V kõigi lõigul [a;b] diferentseeruvate funktsioonide hulga ja vektorruumiks W kõigi lõigul [a; b]
+        määratud funktsioonide hulga. Kujutuseks `L : V rarr W` olgu aga diferentseerimine, st
+        <div class="__formula">
+          `L(f(x)) = f'(x) = df / dx`
+        </div><br>
+        Diferentseerimise omadusestest tuleneb kujutis L lineaarsus.<br>
+        <strong>Näide</strong> Olgu vektorruumiks V kõigi lõigul [a; b] pidevate funktsioonide f(x)
+        hulk C[a;b] ja vektorruumiks W kõigi reaalarvude hulk R. Kujutuse `L:V rarr W` aga defineerime järgnevalt
+        <div class="__formula">
+          `L(f(x)) = int_a^b f(x)dx`
+        </div>
+        Baasivektorite kujutised `L(epsilon_1), ... , L(epsilon_n)` lineaarse kujutusega L kui ruumi W vektorid on antavad
+        oma koordinaatidega baasil `delta_1, ... , delta_m`:<br>
+        <div class="__formula">
+          `L(epsilon_j) = (a_(1j); a_(2j); ... ; a_(mj)) = sum_(i=1)^m a_(ij) delta_i; j = 1,2,3, ... , n`
+        </div><br>
+        Moodustame maatriksi vektorite `L(epsilon_1), ... , L(epsilon_m)` koordinaatidest:
+        <div class="__formula">
+          A = || `a_(ij)` || = `[[a_(11), a_(12), ... , a_(1n)],
+                               [a_(21), a_(22), ... , a_(2n)],
+                               [vdots, vdots, ddots, vdots],
+                               [a_(m1), a_(m2), ..., a_(mn)]]`
+        </div><br>
+        Maatriksi a j-ndaks veeruks on vektor `L(epsilon_j)` koordinaadid. Maatriksit nimetatakse lineaarse kujutuse L maatriksiks
+        (baasidel `epsilon` ja `delta`). Lineaarse kujutuse maatriks sõltub baaside valikust ruumides V ja W. <br>
+        Võrdus `y = Ax` esitabki lineaarse kujutuse L koordinaatkujul: kui A on lineaarse kujutuse L maatriks, siis vektori `xi`
+        koordinaadid `x_1, ... , x_2 `ja tema kujutise `eta = L(xi)` koordinaadid `y_1, ... , y_m` on seotud selle sama võrdusega.
+
       </div>
     <h3>37. Ortogonaalteisenduse definitsioon. Ortogonaalteisenduse seos vektori
     pikkusega ja vektorite vahelise nurgaga. Ortogonaalteisenduse maatriks. Ortogonaalmaatriksi
