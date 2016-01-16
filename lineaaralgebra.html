@@ -30,6 +30,19 @@
         text-align: center;
         padding: 5px;
       }
+
+      body {
+        margin: 40px auto;
+        max-width:650px;
+        line-height:1.6;
+        font-size:18px;
+        color:#444;
+        padding: 0 10px
+      }
+
+      h1, h2, h3 {
+        line-height:1.2
+      }
     </style>
   </head>
   <body>
@@ -506,7 +519,7 @@
           <b>Omadus 4</b><br>
         Determinandi mis tahes rea arvudest võib ühise teguri tuua tegurina determinandi märgi ette.<br>
           <b>Omadus 5</b><br>
-          Kui determinandi `D` mingi rea, näiteks K-nda rea arvud `a_(k1) ,a_(k2) ,...,a_(kn)` avalduvad kahe liidetava summana `a_(k1) = b1 + c1, a_(k2) = b2+c2, ... , a_(kn) = b_n+c_n`, siis determinand `D` avaldub kahe determinandi summana<br>
+          Kui determinandi `D` mingi rea, näiteks K-nda rea arvud `a_(k1) ,a_(k2) ,...,a_(kn)` avalduvad kahe liidetava summana `a_(k1) = b1 + c1, a_(k2) = b2+c2, ... , a_(kn) = b_n+c_n`, siis determinant `D` avaldub kahe determinandi summana<br>
             <div class="__formula">
               `D = |[a_(11), ..., a_(1n)],
                     [vdots, ddots, vdots],
@@ -552,7 +565,7 @@
           <div class="__formula">
             `a_(i1)A_(k1) + a_(i2)A_(k2) + ... + a_(i n)A_(kn) = sum_(j=1)^n a_(ij) A_(kj) = {(D, text(kui )  i=k,),(0, text(kui )  i!=k,):}`
           </div>
-          kus ´A_(kj)´ on determinandi D elemendi `a_(kj)` alamdeterminant. Analoogiliselt mis tahes veerunumbrite j ja k korral <br>
+          kus `A_(kj)` on determinandi D elemendi `a_(kj)` alamdeterminant. Analoogiliselt mis tahes veerunumbrite j ja k korral <br>
           <div class="__formula">
             `a_(1j)A_(1k) + a_(2j)A_(2k) + ... + a_(nj)A_(nk) = sum_(i=1)^n a_(ij) A_(ik) = {(D, text(kui )  j=k,),(0, text(kui )  j!=k,):}`
           </div>
@@ -939,16 +952,35 @@
             <div class="__formula">
               `|| alpha + beta || <= || alpha || + || beta ||`
             </div>
+            <b>Tõestus</b>
+            <div class="__formula">
+              `|| alpha + beta ||^2 = (alpha + beta) * (alpha + beta) =
+              alpha * (alpha + beta) + beta * (alpha + beta) =`
+            </div>
+            <div class="__formula">
+              `= alpha * alpha + alpha * beta + beta * alpha + beta * beta =
+              || alpha ||^2 + 2(alpha * beta) +`
+            </div>
+            <div class="__formula">
+              `+ || beta ||^2 <= || alpha ||^2 + 2 |alpha * beta| + || beta ||^2 <=`
+            </div>
+            <div class="__formula">
+              `<= || alpha ||^2 + 2 || alpha || * || beta || + || beta ||^2 =
+              (|| alpha || + || beta ||)^2`
+            </div>
+            <div style="text-align: right;">
+              kust pärast juurimist saadetaksegi võrratus `|| alpha + beta || <= || alpha || + || beta ||`.
+            </div>
           </li>
         </ol>
       </div>
     <h3>27. Punktide vaheline kaugus. Kauguse omadused.</h3>
       <div>
-
+        Dibbs - uku
       </div>
     <h3>28. Nurk vektorite vahel ja selle olemasolu. Ortogonaalsus ehk ristseis.</h3>
       <div>
-
+        DIbs joss
       </div>
     <h3>29. Ortonormaalne baas. Vektorite skalaarkorrutise, vektori pikkuse ja punktide
     vahelise kauguse leidmise reeglid ortonormaalse reeperi korral.</h3>
@@ -962,15 +994,49 @@
       </div>
     <h3>31. Hüpertasand, selle normaalvektor, omadusi. Hüpertasandi erijuhud.</h3>
       <div>
-        Mina teen seda -J
-      </div>
-    <h3>32. Punkti kaugus mingist punktihulgast eukleidilises ruumis. Punkti kaugus
-    hüpertasandist (tõestusega). Saadud valemi erijuhud.</h3>
-      <div>
+       <b>Hüpertasand</b> <br>
+       Hüpertasand kahe- ja kolmemõõtmelises ruumis: <br>
+         <div class="__formula">
+            <img src="hupertasandkaks.png" alt="">
+        </div>
+        <div class="__formula">
+            <img src="hupertasandkolm.png" alt="">
+         </div>
+        Definitsioon: Hüpertasandiks afiinses ruumis <b>A</b> nimetatakse kõigi selliste punktide
+        `P(x_1;x_2;...;x_n)` hulka, mille koordinaadid `x_1,x_2,...,x_n` rahuldavad lineaarset võrrandit <br>
+        <div class="__formula">
+         `a_1 x_1 + a_2 x_2 +...+a_n x_n + b = 0`,
+        </div>
+          kus `a_1,...,a_n` ja `b` on fikseeritud reaalarvud ning arvude `a_1,...,a_n` seas on vähemalt üks arv erinev nullist. <br>
+          Kahemõõtmelises eukleidelises ruumis on hüpertasandiks punkti A läbiv sirge normaalvektoriga `vec m`. <br>
+          Kolmemõõtmelises ruumis on hüpertasandiks punkti A läbiv ja vektoriga `vec m` risti olev tasand. <br> <br>
 
+        <b>Hüpertasandi normaalvektor</b> <br>
+         Vektorit `vec m` nimetatakse vaadeldava tasandi normaalvektoriks <br>
+         Kolmemõõtmelises ruumis on normaalvektor risti tasandiga. `vec m = (a;b;c)` <br>
+         Kahemõõtmelises ruumis on normaalvektor risti sirgega. <br> <br>
+
+         <b>Hüpertasandi omadusi</b> <br>
+         Kolmemõõtmelises eukleidelises ruumis võib sirget lisaks kanoonilistele ja parameetrilistele võrranditele esitada ka
+         kahe mitteparalleelse tasandi lõiksirgena, st võrrandisüsteemiga kujul
+         <div class="__formula">
+                `{(a_1x+b_1y + c_1z+d_1=0),(a_2x+b_2y + c_2z+d_2=0):}`
+        </div>
+          kus mainitud tasandite normaalvektorid `(a_1;b_1;c_1)` ja `(a_2;b_2;c_2)` on mitteparalleelsed. <br> <br>
+         <b>Hüpertasandi erijuhud</b> <br>
+          Erijuhul n = 2 ehk tasandil on hüpertasandiks sirge võrrandiga: <br>
+          <div class="__formula">`ax + by +c = 0`</div>
+          Erijuhul n = 3 on hüpertasandiks tavaline tasand võrrandiga <br>
+          <div class="__formula">`ax + by + cz + b = 0`</div>
+          kus tasandi normaalvektor (tasandiga risti olev vektor) on koordinaatidega `vec n = (a,b,c)`
       </div>
-    <h3>33. Teist järku determinandi geomeetriline tõlgendus (tõestusega).</h3>
-      <div>
+        <h3>32. Punkti kaugus mingist punktihulgast eukleidilises ruumis. Punkti kaugus <br>
+        hüpertasandist (tõestusega). Saadud valemi erijuhud.</h3>
+       <div>
+      </div>
+
+        <h3>33. Teist järku determinandi geomeetriline tõlgendus (tõestusega).</h3>
+        <div>
             Vaatleme teist järku determinanti <br>
             <div class="__formula">
                 `D= ||[a1, a2],
@@ -994,23 +1060,38 @@
             </div>
             Leiame determinandi teisele reale arvu a kordse esimese rea ja arvestame, et vektorite `alpha` ja `gamma`
             ristseisu tõttu `alpha * gamma = gamma* alpha = 0`:
-          <div class="__formula">
+            <div class="__formula">
                 `D^2 = |[alpha * alpha, alpha * beta],
                         [(beta + a alpha) * alpha, (beta + a alpha)*beta]|`
+          </div>
+          <div class="__formula">
                 `=     |[alpha * alpha, alpha * beta],
                         [gamma * alpha, gamma*beta]|`
+          </div>
+          <div class="__formula">
                 `=     |[alpha * alpha, alpha * beta],
                         [0, gamma*beta]|`
+          </div>
+          <div class="__formula">
                 `=    (alpha*alpha)(gamma*beta)``=||alpha||^2(gamma*beta+0)`
+          </div>
+          <div class="__formula">
                 `=||alpha||^2(gamma*beta+gamma*a alpha)`
+          </div>
+          <div class="__formula">
                 `=||alpha||^2 (gamma*(beta+a alpha))`
+          </div>
+          <div class="__formula">
                 `=||alpha||^2(gamma*gamma)`
+          </div>
+          <div class="__formula">
                 `=||alpha||^2||gamma||^2`
-            </div>
+          </div>
             Võttes viimase võrduse mõlemast poolest ruutjuure, saamegi `|D| = ||alpha||*||gamma||`,
             mis võrdub vektoritele`alpha` ja `beta` ehitatud rööpküliku pindalaga. Sõnastame saadud tulemuse teoreemina: <br>
             <i>Teist järku determinandi absoluutväärtus võrdub tema reavektoritele ehitatud rööpküliku pindalaga.</i>
       </div>
+
     <h3>34. Kolmandat järku determinandi geomeetriline tõlgendus (tõestusega).</h3>
             Vaatleme kolmandat järku determinanti <br>
             <div class="__formula">
@@ -1060,12 +1141,31 @@
                      ` =(alpha*alpha)(hat beta*beta)(hat gamma*gamma)`,
              </div>
              sest <br>
-             <div class="__formula">`hat beta _|_ alpha, hat gamma _|_ alpha, hat gamma _|_ beta ehk hat beta*alpha=hat gamma*alpha=hat gamma*beta = 0`</div>
+             <div class="__formula">`hat beta _|_ alpha, hat gamma _|_ alpha, hat gamma _|_ beta`</div>
+             ehk <br>
+             <div class="__formula">`hat beta*alpha=hat gamma*alpha=hat gamma*beta = 0`</div>
              seega <br>
+<<<<<<< HEAD
             <div class="__formula">
                  `D^2 = (alpha*alpha)(hat beta*beta)(hat gamma*gamma)= (alpha*alpha)(hat beta*beta +0)(hat gamma*gamma+0+0)
                  = (alpha*alpha)(hat beta*beta + hat beta*(a alpha))(hat gamma*gamma+hat gamma (b alpha) + hat gamma*(c beta))
                  =(alpha*alpha)(hat beta*hat beta)(hat gamma*hat gamma) = ||alpha||^2||hat beta||^2||hat gamma||^2`
+=======
+             <div class="__formula">
+               `D^2 = (alpha*alpha)(hat beta*beta)(hat gamma*gamma)`
+             </div>
+             <div class="__formula">
+               `= (alpha*alpha)(hat beta*beta +0)(hat gamma*gamma+0+0)`
+             </div>
+             <div class="__formula">
+               `= (alpha*alpha)(hat beta*beta + hat beta*(a alpha))(hat gamma*gamma+hat gamma (b alpha) + hat gamma*(c beta))`
+             </div>
+             <div class="__formula">
+               `= (alpha*alpha)(hat beta*hat beta)(hat gamma*hat gamma)`
+             </div>
+             <div class="__formula">
+               `= ||alpha||^2||hat beta||^2||hat gamma||^2`
+>>>>>>> ecb74ea59c66bfc4954cd187364b8123bf5dafd6
              </div>
              ja <br>
              <div class="__formula">`|D| = ||alpha||*||hat beta||*||hat gamma||`</div>
@@ -1076,7 +1176,7 @@
       </div>
     <h3>35. Vektorkorrutise definitsioon. Vektorkorrutise omadused (tõestustega).</h3>
       <div>
-
+        DUBS -M
       </div>
     <h3>36. Kujutus. Lineaarne kujutus. Näiteid. Lineaarne kujutus koordinaatkujul.
     Lineaarse kujutuse maatriks.</h3>
