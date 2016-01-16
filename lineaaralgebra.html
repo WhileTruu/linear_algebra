@@ -32,6 +32,7 @@
       }
 
       body {
+        background-color: #EEEEEE;
         margin: 40px auto;
         max-width:650px;
         line-height:1.6;
@@ -44,6 +45,13 @@
         line-height:1.2
       }
     </style>
+    <script type="text/javascript">
+      window.onload = function() {
+        if (Math.random() <= 0.1) {
+          document.body.style.backgroundColor = '#FF3366';
+        }
+      };
+    </script>
   </head>
   <body>
     <h1>Lineaaralgebra kordamisküsimused 2015/2016. õppeaastal</h1>
@@ -629,6 +637,7 @@
         </div>
         <div class="__formula">
         mille esiletõstetud komponentides saab moodustada m-järku ühikmaatriksi<br>
+      </div>
         <div class="__formula">
          `E_m = [[1 , 0 , ... , 0],
                 [0 , 1 , ... , 0],
@@ -655,9 +664,23 @@
          `= (0;0;...;0)`
        </div><br>
        kust järelduvadki võrdused `c_1 = c_2 = ... = c_m = 0`. Järelikult on vektorid ´alpha_1, ..., alpha_m´ lineaarselt sõltumatud.
+     </div>
     <h3>18. Vektorruumi baasi definitsioon. Kanoonilised baasid tuntud vektorruumides.
     Baaside omadusi.</h3>
-      
+    <div>
+      Mittetühja vektorite hulka B, `B sub V`, nimetatakse vektorruumi V baasiks, kui K0 vektorite hulk B on lineaarselt sõltumatute vektorite hulk,
+      K2 iga vektor `xi` vektorruumist V avaldub lineaarse kombinatsioonina hulka B kuuluvatest vekotritest, st leiduvad sellised vektorid `epsilon_1, ..., epsilon_n in B`
+      ja arvud `x_1, ... , x_n in R`, et
+      <div class="__formula">
+        `xi = x_1 epsilon_1 + x_2 epsilon_2 + ... + x_n epsilon_n`
+      </div>
+      Tavaliselt valitakse vektorruumi paljude baaside hulgast välja üks baas B, mis enamasti tekib loomulikul viisil.
+      Sellist kokkuleppeliselt välja valitud baasi nimetatakse vaadeldava vektorruumi loomulikuks ehk kanooniliseks baasiks.
+      <strong>Omadused:</strong><br>
+      1) Vektorruumi V erinevad baasid sisaldavad ühe ja sama palju vektoreid. Vektorite arvu vektoruumi V mis tahes baasis nimetatakse vektorruumi V mõõtmeteks ehk dimensiooniks ja seda tähistatakse dimV
+      <br>2) n-mõõtmelises vektorruumis iga n lineaarselt sõltumatut vektorit moodustavad selle ruumi baasi.
+      <br>3) Vektorruumis V iga lineaarselt sõltumatute vektorite hulk on täiendatav selle vektorruumi baasiks.
+    </div>
     <h3>19. Vektori koordinaadid. Tehted koordinaatkujul antud vektoritega. nmõõtmelise
     vektorruumi isomorfsus aritmeetilise ruumiga.</h3>
       <div>
@@ -976,9 +999,29 @@
       <div>
         Dibbs - uku
       </div>
+<<<<<<< HEAD
     <h3>28. Nurk vektorite vahel ja selle olemasolu. Ortogonaalsus ehk ristseis.</h3>
       <div>
         DIbs joss
+=======
+
+    <h3>28. Nurk vektorite vahel ja selle olemasolu. Ortogonaalsus ehk ristseis.</h3>
+      <div>
+        <b>Nurk vektorite vahel ja selle olemasolu</b> <br>
+            Olgu `alpha` ja `beta` nullvektorist erinevad vektorid eukleidilisest vektorruumist V. Vektorite `alpha` ja `beta`
+            vaheliseks nurgaks nimetatakse nurka `hat (alpha,beta)`, mis on määratud võrdusega <br>
+
+         <div class="__formula">
+                `cos hat (alpha,beta) = (alpha*beta)/(||alpha||*||beta||)`
+         </div>
+         Kui `alpha != O/` ja `beta != O/`, siis
+        <div class="__formula">
+                `-1 <= (alpha*beta)/(||alpha||*||beta||) <= 1`
+         </div>
+         Seega saab iga kahe nullist erineva vektori korral määrata nendevahelise nurga. <br> <br>
+        <b>Ristseis</b> <br>
+          Vektorid `alpha` ja `beta` on risti ehk ortogonaalsed, kui `vec alpha* vec beta = 0`
+>>>>>>> e18e874251fca6bd7ac8857fc0c121daeea2b292
       </div>
     <h3>29. Ortonormaalne baas. Vektorite skalaarkorrutise, vektori pikkuse ja punktide
     vahelise kauguse leidmise reeglid ortonormaalse reeperi korral.</h3>
