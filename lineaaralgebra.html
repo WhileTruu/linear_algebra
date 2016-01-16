@@ -1045,7 +1045,122 @@
       </div>
     <h3>35. Vektorkorrutise definitsioon. Vektorkorrutise omadused (tõestustega).</h3>
       <div>
-        DUBS -M
+        <b>Definitsioon</b>
+        <div>
+          Vektorite `alpha` ja `beta` <b>vektorkorrutiseks</b> nimetatakse vektorit
+          `alpha xx beta`, mis on määratud võrdusega
+        </div>
+        <div class="__formula">
+          `alpha xx beta = (|[a_2, a_3],
+                             [b_2, b_3]|;
+
+                           -|[a_1, a_3],
+                             [b_1, b_3]|;
+
+                            |[a_1, a_2],
+                             [b_1, b_2]|)`
+        </div>
+        <div>
+          Tähistades koordinaattelgede suunalisi ühikvektoreid vastavalt `vec i`,
+          `vec j` ja `vec k`, on avaldis esitatav kujul
+        </div>
+        <div class="__formula">
+          `alpha xx beta = |[a_2, a_3],
+                           [b_2, b_3]| vec i;
+
+                          -|[a_1, a_3],
+                            [b_1, b_3]| vec j;
+
+                           |[a_1, a_2],
+                            [b_1, b_2]| vec k =`
+        </div>
+        <div class="__formula">
+          `              = |[vec i, vec j, vec k],
+                            [a_1, a_2, a_3],
+                            [b_1, b_2, b_3]|`
+        </div>
+        <div style="text-align:right;">
+          Seda võrdust on sobiv kasutada vektorkorrutise arvutamiseks.<br>
+        </div>
+        <div>
+          &emsp;Vektor- ja skalaarkorrutise abil on esitatav kolmandat järku
+          determinandi väärtuse leidmise eeskiri.<br>
+          Determinandi
+        </div>
+        <div class="__formula">
+          `D = |[a_1, a_2, a_3],
+                [b_1, b_2, b_3],
+                [c_1, c_2, c_3]|`,
+        </div>
+        <div>
+          mille reavektorid on
+        </div>
+        <div class="__formula">
+          `alpha = (a_1, a_2, a_3), beta = (b_1, b_2, b_3), gamma = (c_1, c_2, c_3)`
+        </div>
+        <div>
+          väärtuse leidmiseks arendame selle determinandi kolmanda rea järgi ning
+          kasutame seejärel vektor- ja skalaarkorrutise definitsiooni:
+        </div>
+        <div class="__formula">
+          `           D = c_1 |[a_2, a_3],
+                               [b_2, b_3]|;
+
+                        - c_2 |[a_1, a_3],
+                               [b_1, b_3]|;
+
+                          c_3 |[a_1, a_2],
+                               [b_1, b_2]| =`
+        </div>
+        <div class="__formula">
+          `= gamma * (alpha xx beta) = (alpha xx beta) * gamma`
+        </div>
+        <div>
+          ehk
+        </div>
+        <div class="__formula">
+          `D = (alpha xx beta) * gamma`
+        </div><br>
+        <b>Teoreem</b>
+        <div>
+          Vektorkorrutis `alpha xx beta` on risti mõlema teguriga `alpha` ja `beta`.
+          Vektorkorrutise `alpha xx beta` pikkus `|| alpha xx beta ||` on arvuliselt
+          võrdne vektoritele `alpha` ja `beta` ehitatud rööpküliku pindalaga.
+        </div><br>
+        <b>Tõestus</b>
+        <div>
+          Vaatleme vektorite `alpha = (a_1, a_2, a_3)` ja `beta = (b_1, b_2, b_3)`
+          vektorkorrutist `alpha xx beta`.
+        </div><br>
+        <div>
+          Võrduse `D = (alpha xx beta) * gamma` kohaselt
+        </div>
+        <div class="__formula">
+          `(alpha xx beta) * gamma = |[a_1, a_2, a_3],
+                                      [b_1, b_2, b_3],
+                                      [c_1, c_2, c_3]|`.
+        </div>
+        <div>
+          Lahutades viimase determinandi kolmandast reast tema esimese rea
+          ja arendades saadud determinandi kolmanda rea järgi, näeme, et
+          vaadeldava determinandi väärtus võrdub nulliga, st `(alpha xx beta) * alpha = 0`.
+          See aga tähendab, et vektorid `alpha xx beta` ja `alpha` on risti.
+          Analoogiliselt põhjendatakse vektorite `alpha xx beta` ja `beta` ristseis.
+        </div><br>
+        <div>
+          &emsp;Teoreemi teise väite tõestamiseks kasutame kolmandat järku determinandi
+          geomeetrilist tähendust.
+        </div>
+        <div class="__formula">
+          `V = |D| = |alpha xx beta| * gamma| = || alpha xx beta || * || gamma || * | cos phi |`,
+        </div>
+        <div>
+          kus `V` on vektoritele `alpha`, `beta`, `gamma` ehitatud rööptahuka ruumala
+          ning `phi` on vektorite `alpha xx beta` ja `gamma` vaheline nurk. Mainitud
+          rööptahuka kõrgus `h` on aga `||gamma|| * |cos phi|`. Seega `V = ||alpha xx beta|| * h`.
+          Siit järeldub, et arv `|| alpha xx beta ||` võrdub vaadeldava rööptahuka põhja
+          pindalaga. See aga on samaväärne teoreemi teise väitega.
+        </div>
       </div>
     <h3>36. Kujutus. Lineaarne kujutus. Näiteid. Lineaarne kujutus koordinaatkujul.
     Lineaarse kujutuse maatriks.</h3>
