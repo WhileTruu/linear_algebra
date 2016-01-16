@@ -474,7 +474,7 @@
           <b>Omadus 4</b><br>
         Determinandi mis tahes rea arvudest võib ühise teguri tuua tegurina determinandi märgi ette.<br>
           <b>Omadus 5</b><br>
-          Kui determinandi `D` mingi rea, näiteks K-nda rea arvud `a_(k1) ,a_(k2) ,...,a_(kn)` avalduvad kahe liidetava summana `a_(k1) = b1 + c1, a_(k2) = b2+c2, ... , a_(kn) = b_n+c_n`, siis determinand `D` avaldub kahe determinandi summana<br>
+          Kui determinandi `D` mingi rea, näiteks K-nda rea arvud `a_(k1) ,a_(k2) ,...,a_(kn)` avalduvad kahe liidetava summana `a_(k1) = b1 + c1, a_(k2) = b2+c2, ... , a_(kn) = b_n+c_n`, siis determinant `D` avaldub kahe determinandi summana<br>
             <div class="__formula">
               `D = |[a_(11), ..., a_(1n)],
                     [vdots, ddots, vdots],
@@ -841,7 +841,7 @@
       </div>
     <h3>27. Punktide vaheline kaugus. Kauguse omadused.</h3>
       <div>
-
+        Dibbs - uku
       </div>
     <h3>28. Nurk vektorite vahel ja selle olemasolu. Ortogonaalsus ehk ristseis.</h3>
       <div>
@@ -874,15 +874,15 @@
                     [b1, b2]||`
             </div>
             ja püüame leida talle geomeetrilise tõlgenduse. Selleks vaatleme determinandi reavektoreid `alpha = (a1;a2), beta = (b1;b2)` <br>
-            ning tõlgendame neid kui geomeetrilisi vektoreid, mis on antud oma koordinaatidega xy-tasandil. Ehitame vektoritele `alpha ` 
+            ning tõlgendame neid kui geomeetrilisi vektoreid, mis on antud oma koordinaatidega xy-tasandil. Ehitame vektoritele `alpha `
             ja ` beta` rööpküliku ning näitame, et determinandi `D` absoluutväärtus `|D|=0=S` ja väide kehtib. Seepärast eeldame, et `alpha != O/` <br>
             <div class="__formula">
                 <img src="teistjarkudeterminant.png" alt=""> <br>
             </div>
-            Vaatleme tekkinud rööpküliku kõrgusvektorit `gamma = vec(CO) + beta`. Kuna vektorid `alpha ` ja ` vec(CO)` on paralleelsed 
+            Vaatleme tekkinud rööpküliku kõrgusvektorit `gamma = vec(CO) + beta`. Kuna vektorid `alpha ` ja ` vec(CO)` on paralleelsed
             ja `alpha != O/`, siis leidub selline arv `a, `et ` vec(CO) = a alpha ` ehk ` gamma = beta + a alpha`. <br>
             arvutame `D^2`, arvestades determinantide omadusi 1 ja 10:
-            
+
             <div class="__formula">
                 `D^2 = D*D = |[a1, a2],
                     [b1, b2]|*|[a1, a2],
@@ -903,8 +903,8 @@
                 `=||alpha||^2 (gamma*(beta+a alpha))`
                 `=||alpha||^2(gamma*gamma)`
                 `=||alpha||^2||gamma||^2`
-            </div>  
-            Võttes viimase võrduse mõlemast poolest ruutjuure, saamegi `|D| = ||alpha||*||gamma||`, 
+            </div>
+            Võttes viimase võrduse mõlemast poolest ruutjuure, saamegi `|D| = ||alpha||*||gamma||`,
             mis võrdub vektoritele`alpha` ja `beta` ehitatud rööpküliku pindalaga. Sõnastame saadud tulemuse teoreemina: <br>
             <i>Teist järku determinandi absoluutväärtus võrdub tema reavektoritele ehitatud rööpküliku pindalaga.</i>
       </div>
@@ -919,15 +919,15 @@
             <div class="__formula">
                 `alpha = (a1;a2;a3), beta = (b1;b2;b3), gamma = (c1,c2,c3)`
             </div>
-            geomeetriliste vektoritena, mis on antud oma koordinaatidega xyz-teljestikus. 
+            geomeetriliste vektoritena, mis on antud oma koordinaatidega xyz-teljestikus.
             Kanname vektorid `alpha, beta, gamma` ühte punkti ja ehitame nendele rööptahuka <br>
             <div class="__formula">
                 <img src="kolmandatjarku.png" alt="">
             </div>
             Veendume, et `|D|` võrdub tekkinud rööptahuka ruumalaga V. Selle näitamiseks konstrueerime risttahuka, mille ruumala on samuti V.
             Mainitud risttahuka külgvektoriteks valime vektorid `alpha, hat beta` ja `hat gamma`, kus `hat beta` on vektori `beta` projektsioon vektori `alpha`
-             ristsihile ja `hat gamma` on vektori `gamma` projektsioon vektoritega `alpha` ja `beta` risti olevale sihile. On ilmne, et 
-             sellise risttahuka ruumala võrdub esialgse rööptahuka ruumalaga.. Kuna vektor `hat beta - beta` on paralleelne vektoriga `alpha` ning vektor 
+             ristsihile ja `hat gamma` on vektori `gamma` projektsioon vektoritega `alpha` ja `beta` risti olevale sihile. On ilmne, et
+             sellise risttahuka ruumala võrdub esialgse rööptahuka ruumalaga.. Kuna vektor `hat beta - beta` on paralleelne vektoriga `alpha` ning vektor
              `hat gamma - gamma` on paralleelne tasandiga, millel asuvad vektorid `alpha` ja `gamma`, siis leiduvad sellised arvud a, b, c, et <br>
              <div class="__formula">`hat beta - beta = a alpha, hat gamma - gamma = b alpha + c beta`</div>
              ehk <br>
@@ -939,18 +939,18 @@
                       [c1, c2, c3]||*||[a1, a2, a3],
                       [b1, b2, b3],
                       [c1, c2, c3]||`
-                      
+
                       `= ||[alpha *alpha, alpha *beta, alpha*gamma],
                       [beta*alpha, beta*beta, beta*gamma],
                       [gamma*alpha,gamma*beta,gamma*gamma]||`
              </div>
-             Liidame determinandi kolmandale reale arvu b kordse esimese rea ja arvu c kordse teise 
+             Liidame determinandi kolmandale reale arvu b kordse esimese rea ja arvu c kordse teise
              rea ning teisele reale arvu a kordse esimese rea. Seoste tõttu saame
              <div class="__formula">
                  `D^2 =||[alpha *alpha, alpha *beta, alpha*gamma],
                       [hat beta*alpha, hat beta*beta,  hatbeta*gamma],
                       [hat gamma*alpha,hat gamma*beta,hat gamma*gamma]||`
-                      
+
                       `=||[alpha *alpha, alpha *beta, alpha*gamma],
                       [0, hat beta*beta,  hatbeta*gamma],
                       [0,0,hat gamma*gamma]||`
@@ -960,7 +960,7 @@
              <div class="__formula">`hat beta _|_ alpha, hat gamma _|_ alpha, hat gamma _|_ beta ehk hat beta*alpha=hat gamma*alpha=hat gamma*beta = 0`</div>
              seega <br>
             <div class="__formula">
-                 `D^2 = (alpha*alpha)(hat beta*beta)(hat gamma*gamma)= (alpha*alpha)(hat beta*beta +0)(hat gamma*gamma+0+0) 
+                 `D^2 = (alpha*alpha)(hat beta*beta)(hat gamma*gamma)= (alpha*alpha)(hat beta*beta +0)(hat gamma*gamma+0+0)
                  = (alpha*alpha)(hat beta*beta + hat beta*(a alpha))(hat gamma*gamma+hat gamma (b alpha) + hat gamma*(c beta))
                  =(alpha*alpha)(hat beta*hat beta)(hat gamma*hat gamma) = ||alpha||^2||hat beta||^2||hat gamma||^2`
              </div>
