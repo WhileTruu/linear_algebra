@@ -342,8 +342,51 @@
           <div class="__formula">
             `(AB)_(ij) = sum_(j=1)^n a_(ik) b_(kj) = a_(i1) b_(1j) + a_(i2) b_(2j) + ... + a_(in) b_(nj)`
           </div>
+        </div><br>
+        <b>Omadused ja seos lineaarsete tehetega</b>
+        <div>
+          <ol>
+            <li>
+              <div>
+                Maatriksite korrutamine pole kommutatiivne, st leiduvad sellised maatriksid
+                `A` ja `B`, et `A B != B A`.
+              </div>
+            </li><br>
+            <li>
+              <div>
+                Maatriksite korrutamine on assotsiatiivne, st
+              </div>
+              <div class="__formula">
+                `A(BC) = (AB) C`
+              </div>
+              <div style="text-align: right;">
+                alati, kui vaadeldavad maatriksid on korrutatavad.
+              </div>
+            </li><br>
+            <li>
+              <div>
+                Liitmine ja korrutamine on seotud distributiivsusega, st
+              </div>
+              <div class="__formula">
+                `A (B + C) = A B + A C`,&emsp;`(A + B) C = A C + B C`
+              </div>
+              <div style="text-align: right;">
+                alati, kui antud tehted on teostatavad.
+              </div>
+            </li><br>
+            <li>
+              <div>
+                Kui eksisteerib maatriksite korrutis `A B`, siis
+              </div>
+              <div class="__formula">
+                `a (A B) = (a A) B = A (a B)`
+              </div>
+              <div style="text-align: right;">
+                iga `a in RR` korral.
+              </div>
+            </li>
+          </ol>
         </div>
-        <b style="color: red;">TO BE CONTINUDED</b>
       </div>
     <h3>8. Maatriksite transponeerimine. Transponeerimise omadused.</h3>
       <div>
@@ -961,12 +1004,12 @@
 
     <h3>22. Pöördmaatriksi definitsioon, ühesus, olemasolu ja leidmine (tõestustega).</h3>
       <div>
-        Maatriksi A <b>pöördmaatriksiks</b> nimetatakse sellist maatriksit B, mille korral 
+        Maatriksi A <b>pöördmaatriksiks</b> nimetatakse sellist maatriksit B, mille korral
           <div class="__formula">`AB=BA=E`, </div>
           kus E on sobivat järku ühikmaatriks. <br>
-          Võrduste ahelas on korrutamine võimalik vaid juhul, kui A on ruutmaatriks. Seega 
+          Võrduste ahelas on korrutamine võimalik vaid juhul, kui A on ruutmaatriks. Seega
           pöördmaatriks võib leiduda ainult ruutmaatriksil. <br> <br>
-          
+
           <b>Ühesus</b> <br>
           Maatriksi A pöördmaatriks, juhul, kui ta eksisteerib, on üheselt määratud. <br>
           <i>Tõestus</i> Olgu `B_1` ja `B_2` maatriksi A pöördmaatriksid. Siis
@@ -977,13 +1020,13 @@
           Maatriksi A pöördmaatriksit tähistatakse `A^(-1)`. Seega
           <div class="__formula">`AA^(-1) = A^(-1)A=E`</div>
           Osutub, et mitte kõik ruutmaatriksid ei oma pöördmaatriksit. <br> <br>
-          
+
           <b>Pöördmaatriksi olemasolu</b> <br>
-          Oletame, et maatriksil A leidub pöördmaatriks. Siis `AA^(-1)=E` ning 
+          Oletame, et maatriksil A leidub pöördmaatriks. Siis `AA^(-1)=E` ning
           <div class="__formula">`|A|*|A^(-1)|=|A^(-1)|=|E|=|[1, 0,...,0],
                     [0,1,...,0],
                     [vdots, vdots,ddots,vdots],
-                    [0, 0,...,1]|=1!=0`</div>          
+                    [0, 0,...,1]|=1!=0`</div>
           Siit järeldubki, et `|A|!=0` <br> <br>
           <b>Pöördmaatriksi leidmine</b> <br>
           Eeldame, et`|A| !=0`. Moodustame maatriksi
@@ -991,7 +1034,7 @@
                     [A_(12),A_(22),...,A_(n2)],
                     [vdots, vdots,ddots,vdots],
                     [A_(1n),A_(2n),...,A_(n n)]||`</div>
-          
+
           ja veendume determinantide teooria põhivalemeid kasutades, et AB=E:
           <div class="__formula">`AB=1/|A|*||[A_(11),A_(21),...,A_(n1)],
                     [A_(12),A_(22),...,A_(n2)],
@@ -1000,7 +1043,7 @@
                     [A_(12),A_(22),...,A_(n2)],
                     [vdots, vdots,ddots,vdots],
                     [A_(1n),A_(2n),...,A_(n n)]|| = `</div>
-          
+
           <div class="__formula">`=1/|A|*||[|A|,0,...,0],
                     [0,|A|,...,0],
                     [vdots, vdots,ddots,vdots],
@@ -1051,7 +1094,7 @@
             <div class="__formula">`=(y_1;y_2;...;y_n) -(x_1;x_2;...;x_n) =  `</div>
            <div class="__formula">`=(y_1-x_1;y_2-x_2;...;y_n-x_n)`</div>
       </div>
-      
+
     <h3>24. Skalaarkorrutise definitsioon üldjuhul. Skalaarkorrutise näiteid.</h3>
       <div>
         Skalaarkorrutiseks vektorruumis V nimetatakse reeglit, mis igale kahele vektorile `alpha, beta in V` paneb vastavusse
@@ -1250,9 +1293,14 @@
       </div>
     <h3>29. Ortonormaalne baas. Vektorite skalaarkorrutise, vektori pikkuse ja punktide
     vahelise kauguse leidmise reeglid ortonormaalse reeperi korral.</h3>
-      <div>
-
-      </div>
+    <div>
+      <b>Ortonormaalne baas</b><br>
+      Eukleidilise vektorruumi baasi nimetatakse ortonormeeritud ehk ortonormaalseks baasiks,
+      kui baasivektorid moodustavad ortonormeeritud vektorite süsteemi.
+      (vektor `alpha` on normeeritud ehk ühikvektor, kui pikkus `||alpha|| = 1`)
+      <br>
+      Selles baasis nende asjade arvutamine toimub nii nagu oled harjunud.
+    </div>
 
     <h3>30. Sirge ja tema võrrandid. Sirge võrrandid kahemõõtmelises eukleidilises
     ruumis.</h3>
@@ -1718,6 +1766,93 @@
     oleks ortogonaalmaatriks (kõik tõestustega).</h3>
       <div>
         DIIIBS - MARTEN
+        <b>Definitsioon</b>
+        <div>
+          Lineaarteisendusest `L : V rarr V` nimetatakse <b>ortogonaalteisenduseks</b>,
+          kui ta säilitab skalaarkorrutise.
+        </div><br>
+        <div>
+          Öeldakse, et lineaarteisendus `L : V rarr V` <b>säilitab skalaarkorrutise</b>,
+          kui
+        </div><br>
+        <div class="__formula">
+          `xi_1 * xi_2 = L(xi_1) * L(xi_2)`
+        </div>
+        <div style="text-align: right;">
+          iga `xi_1, xi_2 in V` korral.
+        </div><br>
+        <b>Seos vektori pikkuse ja vektorite vahelise nurgaga</b>
+        <div>
+          Ortogonaalteisendus `L` säilitab vektorite pikkused ja vektorite vahelised nurgad,
+          st
+        </div>
+        <div class="__formula">
+          `|| xi || = || L (xi) ||,`&emsp;`hat(xi_1, xi_2) = hat(L(xi_1), L(xi_2))`
+        </div>
+        <div style="text-align: right;">
+          iga `xi, xi_1, xi_2 in V` korral.
+        </div>
+        <div>
+          Tõepoolest, võrduse `xi_1 * xi_2 = L(xi_1) * L(xi_2)` kohaselt
+        </div>
+        <div class="__formula">
+          `|| xi || = sqrt( xi * xi) = sqrt(L(xi) * L(xi)) = || L(xi) ||`
+        </div>
+        <div>
+          ja seetõttu ka
+        </div>
+        <div class="__formula">
+          `cos hat(xi_1, xi_2) = (xi_1 * xi_2) / (||xi_1|| * ||xi_2||) = `
+        </div>
+        <div class="__formula">
+          `(L(xi_1) * L(xi_2)) / (||L(xi_1)|| * ||L(xi_2)||) = cos hat(L(xi_1), L(xi_2))`.
+        </div><br>
+        <b>Ortogonaalteisenduse maatriks</b>
+        <div>
+          Lineaarteisendus `L` on ortogonaalteisendus parajasti siis, kui tema maatriks
+          `A` rahuldab võrdust
+        </div>
+        <div class="__formula">
+          `A^T = A^(-1)`
+        </div><br>
+        <b>Definitsioon</b>
+        <div>
+          Ruutmaatriksit `A` nimetatakse <b>ortogonaalmaatriksiks</b>, kui `A^(-1)=A^T`.
+        </div><br>
+        <b>Tarvilik ja piisav tunnus selleks, et ruutmaatriks oleks ortogonaalmaatriks.</b>
+        <div>
+          Ruutmaatriks `A` on ortogonaalmaatriks parajasti siis, kui tema reavektorid
+          on omavahel risti ja pikkusega `1`.
+        </div><br>
+        <b>Tõestus</b>
+        <div>
+          Olgu `A` reavektorid `vec a_1, vec a_2, ... , vec a_3`, st
+        </div>
+        <div class="__formula">
+          `A = [[vec a_1], [vec a_2], [...], [vec a_n]]`,&emsp;siis
+          &emsp;`A^T=[vec a_1 vec a_2 ... vec a_n]`.
+        </div>
+        <div>
+          siis
+        </div>
+        <div class="__formula">
+          `A A^T = [
+          [alpha_1 * alpha_1, alpha_1 * alpha_2, ... , alpha_1 * alpha_n],
+          [alpha_1 * alpha_1, alpha_1 * alpha_2, ... , alpha_1 * alpha_n],
+          [vdots, vdots, ddots, vdots],
+          [alpha_n * alpha_1, alpha_n * alpha_2, ... , alpha_n * alpha_n]
+          ]`
+        </div>
+        <div>
+          Maatriks `A` on ortogonaalmaatriks parajasti siis, kui `A^T = A^(-1)`,
+          st `A A^T = E` ehk eelneva võrduse tõttu
+        </div>
+        <div class="__formula">
+          `a_i a_j = {(0, text(kui ) i != j), (1, text(kui ) i = j):}`
+        </div>
+        <div>
+          See on samaväärne teoreemi väitega, M.O.T.T.
+        </div>
       </div>
     <h3>38. Omaväärtused ja omavektorid ning nende leidmine.</h3>
     <div>
@@ -1751,7 +1886,14 @@
     </div>
     <h3>39. Omaväärtuste ja omavektorite omadused (ainult loetleda).</h3>
       <div>
-
+        1) Maatriksi A omaväärtusele t vastava alamruumi `U_t = {xi | L(xi) = txi}` mõõdet nimetatakse omaväärtuse t geomeetriliseks
+        kordsuseks.<br>
+        2) Kui `t_1, ... , t_k` on maatriksi A erinevad omaväärtused ja `xi_1, ... , xi_k` neile vastavad omavektorid, st
+        `L(xi_i) = t_i xi_i`, siis vektorid `xi_1, ... , xi_k` on lineaarselt sõltumatud.<br>
+        3) Sümmetrilise maatriksi A erinevatel omaväärtustele t_1 ja t_2 vastavad omavektorid `xi_1` ja `xi_2` on omavahel rist.<br>
+        4) Olgu maatriksi A omaväärtustele `t_1, t_2, ... ,t_n` vastavad  omavektorid (`L(xi_i) = t_i xi_i iga i korral`)<br>
+        5) Maatriksi A omaväärtusele t vastavate kõigi omavektorite hulk koos null vektoriga moodustab alamruumi `U_t = {xi | L(xi) = txi}`
+        vaadeldavas vektorruumis V.
       </div>
     <h3>40. Ruutvorm ja tema maatrikskuju. Kanooniline kuju. Ruutvormi viimine
     kanoonilisele kujule.</h3>
