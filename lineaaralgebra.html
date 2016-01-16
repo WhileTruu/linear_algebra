@@ -342,8 +342,51 @@
           <div class="__formula">
             `(AB)_(ij) = sum_(j=1)^n a_(ik) b_(kj) = a_(i1) b_(1j) + a_(i2) b_(2j) + ... + a_(in) b_(nj)`
           </div>
+        </div><br>
+        <b>Omadused ja seos lineaarsete tehetega</b>
+        <div>
+          <ol>
+            <li>
+              <div>
+                Maatriksite korrutamine pole kommutatiivne, st leiduvad sellised maatriksid
+                `A` ja `B`, et `A B != B A`.
+              </div>
+            </li><br>
+            <li>
+              <div>
+                Maatriksite korrutamine on assotsiatiivne, st
+              </div>
+              <div class="__formula">
+                `A(BC) = (AB) C`
+              </div>
+              <div style="text-align: right;">
+                alati, kui vaadeldavad maatriksid on korrutatavad.
+              </div>
+            </li><br>
+            <li>
+              <div>
+                Liitmine ja korrutamine on seotud distributiivsusega, st
+              </div>
+              <div class="__formula">
+                `A (B + C) = A B + A C`,&emsp;`(A + B) C = A C + B C`
+              </div>
+              <div style="text-align: right;">
+                alati, kui antud tehted on teostatavad.
+              </div>
+            </li><br>
+            <li>
+              <div>
+                Kui eksisteerib maatriksite korrutis `A B`, siis
+              </div>
+              <div class="__formula">
+                `a (A B) = (a A) B = A (a B)`
+              </div>
+              <div style="text-align: right;">
+                iga `a in RR` korral.
+              </div>
+            </li>
+          </ol>
         </div>
-        <b style="color: red;">TO BE CONTINUDED</b>
       </div>
     <h3>8. Maatriksite transponeerimine. Transponeerimise omadused.</h3>
       <div>
@@ -961,12 +1004,12 @@
 
     <h3>22. Pöördmaatriksi definitsioon, ühesus, olemasolu ja leidmine (tõestustega).</h3>
       <div>
-        Maatriksi A <b>pöördmaatriksiks</b> nimetatakse sellist maatriksit B, mille korral 
+        Maatriksi A <b>pöördmaatriksiks</b> nimetatakse sellist maatriksit B, mille korral
           <div class="__formula">`AB=BA=E`, </div>
           kus E on sobivat järku ühikmaatriks. <br>
-          Võrduste ahelas on korrutamine võimalik vaid juhul, kui A on ruutmaatriks. Seega 
+          Võrduste ahelas on korrutamine võimalik vaid juhul, kui A on ruutmaatriks. Seega
           pöördmaatriks võib leiduda ainult ruutmaatriksil. <br> <br>
-          
+
           <b>Ühesus</b> <br>
           Maatriksi A pöördmaatriks, juhul, kui ta eksisteerib, on üheselt määratud. <br>
           <i>Tõestus</i> Olgu `B_1` ja `B_2` maatriksi A pöördmaatriksid. Siis
@@ -977,13 +1020,13 @@
           Maatriksi A pöördmaatriksit tähistatakse `A^(-1)`. Seega
           <div class="__formula">`AA^(-1) = A^(-1)A=E`</div>
           Osutub, et mitte kõik ruutmaatriksid ei oma pöördmaatriksit. <br> <br>
-          
+
           <b>Pöördmaatriksi olemasolu</b> <br>
-          Oletame, et maatriksil A leidub pöördmaatriks. Siis `AA^(-1)=E` ning 
+          Oletame, et maatriksil A leidub pöördmaatriks. Siis `AA^(-1)=E` ning
           <div class="__formula">`|A|*|A^(-1)|=|A^(-1)|=|E|=|[1, 0,...,0],
                     [0,1,...,0],
                     [vdots, vdots,ddots,vdots],
-                    [0, 0,...,1]|=1!=0`</div>          
+                    [0, 0,...,1]|=1!=0`</div>
           Siit järeldubki, et `|A|!=0` <br> <br>
           <b>Pöördmaatriksi leidmine</b> <br>
           Eeldame, et`|A| !=0`. Moodustame maatriksi
@@ -991,7 +1034,7 @@
                     [A_(12),A_(22),...,A_(n2)],
                     [vdots, vdots,ddots,vdots],
                     [A_(1n),A_(2n),...,A_(n n)]||`</div>
-          
+
           ja veendume determinantide teooria põhivalemeid kasutades, et AB=E:
           <div class="__formula">`AB=1/|A|*||[A_(11),A_(21),...,A_(n1)],
                     [A_(12),A_(22),...,A_(n2)],
@@ -1000,7 +1043,7 @@
                     [A_(12),A_(22),...,A_(n2)],
                     [vdots, vdots,ddots,vdots],
                     [A_(1n),A_(2n),...,A_(n n)]|| = `</div>
-          
+
           <div class="__formula">`=1/|A|*||[|A|,0,...,0],
                     [0,|A|,...,0],
                     [vdots, vdots,ddots,vdots],
@@ -1016,7 +1059,7 @@
       <div>
             Dibs joss
       </div>
-      
+
     <h3>24. Skalaarkorrutise definitsioon üldjuhul. Skalaarkorrutise näiteid.</h3>
       <div>
         Skalaarkorrutiseks vektorruumis V nimetatakse reeglit, mis igale kahele vektorile `alpha, beta in V` paneb vastavusse
