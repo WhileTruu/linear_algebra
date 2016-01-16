@@ -1589,7 +1589,33 @@
       </div>
     <h3>38. Omaväärtused ja omavektorid ning nende leidmine.</h3>
     <div>
-      `d i b b s   U k u`
+      <p>
+        <b>Definitsioon</b><br>
+        Ruutmaatriksi `A` omavektoriks nimetatakse vektorit `vec(x) != vec(theta)` kui
+        <div class="__formula">
+          `[[a_(11), a_(12), ..., a_(1n)],
+            [a_(21), a_(22), ..., a_(2n)],
+            [..., ..., ..., ...],
+            [a_(n1), a_(n2), ..., a_(n n)]]
+          [[x_1], [x_2], [...], [x_n]] = lambda[[x_1], [x_2], [...], [x_n]]`
+        </div>
+        ehk `A vec(x) = lambda vec(x)` kus `lambda` on mingi skalaar.
+        Skalaari `lambda` nimetatakse maatriksi `A` omaväärtuseks ja öeldakse,
+        et `vec(x)` on omaväärtusele `lambda` vastav omavektor.
+      </p>
+      <p>
+        <b>Omaväärtuste ja omavektorite leidmine</b><br>
+        Omaväärtuste ja omavektorite leidmiseks kirjutame tingimuse
+        `A vec(x) = lambda vec(x)` kujul `A vec(x) = lambda E vec(x)`,
+        mis on ekvivalentne tingimusega `(A − lambda E) vec(x) = vec(theta)`,
+        mis on lineaarne homogeenne võrrandisüsteem.
+      </p>
+      <p>
+        <b>Karakteristlik võrrand</b><br>
+        See võrrandisüsteem omab mittetriviaalseid lahendeid parajasti
+        siis, kui `text(det)(A - lambda E) = 0`. Seda võrrandit nimetatatakse maatriksi `A`
+        karakteristlikuks võrrandiks. Selle võrrandi lahendid on maatriksi `A` omaväärtused.
+      </p>
     </div>
     <h3>39. Omaväärtuste ja omavektorite omadused (ainult loetleda).</h3>
       <div>
