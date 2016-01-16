@@ -518,11 +518,11 @@
           <b>Omadus 9</b><br>
           Ruutmaatriksi `A=||a_(ij)||in R^(nxn)` determinandi `|A| = D` mis tahes reanumbrite i ja k korral kehtib võrdus<br>
           <div class="__formula">
-            `a_(i1)A_(k1) + a_(i2)A_(k2) + ... + a_(i n)A_(kn) = sum_(j=1)^n a_(ij) A_(kj) = {(D, kui  i=k,),(0, kui  i!=k,):}`
+            `a_(i1)A_(k1) + a_(i2)A_(k2) + ... + a_(i n)A_(kn) = sum_(j=1)^n a_(ij) A_(kj) = {(D, text(kui )  i=k,),(0, text(kui )  i!=k,):}`
           </div>
           kus ´A_(kj)´ on determinandi D elemendi `a_(kj)` alamdeterminant. Analoogiliselt mis tahes veerunumbrite j ja k korral <br>
           <div class="__formula">
-            `a_(1j)A_(1k) + a_(2j)A_(2k) + ... + a_(nj)A_(nk) = sum_(i=1)^n a_(ij) A_(ik) = {(D, kui  j=k,),(0, kui  j!=k,):}`
+            `a_(1j)A_(1k) + a_(2j)A_(2k) + ... + a_(nj)A_(nk) = sum_(i=1)^n a_(ij) A_(ik) = {(D, text(kui )  j=k,),(0, text(kui )  j!=k,):}`
           </div>
           <b>Omadus 10</b><br>
           Kui A ja B on ühte ja sama järku ruutmaatriksid, siis nende maatriksite korrutise AB determinant võrdub maatriksite A ja B determinantide korrutisega:
@@ -778,9 +778,138 @@
       </div>
     <h3>33. Teist järku determinandi geomeetriline tõlgendus (tõestusega).</h3>
       <div>
-            I CALL DIBS
+            Vaatleme teist järku determinanti <br>
+            <div class="__formula">
+                `D= ||[a1, a2],
+                    [b1, b2]||`
+            </div>
+            ja püüame leida talle geomeetrilise tõlgenduse. Selleks vaatleme determinandi reavektoreid `alpha = (a1;a2), beta = (b1;b2)` <br>
+            ning tõlgendame neid kui geomeetrilisi vektoreid, mis on antud oma koordinaatidega xy-tasandil. Ehitame vektoritele `alpha ` 
+            ja ` beta` rööpküliku ning näitame, et determinandi `D` absoluutväärtus `|D|=0=S` ja väide kehtib. Seepärast eeldame, et `alpha != O/` <br>
+            <div class="__formula">
+                <img src="teistjarkudeterminant.png" alt=""> <br>
+            </div>
+            Vaatleme tekkinud rööpküliku kõrgusvektorit `gamma = vec(CO) + beta`. Kuna vektorid `alpha ` ja ` vec(CO)` on paralleelsed 
+            ja `alpha != O/`, siis leidub selline arv `a, `et ` vec(CO) = a alpha ` ehk ` gamma = beta + a alpha`. <br>
+            arvutame `D^2`, arvestades determinantide omadusi 1 ja 10:
+            
+            <div class="__formula">
+                `D^2 = D*D = |[a1, a2],
+                    [b1, b2]|*|[a1, a2],
+                    [b1, b2]|=|[alpha * alpha, alpha * beta],
+                    [beta * alpha, beta*beta]|`
+            </div>
+            Leiame determinandi teisele reale arvu a kordse esimese rea ja arvestame, et vektorite `alpha` ja `gamma`
+            ristseisu tõttu `alpha * gamma = gamma* alpha = 0`:
+          <div class="__formula">
+                `D^2 = |[alpha * alpha, alpha * beta],
+                        [(beta + a alpha) * alpha, (beta + a alpha)*beta]|`
+                `=     |[alpha * alpha, alpha * beta],
+                        [gamma * alpha, gamma*beta]|`
+                `=     |[alpha * alpha, alpha * beta],
+                        [0, gamma*beta]|`
+                `=    (alpha*alpha)(gamma*beta)``=||alpha||^2(gamma*beta+0)`
+                `=||alpha||^2(gamma*beta+gamma*a alpha)`
+                `=||alpha||^2 (gamma*(beta+a alpha))`
+                `=||alpha||^2(gamma*gamma)`
+                `=||alpha||^2||gamma||^2`
+            </div>  
+            Võttes viimase võrduse mõlemast poolest ruutjuure, saamegi `|D| = ||alpha||*||gamma||`, 
+            mis võrdub vektoritele`alpha` ja `beta` ehitatud rööpküliku pindalaga. Sõnastame saadud tulemuse teoreemina: <br>
+            <i>Teist järku determinandi absoluutväärtus võrdub tema reavektoritele ehitatud rööpküliku pindalaga.</i>
       </div>
     <h3>34. Kolmandat järku determinandi geomeetriline tõlgendus (tõestusega).</h3>
+            Vaatleme kolmandat järku determinanti <br>
+            <div class="__formula">
+                `D= ||[a1, a2, a3],
+                      [b1, b2, b3],
+                      [c1, c2, c3]||`
+            </div>
+            geomeetrilise tähenduse saamiseks vaatleme tema reavektoreid
+            <div class="__formula">
+                `alpha = (a1;a2;a3), beta = (b1;b2;b3), gamma = (c1,c2,c3)`
+            </div>
+            geomeetriliste vektoritena, mis on antud oma koordinaatidega xyz-teljestikus. 
+            Kanname vektorid `alpha, beta, gamma` ühte punkti ja ehitame nendele rööptahuka <br>
+            <div class="__formula">
+                <img src="kolmandatjarku.png" alt="">
+            </div>
+            Veendume, et `|D|` võrdub tekkinud rööptahuka ruumalaga V. Selle näitamiseks konstrueerime risttahuka, mille ruumala on samuti V.
+            Mainitud risttahuka külgvektoriteks valime vektorid `alpha, hat beta` ja `hat gamma`, kus `hat beta` on vektori `beta` projektsioon vektori `alpha`
+             ristsihile ja `hat gamma` on vektori `gamma` projektsioon vektoritega `alpha` ja `beta` risti olevale sihile. On ilmne, et 
+             sellise risttahuka ruumala võrdub esialgse rööptahuka ruumalaga.. Kuna vektor `hat beta - beta` on paralleelne vektoriga `alpha` ning vektor 
+             `hat gamma - gamma` on paralleelne tasandiga, millel asuvad vektorid `alpha` ja `gamma`, siis leiduvad sellised arvud a, b, c, et <br>
+             <div class="__formula">`hat beta - beta = a alpha, hat gamma - gamma = b alpha + c beta`</div>
+             ehk <br>
+             <div class="__formula">`hat beta = beta + a alpha, hat gamma = gamma + b alpha + c beta`</div>
+             Nüüd arvutame sarnaselt eelmise alajaotusega determinandi D ruudu:
+             <div class="__formula">
+                 `D^2 = D*D = ||[a1, a2, a3],
+                      [b1, b2, b3],
+                      [c1, c2, c3]||*||[a1, a2, a3],
+                      [b1, b2, b3],
+                      [c1, c2, c3]||`
+                      
+                      `= ||[alpha *alpha, alpha *beta, alpha*gamma],
+                      [beta*alpha, beta*beta, beta*gamma],
+                      [gamma*alpha,gamma*beta,gamma*gamma]||`
+             </div>
+             Liidame determinandi kolmandale reale arvu b kordse esimese rea ja arvu c kordse teise 
+             rea ning teisele reale arvu a kordse esimese rea. Seoste tõttu saame
+             <div class="__formula">
+                 `D^2 =||[alpha *alpha, alpha *beta, alpha*gamma],
+                      [hat beta*alpha, hat beta*beta,  hatbeta*gamma],
+                      [hat gamma*alpha,hat gamma*beta,hat gamma*gamma]||`
+                      
+                      `=||[alpha *alpha, alpha *beta, alpha*gamma],
+                      [0, hat beta*beta,  hatbeta*gamma],
+                      [0,0,hat gamma*gamma]||`
+                     ` =(alpha*alpha)(hat beta*beta)(hat gamma*gamma)`,
+             </div>
+             sest <br>
+             <div class="__formula">`hat beta _|_ alpha, hat gamma _|_ alpha, hat gamma _|_ beta ehk hat beta*alpha=hat gamma*alpha=hat gamma*beta = 0`</div>
+             seega <br>
+            <div class="__formula">
+                 `D^2 = (alpha*alpha)(hat beta*beta)(hat gamma*gamma)= (alpha*alpha)(hat beta*beta +0)(hat gamma*gamma+0+0) 
+                 = (alpha*alpha)(hat beta*beta + hat beta*(a alpha))(hat gamma*gamma+hat gamma (b alpha) + hat gamma*(c beta))
+                 =(alpha*alpha)(hat beta*hat beta)(hat gamma*hat gamma) = ||alpha||^2||hat beta||^2||hat gamma||^2`
+             </div>
+             ja <br>
+             <div class="__formula">`|D| = ||alpha||*||hat beta||*||hat gamma||`</div>
+            Avaldise parem pool võrdub vaadeldava risttahuka ja seega ka esialgse rööptahuka ruumalaga. Kokkuvõttes oleme saanud teoreemi: <br>
+            <i>Kolmandat järku determinandi absoluutväärtus võrdub tema reavektoritele ehitatud rööptahuka ruumalaga.</i>
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
       <div>
 
       </div>
